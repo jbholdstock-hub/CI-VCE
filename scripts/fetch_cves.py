@@ -8,6 +8,7 @@ NIST_API_KEY = os.environ.get("NIST_API_KEY", "")
 CISA_KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 NIST_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 
+
 KEYWORDS = [
     ("Windows Server", "Windows Server"),
     ("Windows 10", "Windows Desktop"),
