@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberGuard SOC - Enterprise Threat Intelligence Dashboard</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #050811; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    .badge-glow-crit { box-shadow: 0 0 10px rgba(239, 68, 68, 0.35); }
+    .badge-glow-kev { box-shadow: 0 0 12px rgba(168, 85, 247, 0.45); }
+  </style>
+</head>
+<body class="bg-[#050811] text-slate-100 min-h-screen font-sans flex flex-col selection:bg-sky-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-[#080d1a] sticky top-0 z-40 px-4 lg:px-8 py-3 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <!-- Title & Surface Info -->
+      <div class="flex items-center space-x-3">
+        <div class="p-2 bg-sky-500/20 border border-sky-500/30 rounded-xl text-sky-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
+              CyberGuard <span class="text-sky-400 font-mono text-base">SOC &middot; ThreatRadar</span>
+            </h1>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1"></span>CVSS &ge; 7.0 STRICT
+            </span>
+          </div>
+          <p class="text-xs text-slate-400">Surface: Win Server &bull; Win Desktop &bull; SonicWall &bull; Fortinet &bull; Meraki</p>
+        </div>
+      </div>
+
+      <!-- Action & Ingestion Status -->
+      <div class="flex items-center flex-wrap gap-2.5">
+        <div id="feedStatusBadge" class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 flex items-center gap-2">
+          <span id="feedStatusDot" class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span id="feedStatusText">Initializing feed...</span>
+        </div>
+
+        <button onclick="loadVulnerabilityFeed()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition flex items-center gap-1.5">
+          <span>Sync Feed</span>
+        </button>
+
+        <button onclick="exportFilteredData('csv')" class="px-3.5 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold shadow-lg shadow-sky-600/20 transition flex items-center gap-1.5">
+          <span>Export CSV</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl w-full mx-auto px-4 lg:px-8 py-5 flex-1 flex flex-col space-y-4">
+    
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="hidden transform transition-all duration-300 rounded-xl p-3 text-xs border flex items-center justify-between">
+      <div class="flex items-center gap-2" id="toastMessage"></div>
+      <button onclick="hideToast()" class="text-slate-400 hover:text-white">&times;</button>
+    </div>
+
+    <!-- KPIs -->
+    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div class="p-3.5 rounded-xl bg-[#0c1322] border border-red-950/80">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-red-400">Critical (9.0+)</span>
+        </div>
+        <div class="mt-2.5 flex items-baseline gap-2">
+          <span id="kpiCritical" class="text-2xl font-bold font-mono text-red-500">0</span>
+          <span class="text-[10px] text-red-400 font-semibold" id="kpiCritRatio">0%</span>
+        </div>
+        <div class="mt-1 text-[10px] text-slate-400">Immediate action required</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-[#0c1322] border border-orange-950/80">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-orange-400">High (7.0 - 8.9)</span>
+        </div>
+        <div class="mt-2.5 flex items-baseline gap-2">
+          <span id="kpiHigh" class="text-2xl font-bold font-mono text-orange-400">0</span>
+        </div>
+        <div class="mt-1 text-[10px] text-slate-400">Scheduled patch window</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-[#0c1322] border border-purple-950/80">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-purple-300">CISA KEV Actives</span>
+        </div>
+        <div class="mt-2.5 flex items-baseline gap-2">
+          <span id="kpiKev" class="text-2xl font-bold font-mono text-purple-300">0</span>
+          <span class="text-[10px] text-purple-400 font-bold">In-The-Wild</span>
+        </div>
+        <div class="mt-1 text-[10px] text-slate-400">Active exploitation confirmed</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-[#0c1322] border border-slate-800">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-amber-400">Perimeter Firewalls</span>
+        </div>
+        <div class="mt-2.5 flex items-baseline gap-2">
+          <span id="kpiFirewalls" class="text-2xl font-bold font-mono text-amber-300">0</span>
+        </div>
+        <div class="mt-1 text-[10px] text-slate-400">Fortinet / SonicWall / Meraki</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-[#0c1322] border border-slate-800 col-span-2 sm:col-span-1">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-sky-400">Windows Fleet</span>
+        </div>
+        <div class="mt-2.5 flex items-baseline gap-2">
+          <span id="kpiWindows" class="text-2xl font-bold font-mono text-sky-300">0</span>
+        </div>
+        <div class="mt-1 text-[10px] text-slate-400">Server &amp; Desktop targets</div>
+      </div>
+    </section>
+
+    <!-- Filters Bar -->
+    <section class="bg-[#0c1322] border border-slate-800 rounded-2xl p-4 space-y-3.5">
+      <!-- Target Platform Selector -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+        <span class="text-[11px] font-mono uppercase text-slate-400 mr-2 shrink-0">Filter Target:</span>
+        <button onclick="setPlatformFilter('ALL')" id="plat-ALL" class="plat-btn px-3 py-1.5 rounded-lg font-bold bg-sky-600 text-white shrink-0 shadow-sm transition">
+          All Targets
+        </button>
+        <button onclick="setPlatformFilter('Windows Server')" id="plat-Windows Server" class="plat-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white bg-slate-900 border border-slate-800 shrink-0 transition">
+          Windows Server
+        </button>
+        <button onclick="setPlatformFilter('Windows Desktop')" id="plat-Windows Desktop" class="plat-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white bg-slate-900 border border-slate-800 shrink-0 transition">
+          Windows Desktop
+        </button>
+        <button onclick="setPlatformFilter('Fortinet')" id="plat-Fortinet" class="plat-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white bg-slate-900 border border-slate-800 shrink-0 transition">
+          Fortinet
+        </button>
+        <button onclick="setPlatformFilter('SonicWall')" id="plat-SonicWall" class="plat-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white bg-slate-900 border border-slate-800 shrink-0 transition">
+          SonicWall
+        </button>
+        <button onclick="setPlatformFilter('Cisco Meraki')" id="plat-Cisco Meraki" class="plat-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white bg-slate-900 border border-slate-800 shrink-0 transition">
+          Cisco Meraki
+        </button>
+      </div>
+
+      <!-- Release Date, Search, and Criteria Filters -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-3 text-xs">
+        <!-- Search -->
+        <div class="md:col-span-4">
+          <input 
+            type="text" 
+            id="searchInput" 
+            oninput="applyFilters()" 
+            placeholder="Search CVE ID, SSL-VPN, Active Directory, SonicOS..."
+            class="w-full px-3 py-2 bg-slate-950 border border-slate-800 focus:border-sky-500 rounded-xl text-xs text-white outline-none"
+          >
+        </div>
+
+        <!-- Release Cycle Selector -->
+        <div class="md:col-span-3">
+          <select id="dateRangeSelect" onchange="handleDateRangeChange()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 outline-none focus:border-sky-500">
+            <option value="ALL">All Release Dates</option>
+            <option value="30D">Last 30 Days (Newest)</option>
+            <option value="CURRENT_MONTH">Current Patch Cycle</option>
+            <option value="PREV_MONTH">Previous Patch Cycle</option>
+            <option value="CUSTOM_MONTH">Custom Month Picker &rarr;</option>
+          </select>
+        </div>
+
+        <!-- Hidden Month Picker (Appears when Custom Month selected) -->
+        <div id="customMonthContainer" class="hidden md:col-span-2">
+          <input type="month" id="customMonthInput" onchange="applyFilters()" class="w-full px-3 py-2 bg-slate-950 border border-sky-500/60 rounded-xl text-white outline-none focus:border-sky-400">
+        </div>
+
+        <!-- Severity Filter -->
+        <div class="md:col-span-2">
+          <select id="severitySelect" onchange="applyFilters()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 outline-none focus:border-sky-500">
+            <option value="ALL">All CVSS &ge; 7.0</option>
+            <option value="CRITICAL">Critical (9.0 - 10.0)</option>
+            <option value="HIGH">High (7.0 - 8.9)</option>
+          </select>
+        </div>
+
+        <!-- CISA KEV Toggle Button -->
+        <div class="md:col-span-1">
+          <button id="kevToggleBtn" onclick="toggleKevFilter()" class="w-full py-2 px-2 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 hover:text-purple-300 font-semibold text-center truncate transition">
+            KEV
+          </button>
+        </div>
+
+        <!-- Count & Reset -->
+        <div class="md:col-span-12 flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-800/60">
+          <span id="filteredCountLabel" class="font-mono">Displaying: 0 CVEs</span>
+          <button onclick="resetAllFilters()" class="text-sky-400 hover:text-sky-300 underline font-medium">
+            Reset All Filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CVE Table -->
+    <section class="bg-[#0c1322] border border-slate-800 rounded-2xl shadow-xl overflow-hidden flex-1 flex flex-col">
+      <div class="overflow-x-auto flex-1">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950 text-slate-400 font-semibold uppercase text-[10px] tracking-wider">
+              <th class="py-3 px-4 w-36">CVE Identifier</th>
+              <th class="py-3 px-3 w-28 text-center">Score</th>
+              <th class="py-3 px-3.5 w-36">Platform Target</th>
+              <th class="py-3 px-4">Advisory Overview</th>
+              <th class="py-3 px-3 w-24">Vector</th>
+              <th class="py-3 px-3 w-32">Adversary Activity</th>
+              <th class="py-3 px-4 w-20 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody id="cveTableBody" class="divide-y divide-slate-800/60 font-sans">
+            <!-- Dynamic rows injected here -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="px-4 py-2.5 bg-slate-950 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+        <div>Strict Enterprise Ingestion Protocol &bull; Filter: CVSS &ge; 7.0</div>
+        <div class="font-mono" id="tableTimestamp">Sync status: initialized</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Remediation Inspector Modal -->
+  <div id="inspectorDrawer" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-[#0e1628] border border-slate-700 rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl">
+      <div class="p-5 border-b border-slate-800 flex items-start justify-between bg-slate-950/70">
+        <div>
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <span id="drawerCveId" class="text-xl font-bold font-mono text-white">CVE-XXXX-XXXXX</span>
+            <span id="drawerSevBadge" class="px-2.5 py-0.5 rounded text-xs font-extrabold uppercase">CRITICAL</span>
+            <span id="drawerKevBadge" class="hidden px-2.5 py-0.5 rounded text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+              CISA KEV Exploited
+            </span>
+          </div>
+          <h3 id="drawerTitle" class="text-sm font-semibold text-slate-300 mt-1.5">Vulnerability Title</h3>
+        </div>
+        <button onclick="closeInspector()" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 text-lg">
+          &times;
+        </button>
+      </div>
+
+      <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto text-xs">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800">
+          <div>
+            <span class="text-slate-400 block text-[11px]">Base CVSS</span>
+            <span id="drawerScore" class="font-mono text-lg font-bold text-white">9.8</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block text-[11px]">Attack Vector</span>
+            <span id="drawerVector" class="font-semibold text-slate-200 uppercase">NETWORK</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block text-[11px]">Platform</span>
+            <span id="drawerPlatform" class="font-semibold text-sky-400">Windows Server</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block text-[11px]">Release Date</span>
+            <span id="drawerDate" class="font-mono text-slate-200">2026-09-08</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Technical Summary</h4>
+          <p id="drawerDesc" class="text-slate-300 leading-relaxed bg-slate-950/60 p-3.5 rounded-xl border border-slate-800">
+            Summary text...
+          </p>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider" id="drawerRemediationTitle">Hardening &amp; CLI Remediation</h4>
+            <button onclick="copyDrawerCode()" class="text-xs text-sky-400 hover:text-sky-300 font-mono" id="drawerCopyBtnText">
+              Copy Snippet
+            </button>
+          </div>
+          <pre class="bg-black/90 text-emerald-400 font-mono text-xs p-3.5 rounded-xl border border-slate-800 overflow-x-auto whitespace-pre-wrap" id="drawerSnippet"># Snippet...</pre>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Advisory References</h4>
+          <div id="drawerLinks" class="flex flex-wrap gap-2 text-xs"></div>
+        </div>
+      </div>
+
+      <div class="p-3.5 border-t border-slate-800 bg-slate-950/80 flex justify-end">
+        <button onclick="closeInspector()" class="px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Built-in baseline dataset (includes CVE-2026-81963 and cross-platform high/criticals)
+    const FALLBACK_CVE_DATABASE = [
+      {
+        id: "CVE-2026-81963",
+        platform: "Windows Server",
+        title: "Windows Update Stack EoP Zero-Day",
+        score: 7.8,
+        severity: "HIGH",
+        vector: "LOCAL",
+        published: "2026-09-08",
+        cisaKev: true,
+        description: "Improper link resolution (CWE-59) in Windows Update Stack allows authenticated local attackers to redirect file operations and escalate privileges to NT AUTHORITY\\SYSTEM.",
+        source: "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963"
+      },
+      {
+        id: "CVE-2024-38077",
+        platform: "Windows Server",
+        title: "Windows Remote Desktop Licensing Service RCE (MadLicence)",
+        score: 9.8,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2024-07-09",
+        cisaKev: true,
+        description: "Unauthenticated remote code execution vulnerability in Windows Remote Desktop Licensing Service via crafted RPC packets to port 135.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-38077"
+      },
+      {
+        id: "CVE-2024-38063",
+        platform: "Windows Server",
+        title: "Windows TCP/IP IPv6 Remote Code Execution",
+        score: 9.8,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2024-08-13",
+        cisaKev: false,
+        description: "Integer underflow vulnerability in the Windows TCP/IP networking driver (tcpip.sys) allowing remote kernel code execution via crafted IPv6 packets.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-38063"
+      },
+      {
+        id: "CVE-2020-1472",
+        platform: "Windows Server",
+        title: "Zerologon: Netlogon Elevation of Privilege",
+        score: 10.0,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2020-08-17",
+        cisaKev: true,
+        description: "Unauthenticated elevation of privilege in Netlogon secure channel connection protocols allowing attackers to reset Domain Controller machine passwords.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2020-1472"
+      },
+      {
+        id: "CVE-2024-43461",
+        platform: "Windows Desktop",
+        title: "Windows MSHTML Platform Remote Code Execution (Void Banshee)",
+        score: 8.8,
+        severity: "HIGH",
+        vector: "NETWORK",
+        published: "2024-09-10",
+        cisaKev: true,
+        description: "Exploited in the wild to bypass Mark-of-the-Web via crafted filenames and hidden HTA files.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-43461"
+      },
+      {
+        id: "CVE-2024-30051",
+        platform: "Windows Desktop",
+        title: "Windows Desktop Window Manager (DWM) Core Elevation of Privilege",
+        score: 7.8,
+        severity: "HIGH",
+        vector: "LOCAL",
+        published: "2024-05-14",
+        cisaKev: true,
+        description: "Integer overflow in dwmcore.dll allows local unprivileged attackers or malware to corrupt heap memory and elevate privileges to SYSTEM.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-30051"
+      },
+      {
+        id: "CVE-2024-21762",
+        platform: "Fortinet",
+        title: "FortiOS & FortiProxy Out-of-Bounds Write RCE in SSL-VPN",
+        score: 9.8,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2024-02-09",
+        cisaKev: true,
+        description: "Out-of-bounds write in FortiOS SSL-VPN allows remote unauthenticated code execution via specially crafted HTTP requests.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-21762"
+      },
+      {
+        id: "CVE-2024-47575",
+        platform: "Fortinet",
+        title: "FortiJump: FortiManager Missing Authentication in fgfmsd Daemon",
+        score: 9.8,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2024-10-23",
+        cisaKev: true,
+        description: "Missing authentication in FortiManager fgfmsd daemon allows unauthenticated remote attackers to execute arbitrary code and exfiltrate configs.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-47575"
+      },
+      {
+        id: "CVE-2024-40766",
+        platform: "SonicWall",
+        title: "SonicWall SonicOS Improper Access Control in SSL-VPN",
+        score: 9.3,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2024-08-22",
+        cisaKev: true,
+        description: "Improper access control in SonicOS management interface and SSL-VPN functionality exploited in Akira ransomware operations.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-40766"
+      },
+      {
+        id: "CVE-2020-5135",
+        platform: "SonicWall",
+        title: "SonicWall SonicOS SSL-VPN Stack-based Buffer Overflow RCE",
+        score: 9.8,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2020-10-15",
+        cisaKev: true,
+        description: "Stack-based buffer overflow in the SonicOS HTTP/HTTPS engine allows unauthenticated remote attackers to execute code via custom HTTP payloads.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2020-5135"
+      },
+      {
+        id: "CVE-2024-20356",
+        platform: "Cisco Meraki",
+        title: "Cisco Meraki MX Command Injection Vulnerability",
+        score: 9.9,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2024-04-24",
+        cisaKev: true,
+        description: "Command injection vulnerability in web-based management UI allowing unauthenticated attackers to execute root commands.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2024-20356"
+      },
+      {
+        id: "CVE-2023-20198",
+        platform: "Cisco Meraki",
+        title: "Cisco Security Appliances Web UI Privilege Escalation Zero-Day",
+        score: 10.0,
+        severity: "CRITICAL",
+        vector: "NETWORK",
+        published: "2023-10-16",
+        cisaKev: true,
+        description: "Unauthenticated remote attackers can create high-privilege accounts on the appliance, providing full administrative control.",
+        source: "https://nvd.nist.gov/vuln/detail/CVE-2023-20198"
+      }
+    ];
+
+    // State Variables
+    let cveDataset = [...FALLBACK_CVE_DATABASE];
+    let filteredCves = [];
+    let selectedPlatform = "ALL";
+    let filterKevOnly = false;
+    let activeInspectorCve = null;
+
+    async function loadVulnerabilityFeed() {
+      const dot = document.getElementById("feedStatusDot");
+      const text = document.getElementById("feedStatusText");
+
+      try {
+        const res = await fetch('./data/cves.json?t=' + Date.now());
+        if (!res.ok) throw new Error("Feed not found (HTTP " + res.status + ")");
+        
+        const data = await res.json();
+        const vulns = Array.isArray(data) ? data : (data.vulnerabilities || []);
+        if (!vulns.length) throw new Error("No data in feed");
+
+        cveDataset = vulns;
+        if (dot && text) {
+          dot.className = "w-2 h-2 rounded-full bg-emerald-400 animate-pulse";
+          const stamp = data.lastUpdated ? data.lastUpdated.substring(0, 10) : 'Live';
+          text.innerText = `Live Feed: ${stamp} (${vulns.length} CVEs)`;
+        }
+        showToast(`Loaded ${vulns.length} CVEs from automated feed.`, "success");
+      } catch (err) {
+        console.warn("Using baseline fallback data:", err.message);
+        cveDataset = [...FALLBACK_CVE_DATABASE];
+        if (dot && text) {
+          dot.className = "w-2 h-2 rounded-full bg-amber-400";
+          text.innerText = `Baseline Cache (${cveDataset.length} CVEs)`;
+        }
+      }
+
+      applyFilters();
+      const ts = document.getElementById('tableTimestamp');
+      if (ts) ts.innerText = `Sync: ${new Date().toLocaleTimeString()} (Active)`;
+    }
+
+    function handleDateRangeChange() {
+      const range = document.getElementById("dateRangeSelect").value;
+      const customContainer = document.getElementById("customMonthContainer");
+      
+      if (range === "CUSTOM_MONTH") {
+        customContainer.classList.remove("hidden");
+        if (!document.getElementById("customMonthInput").value) {
+          document.getElementById("customMonthInput").value = new Date().toISOString().slice(0, 7);
+        }
+      } else {
+        customContainer.classList.add("hidden");
+      }
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const search = (document.getElementById("searchInput").value || "").toLowerCase().trim();
+      const sevSelect = document.getElementById("severitySelect").value;
+      const dateRange = document.getElementById("dateRangeSelect").value;
+      const customMonthVal = document.getElementById("customMonthInput") ? document.getElementById("customMonthInput").value : "";
+
+      const now = new Date();
+      const currentYearMonth = now.toISOString().slice(0, 7);
+      
+      const prevMonthDate = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const prevYearMonth = prevMonthDate.toISOString().slice(0, 7);
+
+      const thirtyDaysAgo = new Date();
+      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+      filteredCves = cveDataset.filter(item => {
+        // 1. Enforce CVSS >= 7.0
+        if (item.score < 7.0) return false;
+
+        // 2. Platform target filter
+        if (selectedPlatform !== "ALL" && item.platform !== selectedPlatform) return false;
+
+        // 3. Severity filter
+        if (sevSelect === "CRITICAL" && item.score < 9.0) return false;
+        if (sevSelect === "HIGH" && (item.score < 7.0 || item.score >= 9.0)) return false;
+
+        // 4. CISA KEV filter
+        if (filterKevOnly && !item.cisaKev) return false;
+
+        // 5. Release Date Cycle Filter
+        if (item.published) {
+          const pubDate = new Date(item.published);
+          const pubYearMonth = item.published.substring(0, 7);
+
+          if (dateRange === "30D" && pubDate < thirtyDaysAgo) return false;
+          if (dateRange === "CURRENT_MONTH" && pubYearMonth !== currentYearMonth) return false;
+          if (dateRange === "PREV_MONTH" && pubYearMonth !== prevYearMonth) return false;
+          if (dateRange === "CUSTOM_MONTH" && customMonthVal && pubYearMonth !== customMonthVal) return false;
+        }
+
+        // 6. Keyword Search
+        if (search) {
+          const matchId = (item.id || "").toLowerCase().includes(search);
+          const matchTitle = (item.title || "").toLowerCase().includes(search);
+          const matchDesc = (item.description || "").toLowerCase().includes(search);
+          const matchPlat = (item.platform || "").toLowerCase().includes(search);
+          if (!matchId && !matchTitle && !matchDesc && !matchPlat) return false;
+        }
+
+        return true;
+      });
+
+      filteredCves.sort((a, b) => b.score - a.score);
+      updateKpis();
+      renderTable();
+    }
+
+    function setPlatformFilter(plat) {
+      selectedPlatform = plat;
+      document.querySelectorAll(".plat-btn").forEach(b => {
+        b.className = "plat-btn px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white shrink-0 transition text-xs";
+      });
+      const activeBtn = document.getElementById("plat-" + plat);
+      if (activeBtn) {
+        activeBtn.className = "plat-btn px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold shrink-0 shadow-sm transition text-xs";
+      }
+      applyFilters();
+    }
+
+    function toggleKevFilter() {
+      filterKevOnly = !filterKevOnly;
+      const btn = document.getElementById("kevToggleBtn");
+      btn.className = filterKevOnly 
+        ? "w-full py-2 px-2 rounded-xl bg-purple-600 text-white font-bold text-center truncate shadow-lg shadow-purple-600/30 transition"
+        : "w-full py-2 px-2 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 hover:text-purple-300 font-semibold text-center truncate transition";
+      applyFilters();
+    }
+
+    function resetAllFilters() {
+      document.getElementById("searchInput").value = "";
+      document.getElementById("severitySelect").value = "ALL";
+      document.getElementById("dateRangeSelect").value = "ALL";
+      document.getElementById("customMonthContainer").classList.add("hidden");
+      filterKevOnly = false;
+      const kevBtn = document.getElementById("kevToggleBtn");
+      kevBtn.className = "w-full py-2 px-2 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 hover:text-purple-300 font-semibold text-center truncate transition";
+      setPlatformFilter("ALL");
+    }
+
+    function updateKpis() {
+      const total = filteredCves.length;
+      const crit = filteredCves.filter(x => x.score >= 9.0).length;
+      const high = filteredCves.filter(x => x.score >= 7.0 && x.score < 9.0).length;
+      const kev = filteredCves.filter(x => x.cisaKev).length;
+      const fw = filteredCves.filter(x => ["Fortinet", "SonicWall", "Cisco Meraki"].includes(x.platform)).length;
+      const win = filteredCves.filter(x => ["Windows Server", "Windows Desktop"].includes(x.platform)).length;
+
+      document.getElementById("kpiCritical").innerText = crit;
+      document.getElementById("kpiHigh").innerText = high;
+      document.getElementById("kpiKev").innerText = kev;
+      document.getElementById("kpiFirewalls").innerText = fw;
+      document.getElementById("kpiWindows").innerText = win;
+
+      const critRatio = total > 0 ? Math.round((crit / total) * 100) : 0;
+      document.getElementById("kpiCritRatio").innerText = `${critRatio}% of set`;
+      document.getElementById("filteredCountLabel").innerText = `Displaying: ${total} CVEs`;
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById("cveTableBody");
+      tbody.innerHTML = "";
+
+      if (filteredCves.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-10 text-slate-400">No CVEs match the selected filter parameters.</td></tr>`;
+        return;
+      }
+
+      filteredCves.forEach(cve => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-slate-800/40 transition cursor-pointer";
+        tr.onclick = (e) => {
+          if (e.target.closest("a")) return;
+          openInspector(cve.id);
+        };
+
+        const isCrit = cve.score >= 9.0;
+        const sevBadgeClass = isCrit 
+          ? "bg-red-500/10 text-red-400 border border-red-500/30 badge-glow-crit" 
+          : "bg-orange-500/10 text-orange-400 border border-orange-500/30";
+
+        let platBadgeClass = "bg-blue-500/10 text-blue-400 border-blue-500/20";
+        if (cve.platform === "Windows Desktop") platBadgeClass = "bg-cyan-500/10 text-cyan-400 border-cyan-500/20";
+        if (cve.platform === "Fortinet") platBadgeClass = "bg-rose-500/10 text-rose-400 border-rose-500/20";
+        if (cve.platform === "SonicWall") platBadgeClass = "bg-amber-500/10 text-amber-400 border-amber-500/20";
+        if (cve.platform === "Cisco Meraki") platBadgeClass = "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
+
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-mono font-bold text-sky-400 whitespace-nowrap">
+            <span class="hover:underline">${cve.id}</span>
+            <div class="text-[10px] text-slate-400 font-sans mt-0.5">${cve.published || 'Active Threat'}</div>
+          </td>
+          <td class="py-3 px-3 text-center whitespace-nowrap">
+            <span class="px-2 py-0.5 rounded-full font-mono text-xs font-bold ${sevBadgeClass}">
+              ${cve.score ? cve.score.toFixed(1) : '7.0+'}
+            </span>
+            <div class="text-[9px] uppercase font-bold tracking-wider mt-0.5 ${isCrit ? 'text-red-400' : 'text-orange-400'}">
+              ${cve.severity || (isCrit ? 'CRITICAL' : 'HIGH')}
+            </div>
+          </td>
+          <td class="py-3 px-3.5 whitespace-nowrap">
+            <span class="px-2 py-0.5 rounded text-[11px] font-semibold border ${platBadgeClass}">
+              ${cve.platform}
+            </span>
+          </td>
+          <td class="py-3 px-4">
+            <div class="font-semibold text-slate-100 line-clamp-1">${cve.title}</div>
+            <div class="text-slate-400 text-[11px] line-clamp-1 mt-0.5">${cve.description}</div>
+          </td>
+          <td class="py-3 px-3 whitespace-nowrap font-mono text-slate-300 text-[11px]">
+            ${cve.vector || 'NETWORK'}
+          </td>
+          <td class="py-3 px-3 whitespace-nowrap">
+            ${cve.cisaKev 
+              ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30 badge-glow-kev">CISA KEV</span>`
+              : `<span class="px-2 py-0.5 rounded text-[10px] text-slate-400 bg-slate-800 border border-slate-700">Monitored</span>`
+            }
+          </td>
+          <td class="py-3 px-4 text-right whitespace-nowrap">
+            <button onclick="openInspector('${cve.id}')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-sky-600 text-slate-200 hover:text-white border border-slate-700 transition text-[11px]">
+              Audit
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function generateRemediationSnippet(cve) {
+      if (cve.platform === "Windows Server") {
+        return `# [Windows Server Remediations: ${cve.id}]\n` +
+               `# 1. Audit active listening sockets\n` +
+               `Get-NetTCPConnection -State Listen | Where-Object { $_.LocalPort -in 135, 445, 3389 }\n\n` +
+               `# 2. Check hotfix installation status\n` +
+               `Get-HotFix | Select-Object -First 10 HotFixID, InstalledOn, Description\n\n` +
+               `# 3. Emergency hardening for RPC/SMB if unpatched:\n` +
+               `# Set-Service -Name TermServLicensing -StartupType Disabled -Confirm:$false`;
+      }
+      
+      if (cve.platform === "Windows Desktop") {
+        return `# [Windows Desktop Hardening: ${cve.id}]\n` +
+               `# 1. Check Windows build revision\n` +
+               `(Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion').UBR\n\n` +
+               `# 2. Enable Vulnerable Driver Blocklist in WDAC\n` +
+               `Set-ItemProperty -Path 'HKLM:\\SYSTEM\\CurrentControlSet\\Control\\CI\\Config' -Name 'VulnerableDriverBlocklistEnable' -Value 1 -Type DWord`;
+      }
+
+      if (cve.platform === "Fortinet") {
+        return `# [FortiOS CLI Remediation: ${cve.id}]\n` +
+               `# Disable SSL-VPN service globally\n` +
+               `config vpn ssl settings\n` +
+               `    unset status\n` +
+               `end\n\n` +
+               `# Enforce Local-In Policy restriction for administrative WAN ports\n` +
+               `config firewall local-in-policy\n` +
+               `    edit 1\n` +
+               `        set intf "wan1"\n` +
+               `        set srcaddr "Corp_Trusted_Mgmt_Range"\n` +
+               `        set action accept\n` +
+               `    next\n` +
+               `end`;
+      }
+
+      if (cve.platform === "SonicWall") {
+        return `# [SonicWall SonicOS CLI Hardening: ${cve.id}]\n` +
+               `configure\n` +
+               `interface X1\n` +
+               `no management https\n` +
+               `no management ssh\n` +
+               `commit\n\n` +
+               `# Require MFA across all SSL-VPN user groups in Users -> Local Users`;
+      }
+
+      if (cve.platform === "Cisco Meraki") {
+        return `# [Cisco Meraki Cloud Dashboard Remediation: ${cve.id}]\n` +
+               `# 1. Organization -> Firmware Upgrades -> MX Fleet -> Upgrade to Latest Stable\n` +
+               `# 2. Security & SD-WAN -> Firewall -> Layer 3: Deny inbound admin access on WAN\n` +
+               `# 3. Rotate Cloud Dashboard API keys with IP whitelisting`;
+      }
+
+      return `# Apply vendor patch for ${cve.id}`;
+    }
+
+    function openInspector(cveId) {
+      const cve = cveDataset.find(x => x.id === cveId);
+      if (!cve) return;
+      activeInspectorCve = cve;
+
+      document.getElementById("drawerCveId").innerText = cve.id;
+      document.getElementById("drawerTitle").innerText = cve.title;
+      document.getElementById("drawerScore").innerText = cve.score ? cve.score.toFixed(1) : '7.0+';
+      document.getElementById("drawerVector").innerText = cve.vector || "NETWORK";
+      document.getElementById("drawerPlatform").innerText = cve.platform;
+      document.getElementById("drawerDate").innerText = cve.published || "Active Threat";
+      document.getElementById("drawerDesc").innerText = cve.description;
+
+      const sevBadge = document.getElementById("drawerSevBadge");
+      sevBadge.innerText = cve.severity || (cve.score >= 9.0 ? 'CRITICAL' : 'HIGH');
+      if (cve.score >= 9.0) {
+        sevBadge.className = "px-2.5 py-0.5 rounded text-xs font-extrabold uppercase bg-red-500/20 text-red-400 border border-red-500/30 badge-glow-crit";
+      } else {
+        sevBadge.className = "px-2.5 py-0.5 rounded text-xs font-extrabold uppercase bg-orange-500/20 text-orange-400 border border-orange-500/30";
+      }
+
+      const kevBadge = document.getElementById("drawerKevBadge");
+      if (cve.cisaKev) {
+        kevBadge.classList.remove("hidden");
+      } else {
+        kevBadge.classList.add("hidden");
+      }
+
+      document.getElementById("drawerRemediationTitle").innerText = `${cve.platform} Mitigation Snippet`;
+      document.getElementById("drawerSnippet").innerText = generateRemediationSnippet(cve);
+      document.getElementById("drawerCopyBtnText").innerText = "Copy Snippet";
+
+      const links = document.getElementById("drawerLinks");
+      links.innerHTML = `
+        <a href="${cve.source || 'https://nvd.nist.gov/vuln/detail/' + cve.id}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sky-950/70 hover:bg-sky-900 border border-sky-700/60 text-sky-300 font-medium inline-flex items-center gap-1.5">
+          Official Advisory / NVD
+        </a>
+        <a href="https://www.google.com/search?q=${encodeURIComponent(cve.id + ' ' + cve.platform + ' security advisory')}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 font-medium inline-flex items-center gap-1.5">
+          Vendor PSIRT Search
+        </a>
+      `;
+
+      document.getElementById("inspectorDrawer").classList.remove("hidden");
+    }
+
+    function closeInspector() {
+      document.getElementById("inspectorDrawer").classList.add("hidden");
+      activeInspectorCve = null;
+    }
+
+    function copyDrawerCode() {
+      if (!activeInspectorCve) return;
+      const text = generateRemediationSnippet(activeInspectorCve);
+      const tempArea = document.createElement("textarea");
+      tempArea.value = text;
+      document.body.appendChild(tempArea);
+      tempArea.select();
+      try {
+        document.execCommand('copy');
+        document.getElementById("drawerCopyBtnText").innerText = "Copied!";
+        showToast("Remediation commands copied to clipboard.", "success");
+      } catch (err) {
+        showToast("Unable to copy.", "error");
+      }
+      document.body.removeChild(tempArea);
+
+      setTimeout(() => {
+        const btn = document.getElementById("drawerCopyBtnText");
+        if (btn) btn.innerText = "Copy Snippet";
+      }, 3000);
+    }
+
+    function exportFilteredData(format) {
+      if (filteredCves.length === 0) {
+        showToast("No vulnerabilities to export.", "error");
+        return;
+      }
+
+      const dateStamp = new Date().toISOString().slice(0, 10);
+      let filename = `Enterprise_Threat_Intel_${dateStamp}.csv`;
+      const headers = ["CVE ID", "Platform", "CVSS Score", "Severity", "Vector", "CISA KEV", "Title", "Published", "Advisory URL"];
+      const rows = filteredCves.map(c => [
+        `"${c.id}"`,
+        `"${c.platform}"`,
+        c.score,
+        `"${c.severity || 'HIGH'}"`,
+        `"${c.vector || 'NETWORK'}"`,
+        c.cisaKev ? "YES" : "NO",
+        `"${(c.title || '').replace(/"/g, '""')}"`,
+        `"${c.published || ''}"`,
+        `"${c.source || ''}"`
+      ]);
+
+      const csvContent = [headers.join(","), ...rows.map(r => r.join(","))].join("\r\n");
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast(`Exported ${filteredCves.length} CVEs to CSV`, "success");
+    }
+
+    function showToast(message, type = "info") {
+      const toast = document.getElementById("toastNotification");
+      const content = document.getElementById("toastMessage");
+      let borderStyle = "border-sky-500/40 bg-sky-950/90 text-sky-200";
+
+      if (type === "success") borderStyle = "border-emerald-500/40 bg-emerald-950/90 text-emerald-200";
+      if (type === "error") borderStyle = "border-red-500/40 bg-red-950/90 text-red-200";
+
+      toast.className = `transform transition-all duration-300 rounded-xl p-3 text-xs border flex items-center justify-between shadow-xl ${borderStyle}`;
+      content.innerHTML = `<span>${message}</span>`;
+      toast.classList.remove("hidden");
+
+      setTimeout(() => hideToast(), 4000);
+    }
+
+    function hideToast() {
+      document.getElementById("toastNotification").classList.add("hidden");
+    }
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeInspector();
+    });
+
+    // Initialize immediately
+    loadVulnerabilityFeed();
+  </script>
+</body>
+</html>
