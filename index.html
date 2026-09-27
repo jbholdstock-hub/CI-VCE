@@ -1172,7 +1172,58 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       initTelemetryCharts();
-      loadVulnerabilityFeed();
+      async function loadVulnerabilityFeed() {
+  const loadingIndicator = document.getElementById('loading-indicator');
+  const feedStatusBadge = document.getElementById('feed-status');
+
+  try {
+    // 1. Attempt to fetch generated JSON feed
+    const res = await fetch('./data/cves.json?t=' + Date.now());
+    
+    // Explicitly handle 404 or non-200 responses
+    if (!res.ok) {
+      throw new Error(`Feed HTTP status: ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    // 2. Validate data structure
+    const vulns = Array.isArray(data) ? data : (data.vulnerabilities || []);
+    if (!vulns.length) {
+      throw new Error("Feed returned an empty vulnerability array.");
+    }
+
+    // 3. Update status badge if element exists
+    if (feedStatusBadge) {
+      const updatedDate = data.lastUpdated ? data.lastUpdated.substring(0, 10) : 'Live';
+      feedStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Feed: ${updatedDate} (${vulns.length} CVEs)`;
+      feedStatusBadge.className = 'text-xs font-mono px-2.5 py-1 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5';
+    }
+
+    // 4. Render live data
+    currentVulnerabilities = vulns;
+    renderDashboard(vulns);
+
+  } catch (err) {
+    console.warn("Could not load ./data/cves.json, defaulting to cached baseline dataset:", err.message);
+
+    // Update status badge to indicate fallback data
+    if (feedStatusBadge) {
+      feedStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400"></span> Using Baseline Cache`;
+      feedStatusBadge.className = 'text-xs font-mono px-2.5 py-1 rounded bg-amber-950/60 text-amber-400 border border-amber-500/30 flex items-center gap-1.5';
+    }
+
+    // Fall back to embedded dataset
+    currentVulnerabilities = typeof FALLBACK_CVE_DATA !== 'undefined' ? FALLBACK_CVE_DATA : [];
+    renderDashboard(currentVulnerabilities);
+
+  } finally {
+    // 5. Always dismiss the loading indicator
+    if (loadingIndicator) {
+      loadingIndicator.classList.add('hidden');
+    }
+  }
+}
       lucide.createIcons();
     });
   </script>
