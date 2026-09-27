@@ -97,7 +97,35 @@ def main():
     print("Starting automated vulnerability ingestion...")
     cisa_kevs = get_cisa_kevs()
     all_cves = {}
-    
+    # Ensure all actively exploited Windows/Firewall KEVs are ingested directly
+    for cve_id, kev_item in cisa_kevs.items():
+        desc = kev_item.get("shortDescription", "")
+        vendor = kev_item.get("vendorProject", "").lower()
+        product = kev_item.get("product", "").lower()
+        
+        target_platform = None
+        if "microsoft" in vendor or "windows" in product:
+            target_platform = "Windows Server" if "server" in product else "Windows Desktop"
+        elif "fortinet" in vendor:
+            target_platform = "Fortinet"
+        elif "sonicwall" in vendor:
+            target_platform = "SonicWall"
+        elif "meraki" in vendor or "cisco" in vendor:
+            target_platform = "Cisco Meraki"
+            
+        if target_platform and cve_id not in all_cves:
+            all_cves[cve_id] = {
+                "id": cve_id,
+                "platform": target_platform,
+                "title": f"{kev_item.get('vulnerabilityName', 'Zero-Day Exploit')}",
+                "score": 8.0, # Default High for active KEVs lacking NVD scores
+                "severity": "HIGH",
+                "vector": "LOCAL" if "privilege" in desc.lower() else "NETWORK",
+                "published": kev_item.get("dateAdded", "")[:10],
+                "cisaKev": True,
+                "description": desc,
+                "source": f"https://nvd.nist.gov/vuln/detail/{cve_id}"
+            }
     for kw, plat in KEYWORDS:
         print(f"Fetching updates for {kw}...")
         results = fetch_cves_for_keyword(kw, plat, cisa_kevs)
