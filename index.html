@@ -420,6 +420,18 @@
     const FALLBACK_CVE_DATABASE = [
       // Windows Server
       {
+  id: "CVE-2026-81963",
+  platform: "Windows Server",
+  title: "Windows Update Stack EoP Zero-Day",
+  score: 7.8,
+  severity: "HIGH",
+  vector: "LOCAL",
+  published: "2026-09-08",
+  cisaKev: true,
+  description: "Improper link resolution (CWE-59) in Windows Update Stack allows authenticated local attackers to redirect file operations and escalate privileges to NT AUTHORITY\\SYSTEM.",
+  source: "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963"
+}
+      {
         id: "CVE-2024-38077",
         platform: "Windows Server",
         title: "Windows Remote Desktop Licensing Service Remote Code Execution (MadLicence)",
