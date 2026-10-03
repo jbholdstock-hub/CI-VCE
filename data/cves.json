@@ -1,19 +1,7 @@
 {
-  "lastUpdated": "2026-10-03T06:12:16.363227+00:00",
-  "total": 557,
+  "lastUpdated": "2026-10-03T14:52:44.747235+00:00",
+  "total": 551,
   "vulnerabilities": [
-    {
-      "id": "CVE-2016-2396",
-      "platform": "SonicWall",
-      "title": "SonicWall Vulnerability (CVE-2016-2396)",
-      "score": 9.9,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2016-02-17",
-      "cisaKev": false,
-      "description": "The GMS ViewPoint (GMSVP) web application in Dell SonicWALL GMS, Analyzer, and UMA EM5000 7.2, 8.0, and 8.1 before Hotfix 168056 allows remote authenticated users to execute arbitrary commands via vectors related to configuration input.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-2396"
-    },
     {
       "id": "CVE-2026-69730",
       "platform": "Fortinet",
@@ -73,54 +61,6 @@
       "cisaKev": false,
       "description": "Buffer overflow in the Cookie parser in Fortinet FortiOS 4.x before 4.1.11, 4.2.x before 4.2.13, and 4.3.x before 4.3.9 and FortiSwitch before 3.4.3 allows remote attackers to execute arbitrary code via a crafted HTTP request, aka EGREGIOUSBLUNDER.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-6909"
-    },
-    {
-      "id": "CVE-2016-2397",
-      "platform": "SonicWall",
-      "title": "SonicWall Vulnerability (CVE-2016-2397)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2016-02-17",
-      "cisaKev": false,
-      "description": "The cliserver implementation in Dell SonicWALL GMS, Analyzer, and UMA EM5000 7.2, 8.0, and 8.1 before Hotfix 168056 allows remote attackers to deserialize and execute arbitrary Java code via crafted XML data.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-2397"
-    },
-    {
-      "id": "CVE-2016-9682",
-      "platform": "SonicWall",
-      "title": "SonicWall Vulnerability (CVE-2016-9682)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2017-02-22",
-      "cisaKev": false,
-      "description": "The SonicWall Secure Remote Access server (version 8.1.0.2-14sv) is vulnerable to two Remote Command Injection vulnerabilities in its web administrative interface. These vulnerabilities occur in the diagnostics CGI (/cgi-bin/diagnostics) component responsible for emailing out information about the state of the system. The application doesn't properly escape the information passed in the 'tsrDeleteRestartedFile' or 'currentTSREmailTo' variables before making a call to system(), allowing for remote command injection. Exploitation of this vulnerability yields shell access to the remote machine under the nobody user account.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9682"
-    },
-    {
-      "id": "CVE-2024-40591",
-      "platform": "Fortinet",
-      "title": "FortiGate Vulnerability (CVE-2024-40591)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-02-11",
-      "cisaKev": false,
-      "description": "An incorrect privilege assignment vulnerability [CWE-266] in Fortinet FortiOS version 7.6.0, 7.4.0 through 7.4.4, 7.2.0 through 7.2.9 and before 7.0.15 allows an authenticated admin whose access profile has the Security Fabric permission to escalate their privileges to super-admin by connecting the targetted FortiGate to a malicious upstream FortiGate they control.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40591"
-    },
-    {
-      "id": "CVE-2024-47571",
-      "platform": "Fortinet",
-      "title": "FortiGate Vulnerability (CVE-2024-47571)",
-      "score": 8.1,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-01-14",
-      "cisaKev": false,
-      "description": "An operation on a resource after expiration or release in Fortinet FortiManager 6.4.12 through 7.4.0 allows an attacker to gain improper access to FortiGate via valid credentials.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-47571"
     },
     {
       "id": "CVE-2026-104286",
@@ -6649,18 +6589,6 @@
       "cisaKev": false,
       "description": "An information disclosure vulnerability in Fortinet FortiOS 5.6.0, 5.4.4 and below versions allows attacker to get FortiOS version info by inspecting FortiOS IKE VendorID packets.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-3130"
-    },
-    {
-      "id": "CVE-2019-15703",
-      "platform": "Fortinet",
-      "title": "FortiGate Vulnerability (CVE-2019-15703)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2019-10-24",
-      "cisaKev": false,
-      "description": "An Insufficient Entropy in PRNG vulnerability in Fortinet FortiOS 6.2.1, 6.2.0, 6.0.8 and below for device not enable hardware TRNG token and models not support builtin TRNG seed allows attacker to theoretically recover the long term ECDSA secret in a TLS client with a RSA handshake and mutual ECDSA authentication via the help of flush+reload side channel attacks in FortiGate VM models only.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-15703"
     },
     {
       "id": "CVE-2017-7738",
