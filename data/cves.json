@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-08T00:07:18.956559+00:00",
-  "total": 581,
+  "lastUpdated": "2026-10-08T06:08:53.404889+00:00",
+  "total": 574,
   "vulnerabilities": [
     {
       "id": "CVE-2016-2396",
@@ -181,66 +181,6 @@
       "cisaKev": false,
       "description": "SonicOS SSLVPN improper restriction of excessive MFA attempts vulnerability allows an authenticated attacker to use excessive MFA codes.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-1101"
-    },
-    {
-      "id": "CVE-2022-20933",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2022-20933)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2022-10-26",
-      "cisaKev": false,
-      "description": "A vulnerability in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z3 Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability is due to insufficient validation of client-supplied parameters while establishing an SSL VPN session. An attacker could exploit this vulnerability by crafting a malicious request and sending it to the affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to crash and restart, resulting in the failure of the established SSL VPN connections and forcing remote users to initiate a new VPN connection and re-authenticate. A sustained attack could prevent new SSL VPN connections from being established. Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers gracefully without requiring manual intervention. Cisco Meraki has released software updates that address this vulnerability.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-20933"
-    },
-    {
-      "id": "CVE-2024-20498",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20498)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-10-02",
-      "cisaKev": false,
-      "description": "Multiple vulnerabilities in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a DoS condition in the AnyConnect service on an affected device.\r\n\n These vulnerabilities are due to insufficient validation of client-supplied parameters while establishing an SSL VPN session. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to the VPN server of an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN connections and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\n Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers gracefully without requiring manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20498"
-    },
-    {
-      "id": "CVE-2024-20499",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20499)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-10-02",
-      "cisaKev": false,
-      "description": "Multiple vulnerabilities in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a DoS condition in the AnyConnect service on an affected device.\r\n\n These vulnerabilities are due to insufficient validation of client-supplied parameters while establishing an SSL VPN session. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to the VPN server of an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN connections and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\n Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers gracefully without requiring manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20499"
-    },
-    {
-      "id": "CVE-2024-20501",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20501)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-10-02",
-      "cisaKev": false,
-      "description": "Multiple vulnerabilities in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a DoS condition in the AnyConnect service on an affected device.\r\n\n These vulnerabilities are due to insufficient validation of client-supplied parameters while establishing an SSL VPN session. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to the VPN server of an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN connections and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\n Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers gracefully without requiring manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20501"
-    },
-    {
-      "id": "CVE-2025-20271",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2025-20271)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-06-18",
-      "cisaKev": false,
-      "description": "A vulnerability in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition in the Cisco AnyConnect service on an affected device.\r\n\r\nThis vulnerability is due to&nbsp;variable initialization errors when an SSL VPN session is established. An attacker could exploit this vulnerability by sending a sequence of crafted HTTPS requests to an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of all established SSL VPN sessions and forcing remote users to initiate a new VPN connection and re-authenticate. A sustained attack could prevent new SSL VPN connections from being established, effectively making the Cisco AnyConnect VPN service unavailable for all legitimate users.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-20271"
     },
     {
       "id": "CVE-2024-47571",
@@ -6747,18 +6687,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7487"
     },
     {
-      "id": "CVE-2025-20212",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2025-20212)",
-      "score": 7.7,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-04-02",
-      "cisaKev": false,
-      "description": "A vulnerability in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series devices could allow an authenticated, remote attacker to cause a denial of service (DoS) condition in the Cisco AnyConnect service on an affected device. To exploit this vulnerability, the attacker must have valid VPN user credentials on the affected device.\r\n\r This vulnerability exists because a variable is not initialized when an SSL VPN session is established. An attacker could exploit this vulnerability by supplying crafted attributes while establishing an SSL VPN session with an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN sessions and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\r Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers without manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-20212"
-    },
-    {
       "id": "CVE-2001-1452",
       "platform": "Windows Server",
       "title": "Windows Server Vulnerability (CVE-2001-1452)",
@@ -6925,18 +6853,6 @@
       "cisaKev": false,
       "description": "A Stack-based buffer overflow vulnerability in the SonicOS allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0656"
-    },
-    {
-      "id": "CVE-2024-20430",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20430)",
-      "score": 7.3,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2024-09-12",
-      "cisaKev": false,
-      "description": "A vulnerability in Cisco Meraki Systems Manager (SM) Agent for Windows could allow an authenticated, local attacker to execute arbitrary code with elevated privileges.&nbsp;\r\n\r\nThis vulnerability is due to incorrect handling of directory search paths at runtime. A low-privileged attacker could exploit this vulnerability by placing both malicious configuration files and malicious DLL files on an affected system, which would read and execute the files when Cisco Meraki SM launches on startup. A successful exploit could allow the attacker to execute arbitrary code on the affected system with SYSTEM privileges.&nbsp;",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20430"
     },
     {
       "id": "CVE-2017-7738",
