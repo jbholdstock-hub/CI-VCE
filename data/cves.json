@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-09T12:08:19.081957+00:00",
-  "total": 557,
+  "lastUpdated": "2026-10-09T18:07:21.057078+00:00",
+  "total": 574,
   "vulnerabilities": [
     {
       "id": "CVE-2016-2396",
@@ -51,6 +51,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-72979"
     },
     {
+      "id": "CVE-2020-5135",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2020-5135)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2020-10-12",
+      "cisaKev": true,
+      "description": "A buffer overflow vulnerability in SonicOS allows a remote attacker to cause Denial of Service (DoS) and potentially execute arbitrary code by sending a malicious request to the firewall. This vulnerability affected SonicOS Gen 6 version 6.5.4.7, 6.5.1.12, 6.0.5.3, SonicOSv 6.5.4.v and Gen 7 version 7.0.0.0.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5135"
+    },
+    {
       "id": "CVE-2016-1909",
       "platform": "Fortinet",
       "title": "FortiOS Vulnerability (CVE-2016-1909)",
@@ -99,6 +111,30 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9682"
     },
     {
+      "id": "CVE-2019-7475",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2019-7475)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2019-04-02",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicWall SonicOS and SonicOSv with management enabled system on specific configuration allow unprivileged user to access advanced routing services. This vulnerability affected SonicOS Gen 5 version 5.9.1.10 and earlier, Gen 6 version 6.2.7.3, 6.5.1.3, 6.5.2.2, 6.5.3.1, 6.2.7.8, 6.4.0.0, 6.5.1.8, 6.0.5.3-86o and SonicOSv 6.5.0.2-8v_RC363 (VMWARE), 6.5.0.2.8v_RC367 (AZURE), SonicOSv 6.5.0.2.8v_RC368 (AWS), SonicOSv 6.5.0.2.8v_RC366 (HYPER_V).",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7475"
+    },
+    {
+      "id": "CVE-2022-22274",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2022-22274)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2022-03-25",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow vulnerability in the SonicOS via HTTP request allows a remote unauthenticated attacker to cause Denial of Service (DoS) or potentially results in code execution in the firewall.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-22274"
+    },
+    {
       "id": "CVE-2024-40591",
       "platform": "Fortinet",
       "title": "FortiGate Vulnerability (CVE-2024-40591)",
@@ -109,6 +145,42 @@
       "cisaKev": false,
       "description": "An incorrect privilege assignment vulnerability [CWE-266] in Fortinet FortiOS version 7.6.0, 7.4.0 through 7.4.4, 7.2.0 through 7.2.9 and before 7.0.15 allows an authenticated admin whose access profile has the Security Fabric permission to escalate their privileges to super-admin by connecting the targetted FortiGate to a malicious upstream FortiGate they control.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40591"
+    },
+    {
+      "id": "CVE-2021-20046",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2021-20046)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2022-01-10",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow in the SonicOS HTTP Content-Length response header allows a remote authenticated attacker to cause Denial of Service (DoS) and potentially results in code execution in the firewall. This vulnerability affected SonicOS Gen 5, Gen 6 and Gen 7 firmware versions.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20046"
+    },
+    {
+      "id": "CVE-2021-20048",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2021-20048)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2022-01-10",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow in the SonicOS SessionID HTTP response header allows a remote authenticated attacker to cause Denial of Service (DoS) and potentially results in code execution in the firewall. This vulnerability affected SonicOS Gen 5, Gen 6 and Gen 7 firmware versions.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20048"
+    },
+    {
+      "id": "CVE-2023-1101",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2023-1101)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-03-02",
+      "cisaKev": false,
+      "description": "SonicOS SSLVPN improper restriction of excessive MFA attempts vulnerability allows an authenticated attacker to use excessive MFA codes.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-1101"
     },
     {
       "id": "CVE-2024-47571",
@@ -4095,18 +4167,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2009-2055"
     },
     {
-      "id": "CVE-2020-5135",
-      "platform": "SonicWall",
-      "title": "SonicWall SonicOS Buffer Overflow Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2022-03-15",
-      "cisaKev": true,
-      "description": "A buffer overflow vulnerability in SonicOS allows a remote attacker to cause Denial of Service (DoS) and potentially execute arbitrary code by sending a malicious request to the firewall.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5135"
-    },
-    {
       "id": "CVE-2019-1405",
       "platform": "Windows Desktop",
       "title": "Microsoft Windows Universal Plug and Play (UPnP) Service Privilege Escalation Vulnerability",
@@ -6615,6 +6675,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
     },
     {
+      "id": "CVE-2019-7487",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2019-7487)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2019-12-19",
+      "cisaKev": false,
+      "description": "Installation of the SonicOS SSLVPN NACagent 3.5 on the Windows operating system, an autorun value is created does not put the path in quotes, so if a malicious binary by an attacker within the parent path could allow code execution.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7487"
+    },
+    {
       "id": "CVE-2001-1452",
       "platform": "Windows Server",
       "title": "Windows Server Vulnerability (CVE-2001-1452)",
@@ -6663,6 +6735,126 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-15703"
     },
     {
+      "id": "CVE-2019-7477",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2019-7477)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2019-04-02",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicWall SonicOS and SonicOSv TLS CBC Cipher allow remote attackers to obtain sensitive plaintext data when CBC cipher suites are enabled. This vulnerability affected SonicOS Gen 5 version 5.9.1.10 and earlier, Gen 6 version 6.2.7.3, 6.5.1.3, 6.5.2.2, 6.5.3.1, 6.2.7.8, 6.4.0.0, 6.5.1.8, 6.0.5.3-86o and SonicOSv 6.5.0.2-8v_RC363 (VMWARE), 6.5.0.2.8v_RC367 (AZURE), SonicOSv 6.5.0.2.8v_RC368 (AWS), SonicOSv 6.5.0.2.8v_RC366 (HYPER_V).",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7477"
+    },
+    {
+      "id": "CVE-2020-5133",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2020-5133)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2020-10-12",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicOS allows a remote unauthenticated attacker to cause Denial of Service due to buffer overflow, which leads to a firewall crash. This vulnerability affected SonicOS Gen 6 version 6.5.1.12, 6.0.5.3, SonicOSv 6.5.4.v and Gen 7 version 7.0.0.0.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5133"
+    },
+    {
+      "id": "CVE-2020-5137",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2020-5137)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2020-10-12",
+      "cisaKev": false,
+      "description": "A buffer overflow vulnerability in SonicOS allows a remote unauthenticated attacker to cause Denial of Service (DoS) on the firewall SSLVPN service and leads to firewall crash. This vulnerability affected SonicOS Gen 5 version 5.9.1.7, 5.9.1.13, Gen 6 version 6.5.4.7, 6.5.1.12, 6.0.5.3, SonicOSv 6.5.4.v and Gen 7 version 7.0.0.0.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5137"
+    },
+    {
+      "id": "CVE-2020-5138",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2020-5138)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2020-10-12",
+      "cisaKev": false,
+      "description": "A Heap Overflow vulnerability in the SonicOS allows a remote unauthenticated attacker to cause Denial of Service (DoS) on the firewall SSLVPN service and leads to SonicOS crash. This vulnerability affected SonicOS Gen 5 version 5.9.1.7, 5.9.1.13, Gen 6 version 6.5.4.7, 6.5.1.12, 6.0.5.3, SonicOSv 6.5.4.v and Gen 7 version SonicOS 7.0.0.0.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5138"
+    },
+    {
+      "id": "CVE-2020-5139",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2020-5139)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2020-10-12",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicOS SSLVPN service allows a remote unauthenticated attacker to cause Denial of Service (DoS) due to the release of Invalid pointer and leads to a firewall crash. This vulnerability affected SonicOS Gen 5 version 5.9.1.7, 5.9.1.13, Gen 6 version 6.5.4.7, 6.5.1.12, 6.0.5.3, SonicOSv 6.5.4.v and Gen 7 version SonicOS 7.0.0.0.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5139"
+    },
+    {
+      "id": "CVE-2020-5140",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2020-5140)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2020-10-12",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicOS allows a remote unauthenticated attacker to cause Denial of Service (DoS) on the firewall SSLVPN service by sending a malicious HTTP request that leads to memory addresses leak. This vulnerability affected SonicOS Gen 5 version 5.9.1.7, 5.9.1.13, Gen 6 version 6.5.4.7, 6.5.1.12, 6.0.5.3, SonicOSv 6.5.4.v and Gen 7 version SonicOS 7.0.0.0.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5140"
+    },
+    {
+      "id": "CVE-2021-20027",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2021-20027)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-06-14",
+      "cisaKev": false,
+      "description": "A buffer overflow vulnerability in SonicOS allows a remote attacker to cause a Denial of Service (DoS) by sending a specially crafted request. This vulnerability affects SonicOS Gen5, Gen6, Gen7 platforms, and SonicOSv virtual firewalls.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20027"
+    },
+    {
+      "id": "CVE-2021-20019",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2021-20019)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-06-23",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicOS where the HTTP server response leaks partial memory by sending a crafted HTTP request, this can potentially lead to an internal sensitive data disclosure vulnerability.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20019"
+    },
+    {
+      "id": "CVE-2022-22278",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2022-22278)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2022-04-27",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicOS CFS (Content filtering service) returns a large 403 forbidden HTTP response message to the source address when users try to access prohibited resource this allows an attacker to cause HTTP Denial of Service (DoS) attack",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-22278"
+    },
+    {
+      "id": "CVE-2023-0656",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2023-0656)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-03-02",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow vulnerability in the SonicOS allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0656"
+    },
+    {
       "id": "CVE-2017-7738",
       "platform": "Fortinet",
       "title": "FortiOS Vulnerability (CVE-2017-7738)",
@@ -6673,6 +6865,18 @@
       "cisaKev": false,
       "description": "An Information Disclosure vulnerability in Fortinet FortiOS 5.6.0 to 5.6.2, 5.4.0 to 5.4.5, 5.2 and below versions allow an admin user with super_admin privileges to view the current SSL VPN web portal session info which may contains user credentials through the fnsysctl CLI command.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-7738"
+    },
+    {
+      "id": "CVE-2019-7479",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2019-7479)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2019-12-31",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicOS allow authenticated read-only admin can elevate permissions to configuration mode. This vulnerability affected SonicOS Gen 5 version 5.9.1.12-4o and earlier, Gen 6 version 6.2.7.4-32n, 6.5.1.4-4n, 6.5.2.3-4n, 6.5.3.3-3n, 6.2.7.10-3n, 6.4.1.0-3n, 6.5.3.3-3n, 6.5.1.9-4n and SonicOSv 6.5.0.2-8v_RC363 (VMWARE), 6.5.0.2.8v_RC367 (AZURE), SonicOSv 6.5.0.2.8v_RC368 (AWS), SonicOSv 6.5.0.2.8v_RC366 (HYPER_V).",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7479"
     },
     {
       "id": "CVE-1999-0012",
