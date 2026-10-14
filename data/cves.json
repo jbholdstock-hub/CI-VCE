@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-13T18:10:11.360986+00:00",
-  "total": 581,
+  "lastUpdated": "2026-10-14T00:15:40.367736+00:00",
+  "total": 582,
   "vulnerabilities": [
     {
       "id": "CVE-2016-2396",
@@ -253,6 +253,18 @@
       "cisaKev": false,
       "description": "An operation on a resource after expiration or release in Fortinet FortiManager 6.4.12 through 7.4.0 allows an attacker to gain improper access to FortiGate via valid credentials.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-47571"
+    },
+    {
+      "id": "CVE-2026-96951",
+      "platform": "Windows Desktop",
+      "title": "Microsoft Windows Command Injection Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-10-13",
+      "cisaKev": true,
+      "description": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951"
     },
     {
       "id": "CVE-2026-104286",
