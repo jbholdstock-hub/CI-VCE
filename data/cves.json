@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-15T12:21:08.196740+00:00",
-  "total": 609,
+  "lastUpdated": "2026-10-15T18:19:09.552718+00:00",
+  "total": 610,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -77,7 +77,7 @@
     {
       "id": "CVE-2024-40766",
       "platform": "SonicWall",
-      "title": "SonicOS Vulnerability (CVE-2024-40766)",
+      "title": "SonicWall Vulnerability (CVE-2024-40766)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -121,18 +121,6 @@
       "cisaKev": true,
       "description": "An authentication bypass using an alternate path or channel [CWE-288] in Fortinet FortiOS version 7.2.0 through 7.2.1 and 7.0.0 through 7.0.6, FortiProxy version 7.2.0 and version 7.0.0 through 7.0.6 and FortiSwitchManager version 7.2.0 and 7.0.0 allows an unauthenticated atttacker to perform operations on the administrative interface via specially crafted HTTP or HTTPS requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-40684"
-    },
-    {
-      "id": "CVE-2019-11634",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2019-11634)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2019-05-22",
-      "cisaKev": true,
-      "description": "Citrix Workspace App before 1904 for Windows has Incorrect Access Control.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-11634"
     },
     {
       "id": "CVE-2020-12812",
@@ -245,7 +233,7 @@
     {
       "id": "CVE-2026-44170",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2026-44170)",
+      "title": "Windows 11 Vulnerability (CVE-2026-44170)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -293,7 +281,7 @@
     {
       "id": "CVE-2025-55754",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2025-55754)",
+      "title": "Windows 11 Vulnerability (CVE-2025-55754)",
       "score": 9.6,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -337,18 +325,6 @@
       "cisaKev": false,
       "description": "A Zip Slip vulnerability in the SonicWall Network Security Manager (NSM) On-Prem file upload and archive processing functionality allows an attacker to extract files outside the intended destination directory using a specially crafted archive.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81939"
-    },
-    {
-      "id": "CVE-2026-45721",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2026-45721)",
-      "score": 9.0,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2026-05-26",
-      "cisaKev": false,
-      "description": "Algernon is a small self-contained pure-Go web server. Prior to 1.17.7, when Algernon is asked for any URL path that resolves to a directory without an index file, DirPage walks upward through parent directories \u2014 past the configured server root \u2014 looking for a file named handler.lua to execute as the request handler. The loop terminates only after 100 ancestor steps or when filepath.Dir returns ., so on any absolute server-root path the search reaches the filesystem root (/ on Unix, drive letter on Windows). The first handler.lua it finds is loaded into the Lua interpreter with the full Algernon API exposed \u2014 including run3(), httpclient, os.execute, io.popen, PQ, MSSQL, raw filesystem access, and the userstate database. Any process that can write handler.lua anywhere in a parent directory of the server root obtains pre-authenticated remote code execution on the next HTTP request. This is reachable without authentication \u2014 the lookup happens before the permission check returns a hit (the perm system only gates URL prefixes, not the handler-resolution step), and any URL pointing at a directory without an index triggers the walk. On a fresh stock Algernon install the request GET / is enough. This vulnerability is fixed in 1.17.7.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-45721"
     },
     {
       "id": "CVE-2017-0145",
@@ -483,18 +459,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34481"
     },
     {
-      "id": "CVE-2026-76259",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2026-76259)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2026-08-19",
-      "cisaKev": false,
-      "description": "In Splunk Enterprise for Windows versions below 10.4.2, 10.2.6, 10.0.9, 9.4.13, and 9.3.14, a local user with access to the Windows host could bind to the management port before Splunk Enterprise starts, intercept authentication tokens from child processes, and use those tokens to compromise all relevant data and system integrity available to the user account running Splunk Enterprise. The vulnerability is possible because the Windows management-port listener does not apply exclusive address binding protections before the service starts.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-76259"
-    },
-    {
       "id": "CVE-2019-5589",
       "platform": "Fortinet",
       "title": "Fortinet Vulnerability (CVE-2019-5589)",
@@ -543,6 +507,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-66152"
     },
     {
+      "id": "CVE-2026-96540",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-96540)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-10-14",
+      "cisaKev": false,
+      "description": "An improper access control vulnerability has been identified in the SonicWall Network Security Manager (NSM) on-prem in export settings, potentially allowing a remote authenticated attacker to obtain sensitive information. This may allow the attacker to escalate privileges to an administrator or to intercept communications of other users of the NSM instance.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-96540"
+    },
+    {
       "id": "CVE-2015-2546",
       "platform": "Windows Desktop",
       "title": "Windows 10 Vulnerability (CVE-2015-2546)",
@@ -553,6 +529,42 @@
       "cisaKev": true,
       "description": "The kernel-mode driver in Microsoft Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, Windows RT Gold and 8.1, and Windows 10 allows local users to gain privileges via a crafted application, aka \"Win32k Memory Corruption Elevation of Privilege Vulnerability,\" a different vulnerability than CVE-2015-2511, CVE-2015-2517, and CVE-2015-2518.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-2546"
+    },
+    {
+      "id": "CVE-2018-12214",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2018-12214)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2019-03-14",
+      "cisaKev": false,
+      "description": "Potential memory corruption in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables a privileged user to execute arbitrary code via local access.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12214"
+    },
+    {
+      "id": "CVE-2018-12216",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2018-12216)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2019-03-14",
+      "cisaKev": false,
+      "description": "Insufficient input validation in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables a privileged user to execute arbitrary code via local access via local access.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12216"
+    },
+    {
+      "id": "CVE-2018-12220",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2018-12220)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2019-03-14",
+      "cisaKev": false,
+      "description": "Logic bug in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables a privileged user to execute arbitrary code via local access.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12220"
     },
     {
       "id": "CVE-2023-41266",
@@ -3903,6 +3915,30 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-0880"
     },
     {
+      "id": "CVE-2019-1385",
+      "platform": "Windows Desktop",
+      "title": "Microsoft Windows AppX Deployment Extensions Privilege Escalation Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2022-05-23",
+      "cisaKev": true,
+      "description": "A privilege escalation vulnerability exists when the Windows AppX Deployment Extensions improperly performs privilege management, resulting in access to system files.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1385"
+    },
+    {
+      "id": "CVE-2019-1130",
+      "platform": "Windows Desktop",
+      "title": "Microsoft Windows AppX Deployment Service Privilege Escalation Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2022-05-23",
+      "cisaKev": true,
+      "description": "A privilege escalation vulnerability exists when Windows AppX Deployment Service (AppXSVC) improperly handles hard links.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1130"
+    },
+    {
       "id": "CVE-2018-8589",
       "platform": "Windows Desktop",
       "title": "Microsoft Win32k Privilege Escalation Vulnerability",
@@ -4525,6 +4561,18 @@
       "cisaKev": true,
       "description": "A buffer overflow vulnerability in SonicOS allows a remote attacker to cause Denial of Service (DoS) and potentially execute arbitrary code by sending a malicious request to the firewall.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5135"
+    },
+    {
+      "id": "CVE-2019-1405",
+      "platform": "Windows Desktop",
+      "title": "Microsoft Windows Universal Plug and Play (UPnP) Service Privilege Escalation Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2022-03-15",
+      "cisaKev": true,
+      "description": "A privilege escalation vulnerability exists when the Windows UPnP service improperly allows COM object creation.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1405"
     },
     {
       "id": "CVE-2019-1322",
@@ -5595,6 +5643,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20038"
     },
     {
+      "id": "CVE-2020-0787",
+      "platform": "Windows Desktop",
+      "title": "Microsoft Windows Background Intelligent Transfer Service (BITS) Improper Privilege Management Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2022-01-28",
+      "cisaKev": true,
+      "description": "Microsoft Windows BITS is vulnerable to to a privilege elevation vulnerability if it improperly handles symbolic links. An actor can exploit this vulnerability to execute arbitrary code with system-level privileges.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-0787"
+    },
+    {
       "id": "CVE-2014-1776",
       "platform": "Windows Desktop",
       "title": "Microsoft Internet Explorer Memory Corruption Vulnerability",
@@ -5617,6 +5677,18 @@
       "cisaKev": true,
       "description": "Microsoft Exchange Server contains an information disclosure vulnerability which can allow an unauthenticated attacker to steal email traffic from target.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33766"
+    },
+    {
+      "id": "CVE-2019-1458",
+      "platform": "Windows Desktop",
+      "title": "Microsoft Win32k Privilege Escalation Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2022-01-10",
+      "cisaKev": true,
+      "description": "A privilege escalation vulnerability exists in Windows when the Win32k component fails to properly handle objects in memory, aka 'Win32k EoP.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1458"
     },
     {
       "id": "CVE-2013-3900",
@@ -5845,6 +5917,18 @@
       "cisaKev": true,
       "description": "Cisco Adaptive Security Appliance (ASA) contains an improper input validation vulnerability with HTTP URLs. Exploitation could allow an attacker to cause a denial-of-service (DoS) condition or information disclosure.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-0296"
+    },
+    {
+      "id": "CVE-2019-11634",
+      "platform": "Windows Desktop",
+      "title": "Citrix Workspace Application and Receiver for Windows Remote Code Execution Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-11-03",
+      "cisaKev": true,
+      "description": "Citrix Workspace Application and Receiver for Windows contains remote code execution vulnerability resulting from local drive access preferences not being enforced into the clients' local drives.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-11634"
     },
     {
       "id": "CVE-2019-5591",
@@ -6855,42 +6939,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-2291"
     },
     {
-      "id": "CVE-2019-1385",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2019-1385)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2019-11-12",
-      "cisaKev": true,
-      "description": "An elevation of privilege vulnerability exists when the Windows AppX Deployment Extensions improperly performs privilege management, resulting in access to system files.To exploit this vulnerability, an authenticated attacker would need to run a specially crafted application to elevate privileges.The security update addresses the vulnerability by correcting how AppX Deployment Extensions manages privileges., aka 'Windows AppX Deployment Extensions Elevation of Privilege Vulnerability'.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1385"
-    },
-    {
-      "id": "CVE-2019-1130",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2019-1130)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2019-07-15",
-      "cisaKev": true,
-      "description": "An elevation of privilege vulnerability exists when Windows AppX Deployment Service (AppXSVC) improperly handles hard links, aka 'Windows Elevation of Privilege Vulnerability'. This CVE ID is unique from CVE-2019-1129.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1130"
-    },
-    {
-      "id": "CVE-2019-1405",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2019-1405)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2019-11-12",
-      "cisaKev": true,
-      "description": "An elevation of privilege vulnerability exists when the Windows Universal Plug and Play (UPnP) service improperly allows COM object creation, aka 'Windows UPnP Service Elevation of Privilege Vulnerability'.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1405"
-    },
-    {
       "id": "CVE-2015-1701",
       "platform": "Windows Server",
       "title": "Windows Server Vulnerability (CVE-2015-1701)",
@@ -6901,18 +6949,6 @@
       "cisaKev": true,
       "description": "Win32k.sys in the kernel-mode drivers in Microsoft Windows Server 2003 SP2, Vista SP2, and Server 2008 SP2 allows local users to gain privileges via a crafted application, as exploited in the wild in April 2015, aka \"Win32k Elevation of Privilege Vulnerability.\"",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-1701"
-    },
-    {
-      "id": "CVE-2020-0787",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2020-0787)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2020-03-12",
-      "cisaKev": true,
-      "description": "An elevation of privilege vulnerability exists when the Windows Background Intelligent Transfer Service (BITS) improperly handles symbolic links, aka 'Windows Background Intelligent Transfer Service Elevation of Privilege Vulnerability'.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-0787"
     },
     {
       "id": "CVE-2018-8453",
@@ -6927,18 +6963,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-8453"
     },
     {
-      "id": "CVE-2019-1458",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2019-1458)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2019-12-10",
-      "cisaKev": true,
-      "description": "An elevation of privilege vulnerability exists in Windows when the Win32k component fails to properly handle objects in memory, aka 'Win32k Elevation of Privilege Vulnerability'.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-1458"
-    },
-    {
       "id": "CVE-2016-7255",
       "platform": "Windows Desktop",
       "title": "Windows 10 Vulnerability (CVE-2016-7255)",
@@ -6951,28 +6975,16 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-7255"
     },
     {
-      "id": "CVE-2019-14565",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2019-14565)",
+      "id": "CVE-2018-12221",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2018-12221)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
-      "published": "2019-11-14",
+      "published": "2019-03-14",
       "cisaKev": false,
-      "description": "Insufficient initialization in Intel(R) SGX SDK Windows versions 2.4.100.51291 and earlier, and Linux versions 2.6.100.51363 and earlier, may allow an authenticated user to enable information disclosure, escalation of privilege or denial of service via local access.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-14565"
-    },
-    {
-      "id": "CVE-2019-14566",
-      "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2019-14566)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2019-11-14",
-      "cisaKev": false,
-      "description": "Insufficient input validation in Intel(R) SGX SDK multiple Linux and Windows versions may allow an authenticated user to enable information disclosure, escalation of privilege or denial of service via local access.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-14566"
+      "description": "Insufficient input validation in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables an unprivileged user to cause an integer overflow via local access.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12221"
     },
     {
       "id": "CVE-2021-26887",
@@ -7167,18 +7179,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-48884"
     },
     {
-      "id": "CVE-2026-55841",
-      "platform": "Fortinet",
-      "title": "FortiGate Vulnerability (CVE-2026-55841)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2026-08-28",
-      "cisaKev": false,
-      "description": "Graylog is a free and open log management platform. Prior to Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3, the FortiGate key-value syslog parser in graylog2-server/src/main/java/org/graylog2/inputs/codecs/GLFortiGateSyslogEvent.java and graylog2-server/src/main/java/org/graylog2/inputs/codecs/SyslogCodec.java mishandles field-like text inside quoted values. GLFortiGateSyslogEvent.getFields() uses KV_PATTERN and QUOTED_KV_PATTERN, while SyslogCodec.parse() invokes the FortiGateSyslogEvent parser; crafted values containing = or backslash-escaped quotes can cause embedded keys such as srcip, dstip, date, time, and tz to remove or overwrite original top-level fields or produce an invalid message that Graylog discards. An unauthenticated network sender who can submit syslog messages can therefore manipulate security-log fields or evade logging to obscure malicious activity. This issue is fixed in Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-55841"
-    },
-    {
       "id": "CVE-2021-27070",
       "platform": "Windows Desktop",
       "title": "Windows 10 Vulnerability (CVE-2021-27070)",
@@ -7285,6 +7285,18 @@
       "cisaKev": false,
       "description": "An Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.2, FortiSandbox 4.4.0 through 4.4.7, FortiSandbox 4.2 all versions, FortiSandbox 4.0 all versions may allow an authenticated attacker to execute unauthorized code on the underlying system via crafted HTTP requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53949"
+    },
+    {
+      "id": "CVE-2026-100232",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-100232)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-10-14",
+      "cisaKev": false,
+      "description": "Post-authentication Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability has been identified in the SonicWall Network Security Manager (NSM) on-prem which in specific conditions could potentially enable a remote authenticated attacker to execute arbitrary OS commands, resulting in remote code execution.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-100232"
     },
     {
       "id": "CVE-2018-8120",
