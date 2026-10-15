@@ -1,30 +1,30 @@
 {
-  "lastUpdated": "2026-10-15T06:21:04.516356+00:00",
-  "total": 623,
+  "lastUpdated": "2026-10-15T12:21:08.196740+00:00",
+  "total": 609,
   "vulnerabilities": [
     {
-      "id": "CVE-2024-23108",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2024-23108)",
+      "id": "CVE-2025-2857",
+      "platform": "Windows Desktop",
+      "title": "Windows 11 Vulnerability (CVE-2025-2857)",
       "score": 10.0,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2024-02-05",
+      "published": "2025-03-27",
       "cisaKev": false,
-      "description": "An improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet  allows attacker to execute unauthorized code or commands via via\u00a0crafted API requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23108"
+      "description": "Following the recent Chrome sandbox escape (CVE-2025-2783), various Firefox developers identified a similar pattern in our IPC code. A compromised child process could cause the parent process to return an unintentionally powerful handle, leading to a sandbox escape. \nThe original vulnerability was being exploited in the wild. \n*This only affects Firefox on Windows. Other operating systems are unaffected.*. This vulnerability was fixed in Firefox 136.0.4, Firefox ESR 128.8.1, and Firefox ESR 115.21.1.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-2857"
     },
     {
-      "id": "CVE-2024-23109",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2024-23109)",
+      "id": "CVE-2025-57870",
+      "platform": "Windows Desktop",
+      "title": "Windows 11 Vulnerability (CVE-2025-57870)",
       "score": 10.0,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2024-02-05",
+      "published": "2025-10-22",
       "cisaKev": false,
-      "description": "An improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet  allows attacker to execute unauthorized code or commands via via\u00a0crafted API requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23109"
+      "description": "A SQL Injection vulnerability exists in Esri ArcGIS Server versions 11.3, 11.4 and 11.5 on Windows, Linux and Kubernetes. This vulnerability allows a remote, unauthenticated attacker to execute arbitrary SQL commands via a specific ArcGIS Feature Service operation. Successful exploitation can potentially result in unauthorized access, modification, or deletion of data from the underlying Enterprise Geodatabase.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-57870"
     },
     {
       "id": "CVE-2026-69730",
@@ -63,28 +63,28 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-72979"
     },
     {
-      "id": "CVE-2024-23113",
+      "id": "CVE-2024-55591",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-23113)",
+      "title": "FortiOS Vulnerability (CVE-2024-55591)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2024-02-15",
+      "published": "2025-01-14",
       "cisaKev": true,
-      "description": "A use of externally-controlled format string in Fortinet FortiOS versions 7.4.0 through 7.4.2, 7.2.0 through 7.2.6, 7.0.0 through 7.0.13, FortiProxy versions 7.4.0 through 7.4.2, 7.2.0 through 7.2.8, 7.0.0 through 7.0.14, FortiPAM versions 1.2.0, 1.1.0 through 1.1.2, 1.0.0 through 1.0.3, FortiSwitchManager versions 7.2.0 through 7.2.3, 7.0.0 through 7.0.3 allows attacker to execute unauthorized code or commands via specially crafted packets.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23113"
+      "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS version 7.0.0 through 7.0.16 and FortiProxy version 7.0.0 through 7.0.19 and 7.2.0 through 7.2.12 allows a remote attacker to gain super-admin privileges via crafted requests to\u00a0Node.js websocket module.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
     },
     {
-      "id": "CVE-2023-48788",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-48788)",
+      "id": "CVE-2024-40766",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2024-40766)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2024-03-12",
+      "published": "2024-08-23",
       "cisaKev": true,
-      "description": "A improper neutralization of special elements used in an sql command ('sql injection') in Fortinet FortiClientEMS version 7.2.0 through 7.2.2, FortiClientEMS 7.0.1 through 7.0.10 allows attacker to execute unauthorized code or commands via specially crafted packets.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-48788"
+      "description": "An improper access control vulnerability has been identified in the SonicWall SonicOS management access, potentially leading to unauthorized resource access and in specific conditions, causing the firewall to crash. This issue affects SonicWall Firewall Gen 5 and Gen 6 devices, as well as Gen 7 devices running SonicOS 7.0.1-5035 and older versions.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40766"
     },
     {
       "id": "CVE-2024-21762",
@@ -147,6 +147,30 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-12812"
     },
     {
+      "id": "CVE-2021-20021",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2021-20021)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-04-09",
+      "cisaKev": true,
+      "description": "A vulnerability in the SonicWall Email Security version 10.0.9.x allows an attacker to create an administrative account by sending a crafted HTTP request to the remote host.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20021"
+    },
+    {
+      "id": "CVE-2021-20016",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2021-20016)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-02-04",
+      "cisaKev": true,
+      "description": "A SQL-Injection vulnerability in the SonicWall SSLVPN SMA100 product allows a remote unauthenticated attacker to perform SQL query to access username password and other session related information. This vulnerability impacts SMA100 build version 10.x.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20016"
+    },
+    {
       "id": "CVE-2021-26877",
       "platform": "Windows Server",
       "title": "Windows Server Vulnerability (CVE-2021-26877)",
@@ -207,40 +231,28 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26897"
     },
     {
-      "id": "CVE-2023-5168",
+      "id": "CVE-2024-46796",
       "platform": "Windows Desktop",
-      "title": "Windows 11 Vulnerability (CVE-2023-5168)",
+      "title": "Windows 11 Vulnerability (CVE-2024-46796)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2023-09-27",
+      "published": "2024-09-18",
       "cisaKev": false,
-      "description": "A compromised content process could have provided malicious data to `FilterNodeD2D1` resulting in an out-of-bounds write, leading to a potentially exploitable crash in a privileged process.\n*This bug only affects Firefox on Windows. Other operating systems are unaffected.* This vulnerability affects Firefox < 118, Firefox ESR < 115.3, and Thunderbird < 115.3.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5168"
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix double put of @cfile in smb2_set_path_size()\n\nIf smb2_compound_op() is called with a valid @cfile and returned\n-EINVAL, we need to call cifs_get_writable_path() before retrying it\nas the reference of @cfile was already dropped by previous call.\n\nThis fixes the following KASAN splat when running fstests generic/013\nagainst Windows Server 2022:\n\n  CIFS: Attempting to mount //w22-fs0/scratch\n  run fstests generic/013 at 2024-09-02 19:48:59\n  ==================================================================\n  BUG: KASAN: slab-use-after-free in detach_if_pending+0xab/0x200\n  Write of size 8 at addr ffff88811f1a3730 by task kworker/3:2/176\n\n  CPU: 3 UID: 0 PID: 176 Comm: kworker/3:2 Not tainted 6.11.0-rc6 #2\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-2.fc40\n  04/01/2014\n  Workqueue: cifsoplockd cifs_oplock_break [cifs]\n  Call Trace:\n   <TASK>\n   dump_stack_lvl+0x5d/0x80\n   ? detach_if_pending+0xab/0x200\n   print_report+0x156/0x4d9\n   ? detach_if_pending+0xab/0x200\n   ? __virt_addr_valid+0x145/0x300\n   ? __phys_addr+0x46/0x90\n   ? detach_if_pending+0xab/0x200\n   kasan_report+0xda/0x110\n   ? detach_if_pending+0xab/0x200\n   detach_if_pending+0xab/0x200\n   timer_delete+0x96/0xe0\n   ? __pfx_timer_delete+0x10/0x10\n   ? rcu_is_watching+0x20/0x50\n   try_to_grab_pending+0x46/0x3b0\n   __cancel_work+0x89/0x1b0\n   ? __pfx___cancel_work+0x10/0x10\n   ? kasan_save_track+0x14/0x30\n   cifs_close_deferred_file+0x110/0x2c0 [cifs]\n   ? __pfx_cifs_close_deferred_file+0x10/0x10 [cifs]\n   ? __pfx_down_read+0x10/0x10\n   cifs_oplock_break+0x4c1/0xa50 [cifs]\n   ? __pfx_cifs_oplock_break+0x10/0x10 [cifs]\n   ? lock_is_held_type+0x85/0xf0\n   ? mark_held_locks+0x1a/0x90\n   process_one_work+0x4c6/0x9f0\n   ? find_held_lock+0x8a/0xa0\n   ? __pfx_process_one_work+0x10/0x10\n   ? lock_acquired+0x220/0x550\n   ? __list_add_valid_or_report+0x37/0x100\n   worker_thread+0x2e4/0x570\n   ? __kthread_parkme+0xd1/0xf0\n   ? __pfx_worker_thread+0x10/0x10\n   kthread+0x17f/0x1c0\n   ? kthread+0xda/0x1c0\n   ? __pfx_kthread+0x10/0x10\n   ret_from_fork+0x31/0x60\n   ? __pfx_kthread+0x10/0x10\n   ret_from_fork_asm+0x1a/0x30\n   </TASK>\n\n  Allocated by task 1118:\n   kasan_save_stack+0x30/0x50\n   kasan_save_track+0x14/0x30\n   __kasan_kmalloc+0xaa/0xb0\n   cifs_new_fileinfo+0xc8/0x9d0 [cifs]\n   cifs_atomic_open+0x467/0x770 [cifs]\n   lookup_open.isra.0+0x665/0x8b0\n   path_openat+0x4c3/0x1380\n   do_filp_open+0x167/0x270\n   do_sys_openat2+0x129/0x160\n   __x64_sys_creat+0xad/0xe0\n   do_syscall_64+0xbb/0x1d0\n   entry_SYSCALL_64_after_hwframe+0x77/0x7f\n\n  Freed by task 83:\n   kasan_save_stack+0x30/0x50\n   kasan_save_track+0x14/0x30\n   kasan_save_free_info+0x3b/0x70\n   poison_slab_object+0xe9/0x160\n   __kasan_slab_free+0x32/0x50\n   kfree+0xf2/0x300\n   process_one_work+0x4c6/0x9f0\n   worker_thread+0x2e4/0x570\n   kthread+0x17f/0x1c0\n   ret_from_fork+0x31/0x60\n   ret_from_fork_asm+0x1a/0x30\n\n  Last potentially related work creation:\n   kasan_save_stack+0x30/0x50\n   __kasan_record_aux_stack+0xad/0xc0\n   insert_work+0x29/0xe0\n   __queue_work+0x5ea/0x760\n   queue_work_on+0x6d/0x90\n   _cifsFileInfo_put+0x3f6/0x770 [cifs]\n   smb2_compound_op+0x911/0x3940 [cifs]\n   smb2_set_path_size+0x228/0x270 [cifs]\n   cifs_set_file_size+0x197/0x460 [cifs]\n   cifs_setattr+0xd9c/0x14b0 [cifs]\n   notify_change+0x4e3/0x740\n   do_truncate+0xfa/0x180\n   vfs_truncate+0x195/0x200\n   __x64_sys_truncate+0x109/0x150\n   do_syscall_64+0xbb/0x1d0\n   entry_SYSCALL_64_after_hwframe+0x77/0x7f",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-46796"
     },
     {
-      "id": "CVE-2023-5174",
+      "id": "CVE-2026-44170",
       "platform": "Windows Desktop",
-      "title": "Windows 11 Vulnerability (CVE-2023-5174)",
+      "title": "Windows 10 Vulnerability (CVE-2026-44170)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2023-09-27",
+      "published": "2026-06-12",
       "cisaKev": false,
-      "description": "If Windows failed to duplicate a handle during process creation, the sandbox code may have inadvertently freed a pointer twice, resulting in a use-after-free and a potentially exploitable crash.\n*This bug only affects Firefox on Windows when run in non-standard configurations (such as using `runas`). Other operating systems are unaffected.* This vulnerability affects Firefox < 118, Firefox ESR < 115.3, and Thunderbird < 115.3.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5174"
-    },
-    {
-      "id": "CVE-2024-3863",
-      "platform": "Windows Desktop",
-      "title": "Windows 11 Vulnerability (CVE-2024-3863)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2024-04-16",
-      "cisaKev": false,
-      "description": "The executable file warning was not presented when downloading .xrm-ms files.  \n*Note: This issue only affected Windows operating systems. Other operating systems are unaffected.* This vulnerability affects Firefox < 125, Firefox ESR < 115.10, and Thunderbird < 115.10.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-3863"
+      "description": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, MariaDB on WIndows with installed CONNECT engine and enabled REST support interpolated table HTTP attribute into the curl command line without proper sanitizing. This allows the user to execute shell commands on the server. This issue has been patched in versions 10.6.26, 10.11.17, 11.4.11, 11.8.7, and 12.3.2.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-44170"
     },
     {
       "id": "CVE-2023-42789",
@@ -255,6 +267,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-42789"
     },
     {
+      "id": "CVE-2025-25256",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2025-25256)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2025-08-12",
+      "cisaKev": false,
+      "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSIEM 7.3.0 through 7.3.1, FortiSIEM 7.2.0 through 7.2.5, FortiSIEM 7.1.0 through 7.1.7, FortiSIEM 7.0.0 through 7.0.3, FortiSIEM 6.7.0 through 6.7.9, FortiSIEM 6.6 all versions, FortiSIEM 6.5 all versions, FortiSIEM 6.4 all versions, FortiSIEM 6.3 all versions, FortiSIEM 6.2 all versions, FortiSIEM 6.1 all versions, FortiSIEM 5.4 all versions, FortiSIEM 5.3 all versions, FortiSIEM 5.2 all versions, FortiSIEM 5.1 all versions, FortiSIEM 5.0 all versions, FortiSIEM 4.10 all versions, FortiSIEM 4.9 all versions, FortiSIEM 4.7 all versions allows an unauthenticated attacker to execute unauthorized code or commands via crafted CLI requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25256"
+    },
+    {
       "id": "CVE-2023-41265",
       "platform": "Windows Desktop",
       "title": "Windows 10 Vulnerability (CVE-2023-41265)",
@@ -267,28 +291,64 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41265"
     },
     {
-      "id": "CVE-2023-48365",
+      "id": "CVE-2025-55754",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-48365)",
+      "title": "Windows 10 Vulnerability (CVE-2025-55754)",
       "score": 9.6,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2023-11-15",
-      "cisaKev": true,
-      "description": "Qlik Sense Enterprise for Windows before August 2023 Patch 2 allows unauthenticated remote code execution, aka QB-21683. Due to improper validation of HTTP headers, a remote attacker is able to elevate their privilege by tunneling HTTP requests, allowing them to execute HTTP requests on the backend server that hosts the repository application. The fixed versions are August 2023 Patch 2, May 2023 Patch 6, February 2023 Patch 10, November 2022 Patch 12, August 2022 Patch 14, May 2022 Patch 16, February 2022 Patch 15, and November 2021 Patch 17. NOTE: this issue exists because of an incomplete fix for CVE-2023-41265.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-48365"
+      "published": "2025-10-27",
+      "cisaKev": false,
+      "description": "Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in Apache Tomcat.\n\nTomcat did not escape ANSI escape sequences in log messages. If Tomcat was running in a console on a Windows operating system, and the console supported ANSI escape sequences, it was possible for an attacker to use a specially crafted URL to inject ANSI escape sequences to manipulate the console and the clipboard and attempt to trick an administrator into running an attacker controlled command. While no attack vector was found, it may have been possible to mount this attack on other operating systems.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.10, from 10.1.0-M1 through 10.1.44, from 9.0.40 through 9.0.108.\n\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.60 though 8.5.100. Other, older, EOL versions may also be affected.\nUsers are recommended to upgrade to version 11.0.11 or later, 10.1.45 or later or 9.0.109 or later, which fix the issue.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-55754"
     },
     {
-      "id": "CVE-2023-47534",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-47534)",
-      "score": 9.6,
+      "id": "CVE-2026-78327",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-78327)",
+      "score": 9.1,
       "severity": "CRITICAL",
       "vector": "NETWORK",
-      "published": "2024-03-12",
+      "published": "2026-09-04",
       "cisaKev": false,
-      "description": "A improper neutralization of formula elements in a csv file in Fortinet FortiClientEMS version 7.2.0 through 7.2.2, 7.0.0 through 7.0.10, 6.4.0 through 6.4.9, 6.2.0 through 6.2.9, 6.0.0 through 6.0.8 allows attacker to execute unauthorized code or commands via specially crafted packets.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-47534"
+      "description": "An Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in the SonicWall Network Security Manager (NSM) On-Prem Management interface allows an authenticated attacker with SuperAdmin privileges to inject arbitrary commands that are executed on the underlying host, resulting in remote code execution.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-78327"
+    },
+    {
+      "id": "CVE-2026-78328",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-78328)",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2026-09-04",
+      "cisaKev": false,
+      "description": "A missing authorization vulnerability in the SonicWall Network Security Manager (NSM) On-Prem Management interface allows a lower-privileged Admin user to escalate privileges to SuperAdmin.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-78328"
+    },
+    {
+      "id": "CVE-2026-81939",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-81939)",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2026-09-04",
+      "cisaKev": false,
+      "description": "A Zip Slip vulnerability in the SonicWall Network Security Manager (NSM) On-Prem file upload and archive processing functionality allows an attacker to extract files outside the intended destination directory using a specially crafted archive.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81939"
+    },
+    {
+      "id": "CVE-2026-45721",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2026-45721)",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2026-05-26",
+      "cisaKev": false,
+      "description": "Algernon is a small self-contained pure-Go web server. Prior to 1.17.7, when Algernon is asked for any URL path that resolves to a directory without an index file, DirPage walks upward through parent directories \u2014 past the configured server root \u2014 looking for a file named handler.lua to execute as the request handler. The loop terminates only after 100 ancestor steps or when filepath.Dir returns ., so on any absolute server-root path the search reaches the filesystem root (/ on Unix, drive letter on Windows). The first handler.lua it finds is loaded into the Lua interpreter with the full Algernon API exposed \u2014 including run3(), httpclient, os.execute, io.popen, PQ, MSSQL, raw filesystem access, and the userstate database. Any process that can write handler.lua anywhere in a parent directory of the server root obtains pre-authenticated remote code execution on the next HTTP request. This is reachable without authentication \u2014 the lookup happens before the permission check returns a hit (the perm system only gates URL prefixes, not the handler-resolution step), and any URL pointing at a directory without an index triggers the walk. On a fresh stock Algernon install the request GET / is enough. This vulnerability is fixed in 1.17.7.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-45721"
     },
     {
       "id": "CVE-2017-0145",
@@ -387,16 +447,28 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34442"
     },
     {
-      "id": "CVE-2024-22014",
+      "id": "CVE-2025-1930",
       "platform": "Windows Desktop",
-      "title": "Windows 11 Vulnerability (CVE-2024-22014)",
+      "title": "Windows 11 Vulnerability (CVE-2025-1930)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2024-04-15",
+      "published": "2025-03-04",
       "cisaKev": false,
-      "description": "An issue discovered in 360 Total Security Antivirus through 11.0.0.1061 for Windows allows attackers to gain escalated privileges via Symbolic Link Follow to Arbitrary File Delete.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-22014"
+      "description": "On Windows, a compromised content process could use bad StreamData sent over AudioIPC to trigger a use-after-free in the Browser process. This could have led to a sandbox escape. This vulnerability was fixed in Firefox 136, Firefox ESR 115.21, Firefox ESR 128.8, Thunderbird 136, and Thunderbird 128.8.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-1930"
+    },
+    {
+      "id": "CVE-2025-3928",
+      "platform": "Windows Desktop",
+      "title": "Windows 11 Vulnerability (CVE-2025-3928)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-04-25",
+      "cisaKev": true,
+      "description": "Commvault Web Server has an unspecified vulnerability that can be exploited by a remote, authenticated attacker. According to the Commvault advisory: \"Webservers can be compromised through bad actors creating and executing webshells.\" Fixed in version 11.36.46, 11.32.89, 11.28.141, and 11.20.217 for Windows and Linux platforms. This vulnerability was added to the CISA Known Exploited Vulnerabilities (KEV) Catalog on 2025-04-28.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-3928"
     },
     {
       "id": "CVE-2021-34481",
@@ -411,16 +483,16 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34481"
     },
     {
-      "id": "CVE-2023-51749",
+      "id": "CVE-2026-76259",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-51749)",
+      "title": "Windows 10 Vulnerability (CVE-2026-76259)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "LOCAL",
-      "published": "2024-01-11",
+      "published": "2026-08-19",
       "cisaKev": false,
-      "description": "ScaleFusion 10.5.2 does not properly limit users to the Edge application because a search can be made from a tooltip. NOTE: the vendor's position is \"Not vulnerable if the default Windows device profile configuration is used which utilizes modern management with website allow-listing rules.\"",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-51749"
+      "description": "In Splunk Enterprise for Windows versions below 10.4.2, 10.2.6, 10.0.9, 9.4.13, and 9.3.14, a local user with access to the Windows host could bind to the management port before Splunk Enterprise starts, intercept authentication tokens from child processes, and use those tokens to compromise all relevant data and system integrity available to the user account running Splunk Enterprise. The vulnerability is possible because the Windows management-port listener does not apply exclusive address binding protections before the service starts.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-76259"
     },
     {
       "id": "CVE-2019-5589",
@@ -435,172 +507,40 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-5589"
     },
     {
-      "id": "CVE-2023-41678",
+      "id": "CVE-2024-23668",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-41678)",
+      "title": "Fortinet Vulnerability (CVE-2024-23668)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2023-12-13",
+      "published": "2024-06-03",
       "cisaKev": false,
-      "description": "A double free in Fortinet FortiOS versions 7.0.0 through 7.0.5, FortiPAM version 1.0.0 through 1.0.3, 1.1.0 through 1.1.1 allows attacker to execute unauthorized code or commands via specifically crafted request.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41678"
+      "description": "An improper authorization in Fortinet FortiWebManager 7.2.0, FortiWebManager 7.0.0 through 7.0.4, FortiWebManager 6.3.0, FortiWebManager 6.2.3 through 6.2.4, FortiWebManager 6.0.2 allows attacker to execute unauthorized code or commands via HTTP requests or CLI.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23668"
     },
     {
-      "id": "CVE-2023-48782",
+      "id": "CVE-2025-53844",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-48782)",
+      "title": "FortiOS Vulnerability (CVE-2025-53844)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2023-12-13",
+      "published": "2026-05-12",
       "cisaKev": false,
-      "description": "A improper neutralization of special elements used in an os command ('os command injection') in Fortinet FortiWLM version 8.6.0 through 8.6.5 allows attacker to execute unauthorized code or commands via specifically crafted http get request parameters",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-48782"
+      "description": "A out-of-bounds write vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11 allows attacker to execute unauthorized code or commands via specially crafted packets.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53844"
     },
     {
-      "id": "CVE-2023-44252",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-44252)",
+      "id": "CVE-2026-66152",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-66152)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2023-12-13",
+      "published": "2026-08-25",
       "cisaKev": false,
-      "description": "** UNSUPPORTED WHEN ASSIGNED **An improper authentication vulnerability [CWE-287] in Fortinet FortiWAN version 5.2.0 through 5.2.1 and version 5.1.1 through 5.1.2 may allow an authenticated attacker to escalate his privileges via HTTP or HTTPs requests with crafted JWT token values.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-44252"
-    },
-    {
-      "id": "CVE-2023-44250",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-44250)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-01-10",
-      "cisaKev": false,
-      "description": "An improper privilege management vulnerability [CWE-269] in a Fortinet FortiOS HA cluster version 7.4.0 through 7.4.1 and 7.2.5 and in a FortiProxy HA cluster version 7.4.0 through 7.4.1 allows an authenticated attacker to perform elevated actions via crafted HTTP or HTTPS requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-44250"
-    },
-    {
-      "id": "CVE-2023-45581",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-45581)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-02-15",
-      "cisaKev": false,
-      "description": "An improper privilege management vulnerability [CWE-269] in Fortinet FortiClientEMS version 7.2.0 through 7.2.2 and before 7.0.10 allows an\u00a0Site administrator with Super Admin privileges to perform global administrative operations affecting other sites via crafted HTTP or HTTPS requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-45581"
-    },
-    {
-      "id": "CVE-2023-42791",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-42791)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-02-20",
-      "cisaKev": false,
-      "description": "A relative path traversal in Fortinet FortiManager version 7.4.0 and 7.2.0 through 7.2.3 and 7.0.0 through 7.0.8 and 6.4.0 through 6.4.12 and 6.2.0 through 6.2.11 allows attacker to execute unauthorized code or commands via crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-42791"
-    },
-    {
-      "id": "CVE-2023-4576",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-4576)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-09-11",
-      "cisaKev": false,
-      "description": "On Windows, an integer overflow could occur in `RecordedSourceSurfaceCreation` which resulted in a heap buffer overflow potentially leaking sensitive data that could have led to a sandbox escape.\n*This bug only affects Firefox on Windows. Other operating systems are unaffected.* This vulnerability affects Firefox < 117, Firefox ESR < 102.15, Firefox ESR < 115.2, Thunderbird < 102.15, and Thunderbird < 115.2.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4576"
-    },
-    {
-      "id": "CVE-2024-20498",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20498)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-10-02",
-      "cisaKev": false,
-      "description": "Multiple vulnerabilities in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a DoS condition in the AnyConnect service on an affected device.\r\n\n These vulnerabilities are due to insufficient validation of client-supplied parameters while establishing an SSL VPN session. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to the VPN server of an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN connections and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\n Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers gracefully without requiring manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20498"
-    },
-    {
-      "id": "CVE-2024-20499",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20499)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-10-02",
-      "cisaKev": false,
-      "description": "Multiple vulnerabilities in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a DoS condition in the AnyConnect service on an affected device.\r\n\n These vulnerabilities are due to insufficient validation of client-supplied parameters while establishing an SSL VPN session. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to the VPN server of an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN connections and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\n Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers gracefully without requiring manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20499"
-    },
-    {
-      "id": "CVE-2024-20501",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20501)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-10-02",
-      "cisaKev": false,
-      "description": "Multiple vulnerabilities in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a DoS condition in the AnyConnect service on an affected device.\r\n\n These vulnerabilities are due to insufficient validation of client-supplied parameters while establishing an SSL VPN session. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to the VPN server of an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN connections and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\n Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers gracefully without requiring manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20501"
-    },
-    {
-      "id": "CVE-2025-20271",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2025-20271)",
-      "score": 8.6,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-06-18",
-      "cisaKev": false,
-      "description": "A vulnerability in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series Teleworker Gateway devices could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition in the Cisco AnyConnect service on an affected device.\r\n\r\nThis vulnerability is due to&nbsp;variable initialization errors when an SSL VPN session is established. An attacker could exploit this vulnerability by sending a sequence of crafted HTTPS requests to an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of all established SSL VPN sessions and forcing remote users to initiate a new VPN connection and re-authenticate. A sustained attack could prevent new SSL VPN connections from being established, effectively making the Cisco AnyConnect VPN service unavailable for all legitimate users.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-20271"
-    },
-    {
-      "id": "CVE-2024-25699",
-      "platform": "Windows Desktop",
-      "title": "Windows 11 Vulnerability (CVE-2024-25699)",
-      "score": 8.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-04-04",
-      "cisaKev": false,
-      "description": "There is a difficult\u2011to\u2011exploit improper authentication issue in the Home application for Esri Portal for ArcGIS versions 11.2 and below on Windows and Linux, and ArcGIS Enterprise versions 11.1 and below on Kubernetes, which under unique circumstances could allow a remote, authenticated attacker with low\u2011privileged access to compromise the confidentiality, integrity, and availability of the software. Successful exploitation allows the attacker to cross an authentication and authorization boundary beyond their originally assigned access, resulting in a scope change.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-25699"
-    },
-    {
-      "id": "CVE-2023-47145",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-47145)",
-      "score": 8.4,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2024-01-07",
-      "cisaKev": false,
-      "description": "IBM Db2 for Windows (includes Db2 Connect Server) 10.5, 11.1, and 11.5 could allow a local user to escalate their privileges to the SYSTEM user using the MSI repair functionality.  IBM X-Force ID:  270402.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-47145"
-    },
-    {
-      "id": "CVE-2023-44251",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-44251)",
-      "score": 8.3,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-12-13",
-      "cisaKev": false,
-      "description": "** UNSUPPORTED WHEN ASSIGNED **A improper limitation of a pathname to a restricted directory ('path traversal') vulnerability [CWE-22] in Fortinet FortiWAN version 5.2.0 through 5.2.1 and version 5.1.1. through 5.1.2 may allow an authenticated attacker to read and delete arbitrary file of the system via crafted HTTP or HTTPs requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-44251"
+      "description": "A Path traversal vulnerability in the SonicWall NetExtender Linux client file extractor component allows an attacker to write arbitrary file as root.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-66152"
     },
     {
       "id": "CVE-2015-2546",
@@ -627,6 +567,42 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41266"
     },
     {
+      "id": "CVE-2025-58325",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-58325)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2025-10-14",
+      "cisaKev": false,
+      "description": "An Incorrect Provision of Specified Functionality vulnerability [CWE-684] in FortiOS 7.6.0, 7.4.0 through 7.4.5, 7.2.5 through 7.2.10, 7.0.0 through 7.0.15, 6.4 all versions may allow a local authenticated attacker to execute system commands via crafted CLI commands.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-58325"
+    },
+    {
+      "id": "CVE-2025-25249",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-25249)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-01-13",
+      "cisaKev": true,
+      "description": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25249"
+    },
+    {
+      "id": "CVE-2025-24472",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-24472)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-02-11",
+      "cisaKev": true,
+      "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS 7.0.0 through 7.0.16 and FortiProxy 7.2.0 through 7.2.12, 7.0.0 through 7.0.19 may allow a remote unauthenticated attacker with prior knowledge of upstream and downstream devices serial numbers to gain super-admin privileges on the downstream device, if the Security Fabric is enabled, via crafted CSF proxy requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-24472"
+    },
+    {
       "id": "CVE-2017-12615",
       "platform": "Windows Server",
       "title": "Windows Server Vulnerability (CVE-2017-12615)",
@@ -639,30 +615,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-12615"
     },
     {
-      "id": "CVE-2023-41841",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-41841)",
-      "score": 8.1,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-10-10",
-      "cisaKev": false,
-      "description": "An improper authorization vulnerability in Fortinet FortiOS 7.0.0 - 7.0.11 and 7.2.0 - 7.2.4 allows an attacker belonging to the prof-admin profile to perform elevated actions.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41841"
-    },
-    {
-      "id": "CVE-2023-41682",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-41682)",
-      "score": 8.1,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-10-13",
-      "cisaKev": false,
-      "description": "A improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiSandbox 4.4.0, FortiSandbox 4.2.1 through 4.2.5, FortiSandbox 4.0.0 through 4.0.3, FortiSandbox 3.2 all versions, FortiSandbox 3.1 all versions, FortiSandbox 3.0 all versions, FortiSandbox 2.5 all versions, FortiSandbox 2.4 all versions allows attacker to denial of service via crafted http requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41682"
-    },
-    {
       "id": "CVE-2023-42790",
       "platform": "Fortinet",
       "title": "FortiOS Vulnerability (CVE-2023-42790)",
@@ -673,6 +625,18 @@
       "cisaKev": false,
       "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.4.0 through 7.4.1, FortiOS 7.2.0 through 7.2.5, FortiOS 7.0.0 through 7.0.12, FortiOS 6.4.0 through 6.4.14, FortiOS 6.2.0 through 6.2.15, FortiProxy 7.4.0, FortiProxy 7.2.0 through 7.2.6, FortiProxy 7.0.0 through 7.0.12, FortiProxy 2.0.0 through 2.0.13, FortiSASE 23.2.b allows attacker to execute unauthorized code or commands via specially crafted HTTP requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-42790"
+    },
+    {
+      "id": "CVE-2026-84393",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2026-84393)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-09-08",
+      "cisaKev": false,
+      "description": "A improper validation of certificate with host mismatch vulnerability in Fortinet FortiOS 7.6.1 through 7.6.6, FortiProxy 7.6.2 through 7.6.6 may allow attacker to information disclosure via <insert attack vector here>",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-84393"
     },
     {
       "id": "CVE-2026-76519",
@@ -757,18 +721,6 @@
       "cisaKev": true,
       "description": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461"
-    },
-    {
-      "id": "CVE-2025-25249",
-      "platform": "Fortinet",
-      "title": "Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2026-09-09",
-      "cisaKev": true,
-      "description": "Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25249"
     },
     {
       "id": "CVE-2026-20079",
@@ -1983,18 +1935,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20439"
     },
     {
-      "id": "CVE-2025-24472",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2025-03-18",
-      "cisaKev": true,
-      "description": " Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that allows a remote attacker to gain super-admin privileges via crafted CSF proxy requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-24472"
-    },
-    {
       "id": "CVE-2025-24993",
       "platform": "Windows Desktop",
       "title": "Microsoft Windows NTFS Heap-Based Buffer Overflow Vulnerability",
@@ -2223,18 +2163,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-21333"
     },
     {
-      "id": "CVE-2024-55591",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2025-01-14",
-      "cisaKev": true,
-      "description": "Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that may allow an unauthenticated, remote attacker to gain super-admin privileges via crafted requests to Node.js websocket module.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
-    },
-    {
       "id": "CVE-2024-35250",
       "platform": "Windows Desktop",
       "title": "Microsoft Windows Kernel-Mode Driver Untrusted Pointer Dereference Vulnerability ",
@@ -2343,6 +2271,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-30088"
     },
     {
+      "id": "CVE-2024-23113",
+      "platform": "Fortinet",
+      "title": "Fortinet Multiple Products Format String Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2024-10-09",
+      "cisaKev": true,
+      "description": "Fortinet FortiOS, FortiPAM, FortiProxy, and FortiWeb contain a format string vulnerability that allows a remote, unauthenticated attacker to execute arbitrary code or commands via specially crafted requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23113"
+    },
+    {
       "id": "CVE-2024-43573",
       "platform": "Windows Desktop",
       "title": "Microsoft Windows MSHTML Platform Spoofing Vulnerability",
@@ -2425,18 +2365,6 @@
       "cisaKev": true,
       "description": "Microsoft Publisher contains a protection mechanism failure vulnerability that allows attacker to bypass Office macro policies used to block untrusted or malicious files.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-38226"
-    },
-    {
-      "id": "CVE-2024-40766",
-      "platform": "SonicWall",
-      "title": "SonicWall SonicOS Improper Access Control Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-09-09",
-      "cisaKev": true,
-      "description": "SonicWall SonicOS contains an improper access control vulnerability that could lead to unauthorized resource access and, under certain conditions, may cause the firewall to crash.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40766"
     },
     {
       "id": "CVE-2021-31196",
@@ -2677,6 +2605,18 @@
       "cisaKev": true,
       "description": "Microsoft SharePoint Server contains a code injection vulnerability that allows an authenticated attacker with Site Owner privileges to execute code remotely.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-24955"
+    },
+    {
+      "id": "CVE-2023-48788",
+      "platform": "Fortinet",
+      "title": "Fortinet FortiClient EMS SQL Injection Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2024-03-25",
+      "cisaKev": true,
+      "description": "Fortinet FortiClient EMS contains a SQL injection vulnerability that allows an unauthenticated attacker to execute commands as SYSTEM via specifically crafted requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-48788"
     },
     {
       "id": "CVE-2024-21338",
@@ -6855,42 +6795,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-38648"
     },
     {
-      "id": "CVE-2021-20021",
-      "platform": "SonicWall",
-      "title": "SonicWall Email Security Improper Privilege Management Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "SonicWall Email Security contains an improper privilege management vulnerability that allows an attacker to create an administrative account by sending a crafted HTTP request to the remote host. This vulnerability has known usage in a SonicWall Email Security exploit chain along with CVE-2021-20022 and CVE-2021-20023 to achieve privilege escalation.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20021"
-    },
-    {
-      "id": "CVE-2019-7481",
-      "platform": "SonicWall",
-      "title": "SonicWall SMA100 SQL Injection Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "SonicWall SMA100 contains a SQL injection vulnerability allowing an unauthenticated user to gain read-only access to unauthorized resources.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7481"
-    },
-    {
-      "id": "CVE-2021-20022",
-      "platform": "SonicWall",
-      "title": "SonicWall Email Security Unrestricted Upload of File Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "SonicWall Email Security contains an unrestricted upload of file with dangerous type vulnerability that allows a post-authenticated attacker to upload a file to the remote host. This vulnerability has known usage in a SonicWall Email Security exploit chain along with CVE-2021-20021 and CVE-2021-20023 to achieve privilege escalation.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20022"
-    },
-    {
       "id": "CVE-2021-20023",
       "platform": "SonicWall",
       "title": "SonicWall Email Security Path Traversal Vulnerability",
@@ -6901,18 +6805,6 @@
       "cisaKev": true,
       "description": "SonicWall Email Security contains a path traversal vulnerability that allows a post-authenticated attacker to read files on the remote host. This vulnerability has known usage in a SonicWall Email Security exploit chain along with CVE-2021-20021 and CVE-2021-20022 to achieve privilege escalation.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20023"
-    },
-    {
-      "id": "CVE-2021-20016",
-      "platform": "SonicWall",
-      "title": "SonicWall SSLVPN SMA100 SQL Injection Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "SonicWall SSLVPN SMA100 contains a SQL injection vulnerability that allows remote exploitation for credential access by an unauthenticated attacker.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20016"
     },
     {
       "id": "CVE-2021-33746",
@@ -6937,18 +6829,6 @@
       "cisaKev": false,
       "description": "Windows DNS Server Remote Code Execution Vulnerability",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33754"
-    },
-    {
-      "id": "CVE-2024-23112",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-23112)",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "ADJACENT_NETWORK",
-      "published": "2024-03-12",
-      "cisaKev": false,
-      "description": "An authorization bypass through user-controlled key vulnerability [CWE-639] in FortiOS version 7.4.0 through 7.4.1, 7.2.0 through 7.2.6, 7.0.1 through 7.0.13, 6.4.7 through 6.4.14, and FortiProxy version 7.4.0 through 7.4.2, 7.2.0 through 7.2.8, 7.0.0 through 7.0.14 SSL-VPN may allow an authenticated attacker to gain access to another user\u2019s bookmark via URL manipulation.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23112"
     },
     {
       "id": "CVE-2026-81963",
@@ -7119,64 +6999,88 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4807"
     },
     {
-      "id": "CVE-2023-44217",
+      "id": "CVE-2023-52751",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-44217)",
+      "title": "Windows 10 Vulnerability (CVE-2023-52751)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
-      "published": "2023-10-03",
+      "published": "2024-05-21",
       "cisaKev": false,
-      "description": "\nA local privilege escalation vulnerability in SonicWall Net Extender MSI client for Windows 10.2.336 and earlier versions allows a local low-privileged user to gain system privileges through running repair functionality.\n\n",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-44217"
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix use-after-free in smb2_query_info_compound()\n\nThe following UAF was triggered when running fstests generic/072 with\nKASAN enabled against Windows Server 2022 and mount options\n'multichannel,max_channels=2,vers=3.1.1,mfsymlinks,noperm'\n\n  BUG: KASAN: slab-use-after-free in smb2_query_info_compound+0x423/0x6d0 [cifs]\n  Read of size 8 at addr ffff888014941048 by task xfs_io/27534\n\n  CPU: 0 PID: 27534 Comm: xfs_io Not tainted 6.6.0-rc7 #1\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS\n  rel-1.16.2-3-gd478f380-rebuilt.opensuse.org 04/01/2014\n  Call Trace:\n   dump_stack_lvl+0x4a/0x80\n   print_report+0xcf/0x650\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __phys_addr+0x46/0x90\n   kasan_report+0xda/0x110\n   ? smb2_query_info_compound+0x423/0x6d0 [cifs]\n   ? smb2_query_info_compound+0x423/0x6d0 [cifs]\n   smb2_query_info_compound+0x423/0x6d0 [cifs]\n   ? __pfx_smb2_query_info_compound+0x10/0x10 [cifs]\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __stack_depot_save+0x39/0x480\n   ? kasan_save_stack+0x33/0x60\n   ? kasan_set_track+0x25/0x30\n   ? ____kasan_slab_free+0x126/0x170\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n   ? __pfx_smb2_queryfs+0x10/0x10 [cifs]\n   ? __pfx___lock_acquire+0x10/0x10\n   smb311_queryfs+0x210/0x220 [cifs]\n   ? __pfx_smb311_queryfs+0x10/0x10 [cifs]\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __lock_acquire+0x480/0x26c0\n   ? lock_release+0x1ed/0x640\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? do_raw_spin_unlock+0x9b/0x100\n   cifs_statfs+0x18c/0x4b0 [cifs]\n   statfs_by_dentry+0x9b/0xf0\n   fd_statfs+0x4e/0xb0\n   __do_sys_fstatfs+0x7f/0xe0\n   ? __pfx___do_sys_fstatfs+0x10/0x10\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? lockdep_hardirqs_on_prepare+0x136/0x200\n   ? srso_alias_return_thunk+0x5/0x7f\n   do_syscall_64+0x3f/0x90\n   entry_SYSCALL_64_after_hwframe+0x6e/0xd8\n\n  Allocated by task 27534:\n   kasan_save_stack+0x33/0x60\n   kasan_set_track+0x25/0x30\n   __kasan_kmalloc+0x8f/0xa0\n   open_cached_dir+0x71b/0x1240 [cifs]\n   smb2_query_info_compound+0x5c3/0x6d0 [cifs]\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n   smb311_queryfs+0x210/0x220 [cifs]\n   cifs_statfs+0x18c/0x4b0 [cifs]\n   statfs_by_dentry+0x9b/0xf0\n   fd_statfs+0x4e/0xb0\n   __do_sys_fstatfs+0x7f/0xe0\n   do_syscall_64+0x3f/0x90\n   entry_SYSCALL_64_after_hwframe+0x6e/0xd8\n\n  Freed by task 27534:\n   kasan_save_stack+0x33/0x60\n   kasan_set_track+0x25/0x30\n   kasan_save_free_info+0x2b/0x50\n   ____kasan_slab_free+0x126/0x170\n   slab_free_freelist_hook+0xd0/0x1e0\n   __kmem_cache_free+0x9d/0x1b0\n   open_cached_dir+0xff5/0x1240 [cifs]\n   smb2_query_info_compound+0x5c3/0x6d0 [cifs]\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n\nThis is a race between open_cached_dir() and cached_dir_lease_break()\nwhere the cache entry for the open directory handle receives a lease\nbreak while creating it.  And before returning from open_cached_dir(),\nwe put the last reference of the new @cfid because of\n!@cfid->has_lease.\n\nBesides the UAF, while running xfstests a lot of missed lease breaks\nhave been noticed in tests that run several concurrent statfs(2) calls\non those cached fids\n\n  CIFS: VFS: \\\\w22-root1.gandalf.test No task to wake, unknown frame...\n  CIFS: VFS: \\\\w22-root1.gandalf.test Cmd: 18 Err: 0x0 Flags: 0x1...\n  CIFS: VFS: \\\\w22-root1.gandalf.test smb buf 00000000715bfe83 len 108\n  CIFS: VFS: Dump pending requests:\n  CIFS: VFS: \\\\w22-root1.gandalf.test No task to wake, unknown frame...\n  CIFS: VFS: \\\\w22-root1.gandalf.test Cmd: 18 Err: 0x0 Flags: 0x1...\n  CIFS: VFS: \\\\w22-root1.gandalf.test smb buf 000000005aa7316e len 108\n  ...\n\nTo fix both, in open_cached_dir() ensure that @cfid->has_lease is set\nright before sending out compounded request so that any potential\nlease break will be get processed by demultiplex thread while we're\nstill caching @cfid.  And, if open failed for some reason, re-check\n@cfid->has_lease to decide whether or not put lease reference.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-52751"
     },
     {
-      "id": "CVE-2023-5993",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-5993)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2024-02-27",
-      "cisaKev": false,
-      "description": "A flaw in the Windows Installer in Thales SafeNet Authentication Client prior to 10.8 R10 on Windows allows an attacker to escalate their privilege level via local access.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5993"
-    },
-    {
-      "id": "CVE-2023-7016",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-7016)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2024-02-27",
-      "cisaKev": false,
-      "description": "A flaw in Thales SafeNet Authentication Client prior to 10.8 R10 on Windows allows an attacker to execute code at a SYSTEM level via local access.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-7016"
-    },
-    {
-      "id": "CVE-2023-41840",
+      "id": "CVE-2024-23667",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-41840)",
+      "title": "Fortinet Vulnerability (CVE-2024-23667)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
-      "published": "2023-11-14",
+      "published": "2024-06-03",
       "cisaKev": false,
-      "description": "A untrusted search path vulnerability in Fortinet FortiClientWindows 7.0.9 allows an attacker to perform a DLL Hijack attack via a malicious OpenSSL engine library in the search path.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41840"
+      "description": "An improper authorization in Fortinet FortiWebManager 7.2.0, FortiWebManager 7.0.0 through 7.0.4, FortiWebManager 6.3.0, FortiWebManager 6.2.3 through 6.2.4, FortiWebManager 6.0.2 allows attacker to execute unauthorized code or commands via HTTP requests or CLI.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23667"
     },
     {
-      "id": "CVE-2024-23110",
+      "id": "CVE-2024-23670",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-23110)",
+      "title": "Fortinet Vulnerability (CVE-2024-23670)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
-      "published": "2024-06-11",
+      "published": "2024-06-03",
       "cisaKev": false,
-      "description": "A stack-based buffer overflow in Fortinet FortiOS version 7.4.0 through 7.4.2, 7.2.0 through 7.2.6, 7.0.0 through 7.0.13, 6.4.0 through 6.4.14, 6.2.0 through 6.2.15, 6.0 all versions allows attacker to execute unauthorized code or commands via specially crafted commands",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23110"
+      "description": "An improper authorization in Fortinet FortiWebManager 7.2.0, FortiWebManager 7.0.0 through 7.0.4, FortiWebManager 6.3.0, FortiWebManager 6.2.3 through 6.2.4, FortiWebManager 6.0.2 allows attacker to execute unauthorized code or commands via HTTP requests or CLI.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23670"
+    },
+    {
+      "id": "CVE-2025-54658",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2025-54658)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2025-10-16",
+      "cisaKev": false,
+      "description": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability [CWE-22] in Fortinet FortiDLP Agent's Outlookproxy plugin for MacOS 11.5.1 and 11.4.2 through 11.4.6 and 11.3.2 through 11.3.4 and 11.2.0 through 11.2.3 and 11.1.1 through 11.1.2 and 11.0.1 and 10.5.1 and 10.4.0, and 10.3.1 may allow an authenticated attacker to escalate their privilege to Root via sending a crafted request to a local listening port.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-54658"
+    },
+    {
+      "id": "CVE-2026-66149",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-66149)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2026-08-11",
+      "cisaKev": false,
+      "description": "Improper Control of Generation of Code ('Code Injection') Vulnerability in the SonicWall Email Security appliance allows an authenticated attacker with access to the SonicWall Email Security restricted CLI can inject arbitrary OS commands that execute as root via netmask.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-66149"
+    },
+    {
+      "id": "CVE-2026-66150",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-66150)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2026-08-11",
+      "cisaKev": false,
+      "description": "Improper Control of Generation of Code ('Code Injection') Vulnerability in the SonicWall Email Security appliance allows an authenticated attacker with access to the SonicWall Email Security restricted CLI can inject arbitrary OS commands that execute as root via SNMP.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-66150"
+    },
+    {
+      "id": "CVE-2025-69217",
+      "platform": "Windows Desktop",
+      "title": "Windows 11 Vulnerability (CVE-2025-69217)",
+      "score": 7.7,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-12-30",
+      "cisaKev": false,
+      "description": "coturn is a free open source implementation of TURN and STUN Server. Versions 4.6.2r5 through 4.7.0-r4 have a bad random number generator for nonces and port randomization after refactoring. Additionally, random numbers aren't generated with openssl's RAND_bytes but libc's random() (if it's not running on Windows). When fetching about 50 sequential nonces (i.e., through sending 50 unauthenticated allocations requests) it is possible to completely reconstruct the current state of the random number generator, thereby predicting the next nonce. This allows authentication while spoofing IPs. An attacker can send authenticated messages without ever receiving the responses, including the nonce (requires knowledge of the credentials, which is e.g., often the case in IoT settings). Since the port randomization is deterministic given the pseudorandom seed, an attacker can exactly reconstruct the ports and, hence predict the randomization of the ports. If an attacker allocates a relay port, they know the current port, and they are able to predict the next relay port (at least if it is not used before). Commit 11fc465f4bba70bb0ad8aae17d6c4a63a29917d9 contains a fix.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-69217"
     },
     {
       "id": "CVE-2020-9287",
@@ -7191,18 +7095,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-9287"
     },
     {
-      "id": "CVE-2025-20212",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2025-20212)",
-      "score": 7.7,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-04-02",
-      "cisaKev": false,
-      "description": "A vulnerability in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series devices could allow an authenticated, remote attacker to cause a denial of service (DoS) condition in the Cisco AnyConnect service on an affected device. To exploit this vulnerability, the attacker must have valid VPN user credentials on the affected device.\r\n\r This vulnerability exists because a variable is not initialized when an SSL VPN session is established. An attacker could exploit this vulnerability by supplying crafted attributes while establishing an SSL VPN session with an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN sessions and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\r Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers without manual intervention.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-20212"
-    },
-    {
       "id": "CVE-2018-8174",
       "platform": "Windows Desktop",
       "title": "Windows 10 Vulnerability (CVE-2018-8174)",
@@ -7213,6 +7105,18 @@
       "cisaKev": true,
       "description": "A remote code execution vulnerability exists in the way that the VBScript engine handles objects in memory, aka \"Windows VBScript Engine Remote Code Execution Vulnerability.\" This affects Windows 7, Windows Server 2012 R2, Windows RT 8.1, Windows Server 2008, Windows Server 2012, Windows 8.1, Windows Server 2016, Windows Server 2008 R2, Windows 10, Windows 10 Servers.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-8174"
+    },
+    {
+      "id": "CVE-2019-7481",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7481)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2019-12-17",
+      "cisaKev": true,
+      "description": "Vulnerability in SonicWall SMA100 allow unauthenticated user to gain read-only access to unauthorized resources. This vulnerablity impacted SMA100 version 9.0.0.3 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7481"
     },
     {
       "id": "CVE-2020-0909",
@@ -7251,112 +7155,28 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-27063"
     },
     {
-      "id": "CVE-2023-4801",
-      "platform": "Windows Server",
-      "title": "Windows Server Vulnerability (CVE-2023-4801)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "ADJACENT_NETWORK",
-      "published": "2023-09-13",
-      "cisaKev": false,
-      "description": "An improper certification validation vulnerability in the Insider Threat Management (ITM) Agent for MacOS could be used by an anonymous actor on an adjacent network to establish a man-in-the-middle position between the agent and the ITM server after the agent has registered. All versions prior to 7.14.3.69 are affected. Agents for Windows, Linux, and Cloud are unaffected.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4801"
-    },
-    {
-      "id": "CVE-2024-27405",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2024-27405)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-05-17",
-      "cisaKev": false,
-      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: ncm: Avoid dropping datagrams of properly parsed NTBs\n\nIt is observed sometimes when tethering is used over NCM with Windows 11\nas host, at some instances, the gadget_giveback has one byte appended at\nthe end of a proper NTB. When the NTB is parsed, unwrap call looks for\nany leftover bytes in SKB provided by u_ether and if there are any pending\nbytes, it treats them as a separate NTB and parses it. But in case the\nsecond NTB (as per unwrap call) is faulty/corrupt, all the datagrams that\nwere parsed properly in the first NTB and saved in rx_list are dropped.\n\nAdding a few custom traces showed the following:\n[002] d..1  7828.532866: dwc3_gadget_giveback: ep1out:\nreq 000000003868811a length 1025/16384 zsI ==> 0\n[002] d..1  7828.532867: ncm_unwrap_ntb: K: ncm_unwrap_ntb toprocess: 1025\n[002] d..1  7828.532867: ncm_unwrap_ntb: K: ncm_unwrap_ntb nth: 1751999342\n[002] d..1  7828.532868: ncm_unwrap_ntb: K: ncm_unwrap_ntb seq: 0xce67\n[002] d..1  7828.532868: ncm_unwrap_ntb: K: ncm_unwrap_ntb blk_len: 0x400\n[002] d..1  7828.532868: ncm_unwrap_ntb: K: ncm_unwrap_ntb ndp_len: 0x10\n[002] d..1  7828.532869: ncm_unwrap_ntb: K: Parsed NTB with 1 frames\n\nIn this case, the giveback is of 1025 bytes and block length is 1024.\nThe rest 1 byte (which is 0x00) won't be parsed resulting in drop of\nall datagrams in rx_list.\n\nSame is case with packets of size 2048:\n[002] d..1  7828.557948: dwc3_gadget_giveback: ep1out:\nreq 0000000011dfd96e length 2049/16384 zsI ==> 0\n[002] d..1  7828.557949: ncm_unwrap_ntb: K: ncm_unwrap_ntb nth: 1751999342\n[002] d..1  7828.557950: ncm_unwrap_ntb: K: ncm_unwrap_ntb blk_len: 0x800\n\nLecroy shows one byte coming in extra confirming that the byte is coming\nin from PC:\n\n Transfer 2959 - Bytes Transferred(1025)  Timestamp((18.524 843 590)\n - Transaction 8391 - Data(1025 bytes) Timestamp(18.524 843 590)\n --- Packet 4063861\n       Data(1024 bytes)\n       Duration(2.117us) Idle(14.700ns) Timestamp(18.524 843 590)\n --- Packet 4063863\n       Data(1 byte)\n       Duration(66.160ns) Time(282.000ns) Timestamp(18.524 845 722)\n\nAccording to Windows driver, no ZLP is needed if wBlockLength is non-zero,\nbecause the non-zero wBlockLength has already told the function side the\nsize of transfer to be expected. However, there are in-market NCM devices\nthat rely on ZLP as long as the wBlockLength is multiple of wMaxPacketSize.\nTo deal with such devices, it pads an extra 0 at end so the transfer is no\nlonger multiple of wMaxPacketSize.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-27405"
-    },
-    {
-      "id": "CVE-2023-41680",
+      "id": "CVE-2024-48884",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-41680)",
+      "title": "FortiOS Vulnerability (CVE-2024-48884)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2023-10-13",
+      "published": "2025-01-14",
       "cisaKev": false,
-      "description": "A improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Fortinet FortiSandbox 4.4.0 through 4.4.1, FortiSandbox 4.2.1 through 4.2.5, FortiSandbox 4.0.0 through 4.0.3, FortiSandbox 3.2 all versions, FortiSandbox 3.1 all versions, FortiSandbox 3.0 all versions, FortiSandbox 2.5 all versions, FortiSandbox 2.4.1 allows attacker to execute unauthorized code or commands via crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41680"
+      "description": "A improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiManager 7.6.0 through 7.6.1, FortiManager 7.4.1 through 7.4.3, FortiManager Cloud 7.4.1 through 7.4.3, FortiOS 7.6.0, FortiOS 7.4.0 through 7.4.4, FortiOS 7.2.0 through 7.2.9, FortiOS 7.0.0 through 7.0.15, FortiOS 6.4.0 through 6.4.15, FortiProxy 7.4.0 through 7.4.5, FortiProxy 7.2.0 through 7.2.11, FortiProxy 7.0.0 through 7.0.18, FortiProxy 2.0 all versions, FortiProxy 1.2 all versions, FortiProxy 1.1 all versions, FortiProxy 1.0 all versions may allow a remote authenticated attacker with access to the security fabric interface and port to write arbitrary files or a remote unauthenticated attacker to delete an arbitrary folder",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-48884"
     },
     {
-      "id": "CVE-2023-41681",
+      "id": "CVE-2026-55841",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-41681)",
+      "title": "FortiGate Vulnerability (CVE-2026-55841)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2023-10-13",
+      "published": "2026-08-28",
       "cisaKev": false,
-      "description": "A improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Fortinet FortiSandbox 4.4.0 through 4.4.1, FortiSandbox 4.2.1 through 4.2.5, FortiSandbox 4.0.0 through 4.0.3, FortiSandbox 3.2 all versions, FortiSandbox 3.1 all versions, FortiSandbox 3.0 all versions, FortiSandbox 2.5 all versions, FortiSandbox 2.4.1 allows attacker to execute unauthorized code or commands via crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41681"
-    },
-    {
-      "id": "CVE-2023-41843",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-41843)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-10-13",
-      "cisaKev": false,
-      "description": "A improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Fortinet FortiSandbox 4.4.0 through 4.4.1, FortiSandbox 4.2.1 through 4.2.5, FortiSandbox 4.0.0 through 4.0.3, FortiSandbox 3.2 all versions, FortiSandbox 3.1 all versions, FortiSandbox 3.0 all versions, FortiSandbox 2.5 all versions, FortiSandbox 2.4.1 allows attacker to execute unauthorized code or commands via crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41843"
-    },
-    {
-      "id": "CVE-2023-42783",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-42783)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-11-14",
-      "cisaKev": false,
-      "description": "A relative path traversal in Fortinet FortiWLM version 8.6.0 through 8.6.5 and 8.5.0 through 8.5.4 and 8.4.2 through 8.4.0 and 8.3.2 through 8.3.0 and 8.2.2 allows attacker to read arbitrary files via crafted http requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-42783"
-    },
-    {
-      "id": "CVE-2023-46717",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-46717)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-03-12",
-      "cisaKev": false,
-      "description": "An improper authentication vulnerability [CWE-287] in FortiOS versions 7.4.1 and below, versions 7.2.6 and below, and versions 7.0.12 and below when configured with FortiAuthenticator in HA may allow a readonly user to gain read-write access via successive login attempts.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-46717"
-    },
-    {
-      "id": "CVE-2023-41677",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-41677)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-04-09",
-      "cisaKev": false,
-      "description": "A insufficiently protected credentials in Fortinet FortiProxy 7.4.0, 7.2.0 through 7.2.6, 7.0.0 through 7.0.12, 2.0.0 through 2.0.13, 1.2.0 through 1.2.13, 1.1.0 through 1.1.6, 1.0.0 through 1.0.7, Fortinet FortiOS 7.4.0 through 7.4.1, 7.2.0 through 7.2.6, 7.0.0 through 7.0.12, 6.4.0 through 6.4.14, 6.2.0 through 6.2.15, 6.0.0 through 6.0.17 allows attacker to execute unauthorized code or commands via targeted social engineering attack",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41677"
-    },
-    {
-      "id": "CVE-2024-26010",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-26010)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-06-11",
-      "cisaKev": false,
-      "description": "A stack-based buffer overflow in Fortinet FortiPAM version 1.2.0, 1.1.0 through 1.1.2, 1.0.0 through 1.0.3, FortiWeb, FortiAuthenticator, FortiSwitchManager version 7.2.0 through 7.2.3, 7.0.1 through 7.0.3, FortiOS version 7.4.0 through 7.4.3, 7.2.0 through 7.2.7, 7.0.0 through 7.0.14, 6.4.0 through 6.4.15, 6.2.0 through 6.2.16, 6.0.0 through 6.0.18, FortiProxy version 7.4.0 through 7.4.2, 7.2.0 through 7.2.9, 7.0.0 through 7.0.15, 2.0.0 through 2.0.13, 1.2.0 through 1.2.13, 1.1.0 through 1.1.6, 1.0.0 through 1.0.7 allows attacker to execute unauthorized code or commands via specially crafted packets.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-26010"
+      "description": "Graylog is a free and open log management platform. Prior to Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3, the FortiGate key-value syslog parser in graylog2-server/src/main/java/org/graylog2/inputs/codecs/GLFortiGateSyslogEvent.java and graylog2-server/src/main/java/org/graylog2/inputs/codecs/SyslogCodec.java mishandles field-like text inside quoted values. GLFortiGateSyslogEvent.getFields() uses KV_PATTERN and QUOTED_KV_PATTERN, while SyslogCodec.parse() invokes the FortiGateSyslogEvent parser; crafted values containing = or backslash-escaped quotes can cause embedded keys such as srcip, dstip, date, time, and tz to remove or overwrite original top-level fields or produce an invalid message that Graylog discards. An unauthenticated network sender who can submit syslog messages can therefore manipulate security-log fields or evade logging to obscure malicious activity. This issue is fixed in Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-55841"
     },
     {
       "id": "CVE-2021-27070",
@@ -7383,18 +7203,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-36945"
     },
     {
-      "id": "CVE-2023-44220",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-44220)",
-      "score": 7.3,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2023-10-27",
-      "cisaKev": false,
-      "description": "SonicWall NetExtender Windows (32-bit and 64-bit) client 10.2.336 and earlier versions have a DLL Search Order Hijacking vulnerability in the start-up DLL component. Successful exploitation via a local attacker could result in command execution in the target system.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-44220"
-    },
-    {
       "id": "CVE-2020-9290",
       "platform": "Fortinet",
       "title": "Fortinet Vulnerability (CVE-2020-9290)",
@@ -7407,64 +7215,76 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-9290"
     },
     {
-      "id": "CVE-2024-20430",
-      "platform": "Cisco Meraki",
-      "title": "Cisco Meraki Vulnerability (CVE-2024-20430)",
+      "id": "CVE-2024-45331",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2024-45331)",
       "score": 7.3,
       "severity": "HIGH",
       "vector": "LOCAL",
-      "published": "2024-09-12",
+      "published": "2025-01-16",
       "cisaKev": false,
-      "description": "A vulnerability in Cisco Meraki Systems Manager (SM) Agent for Windows could allow an authenticated, local attacker to execute arbitrary code with elevated privileges.&nbsp;\r\n\r\nThis vulnerability is due to incorrect handling of directory search paths at runtime. A low-privileged attacker could exploit this vulnerability by placing both malicious configuration files and malicious DLL files on an affected system, which would read and execute the files when Cisco Meraki SM launches on startup. A successful exploit could allow the attacker to execute arbitrary code on the affected system with SYSTEM privileges.&nbsp;",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20430"
+      "description": "A incorrect privilege assignment vulnerability in Fortinet FortiAnalyzer 7.4.0 through 7.4.3, FortiAnalyzer 7.2.0 through 7.2.5, FortiAnalyzer 7.0 all versions, FortiAnalyzer 6.4 all versions, FortiAnalyzer Cloud 7.4.1 through 7.4.2, FortiAnalyzer Cloud 7.2.1 through 7.2.6, FortiAnalyzer Cloud 7.0 all versions, FortiAnalyzer Cloud 6.4 all versions, FortiManager 7.4.0 through 7.4.3, FortiManager 7.2.0 through 7.2.5, FortiManager 7.0 all versions, FortiManager 6.4 all versions allows attacker to escalate privilege via specific shell commands",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-45331"
     },
     {
-      "id": "CVE-2024-2637",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2024-2637)",
-      "score": 7.2,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2024-05-14",
-      "cisaKev": false,
-      "description": "An Uncontrolled Search Path Element vulnerability\u00a0in B&R Industrial Automation Scene Viewer, B&R Industrial Automation Automation Runtime, B&R Industrial Automation mapp Vision, B&R Industrial Automation mapp View, B&R Industrial Automation mapp Cockpit, B&R Industrial Automation mapp Safety, B&R Industrial Automation VC4, B&R Industrial Automation APROL, B&R Industrial Automation CAN Driver, B&R Industrial Automation CAN Driver CC770, B&R Industrial Automation CAN Driver SJA1000, B&R Industrial Automation Tou0ch Lock, B&R Industrial Automation B&R Single-Touch Driver, B&R Industrial Automation Serial User Mode Touch Driver, B&R Industrial Automation Windows Settings Changer (LTSC), B&R Industrial Automation Windows Settings Changer (2019 LTSC), B&R Industrial Automation Windows 10 Recovery Solution, B&R Industrial Automation ADI driver universal, B&R Industrial Automation ADI Development Kit, B&R Industrial Automation ADI .NET SDK, B&R Industrial Automation SRAM driver, B&R Industrial Automation HMI Service Center, B&R Industrial Automation HMI Service Center Maintenance, B&R Industrial Automation Windows 10 IoT Enterprise 2019 LTSC, B&R Industrial Automation KCF Editor could allow an authenticated local attacker to execute malicious code by placing specially crafted files in the loading search path..This issue affects Scene Viewer: before 4.4.0; Automation Runtime: before J4.93; mapp Vision: before 5.26.1; mapp View: before 5.24.2; mapp Cockpit: before 5.24.2; mapp Safety: before 5.24.2; VC4: before 4.73.2; APROL: before 4.4-01; CAN Driver: before 1.1.0; CAN Driver CC770: before 3.3.0; CAN Driver SJA1000: before 1.3.0; Tou0ch Lock: before 2.1.0; B&R Single-Touch Driver: before 2.0.0; Serial User Mode Touch Driver: before 1.7.1; Windows Settings Changer (LTSC): before 3.2.0; Windows Settings Changer (2019 LTSC): before 2.2.0; Windows 10 Recovery Solution: before 3.2.0; ADI driver universal: before 3.2.0; ADI Development Kit: before 5.5.0; ADI .NET SDK: before 4.1.0; SRAM driver: before 1.2.0; HMI Service Center: before 3.1.0; HMI Service Center Maintenance: before 2.1.0; Windows 10 IoT Enterprise 2019 LTSC: through 1.1; KCF Editor: before 1.1.0.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-2637"
-    },
-    {
-      "id": "CVE-2023-46712",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-46712)",
+      "id": "CVE-2021-20022",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2021-20022)",
       "score": 7.2,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2024-01-10",
-      "cisaKev": false,
-      "description": "A improper access control in Fortinet FortiPortal version 7.0.0 through 7.0.6, Fortinet FortiPortal version 7.2.0 through 7.2.1 allows attacker to escalate its privilege via specifically crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-46712"
+      "published": "2021-04-09",
+      "cisaKev": true,
+      "description": "SonicWall Email Security version 10.0.9.x contains a vulnerability that allows a post-authenticated attacker to upload an arbitrary file to the remote host.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20022"
     },
     {
-      "id": "CVE-2023-46714",
+      "id": "CVE-2025-31104",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-46714)",
+      "title": "Fortinet Vulnerability (CVE-2025-31104)",
       "score": 7.2,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2024-05-14",
+      "published": "2025-06-10",
       "cisaKev": false,
-      "description": "A stack-based buffer overflow [CWE-121] vulnerability in Fortinet FortiOS version 7.2.1 through 7.2.6 and version 7.4.0 through 7.4.1 allows a privileged attacker over the administrative interface to execute arbitrary code or commands via crafted HTTP or HTTPs requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-46714"
+      "description": "A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiADC 7.6.0 through 7.6.1, FortiADC 7.4.0 through 7.4.6, FortiADC 7.2.0 through 7.2.7, FortiADC 7.1.0 through 7.1.4, FortiADC 7.0 all versions, FortiADC 6.2 all versions, FortiADC 6.1 all versions, FortiADC 6.0 all versions, FortiADC 5.4 all versions, FortiADC 5.3 all versions, FortiADC 5.2 all versions, FortiADC 5.1 all versions, FortiADC 5.0 all versions, FortiADC 4.8 all versions, FortiADC 4.7 all versions, FortiADC 4.6 all versions, FortiADC 4.5 all versions, FortiADC 4.4 all versions, FortiADC 4.3 all versions, FortiADC 4.2 all versions, FortiADC 4.1 all versions, FortiADC 4.0 all versions, FortiADC 3.2 all versions, FortiADC 3.1 all versions, FortiADC 3.0 all versions may allow attacker to execute unauthorized code or commands via <insert attack vector here>",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-31104"
     },
     {
-      "id": "CVE-2023-41673",
+      "id": "CVE-2025-47856",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-41673)",
-      "score": 7.1,
+      "title": "Fortinet Vulnerability (CVE-2025-47856)",
+      "score": 7.2,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2023-12-13",
+      "published": "2025-10-14",
       "cisaKev": false,
-      "description": "An improper authorization vulnerability [CWE-285] in Fortinet FortiADC version 7.4.0 and before 7.2.2 may allow a low privileged user to read or backup the full system configuration via HTTP or HTTPS requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41673"
+      "description": "Two improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerabilities [CWE-78] in Fortinet FortiVoice version 7.2.0, 7.0.0 through 7.0.6 and before 6.4.10 allows a privileged attacker to execute arbitrary code or commands via crafted HTTP/HTTPS or CLI requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-47856"
+    },
+    {
+      "id": "CVE-2025-53679",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2025-53679)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-12-09",
+      "cisaKev": false,
+      "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.2, FortiSandbox 4.4.0 through 4.4.7, FortiSandbox 4.2 all versions, FortiSandbox 4.0 all versions, FortiSandbox Cloud 24.1, FortiSandbox Cloud 23 all versions allows a remote privileged attacker to execute unauthorized code or commands via crafted HTTP or HTTPS requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53679"
+    },
+    {
+      "id": "CVE-2025-53949",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2025-53949)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-12-09",
+      "cisaKev": false,
+      "description": "An Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.2, FortiSandbox 4.4.0 through 4.4.7, FortiSandbox 4.2 all versions, FortiSandbox 4.0 all versions may allow an authenticated attacker to execute unauthorized code on the underlying system via crafted HTTP requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53949"
     },
     {
       "id": "CVE-2018-8120",
@@ -7477,6 +7297,18 @@
       "cisaKev": true,
       "description": "An elevation of privilege vulnerability exists in Windows when the Win32k component fails to properly handle objects in memory, aka \"Win32k Elevation of Privilege Vulnerability.\" This affects Windows Server 2008, Windows 7, Windows Server 2008 R2. This CVE ID is unique from CVE-2018-8124, CVE-2018-8164, CVE-2018-8166.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-8120"
+    },
+    {
+      "id": "CVE-2026-66153",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-66153)",
+      "score": 7.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2026-08-25",
+      "cisaKev": false,
+      "description": "The NEService auto-upgrade process insecurely handles temporary files in SonicWall NetExtender Linux client which allows an attacker to manipulate file paths.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-66153"
     }
   ]
 }
