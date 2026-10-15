@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-14T18:21:02.205930+00:00",
-  "total": 582,
+  "lastUpdated": "2026-10-15T00:14:20.955534+00:00",
+  "total": 609,
   "vulnerabilities": [
     {
       "id": "CVE-2016-2396",
@@ -63,6 +63,30 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5135"
     },
     {
+      "id": "CVE-2021-20021",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2021-20021)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-04-09",
+      "cisaKev": true,
+      "description": "A vulnerability in the SonicWall Email Security version 10.0.9.x allows an attacker to create an administrative account by sending a crafted HTTP request to the remote host.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20021"
+    },
+    {
+      "id": "CVE-2021-20016",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2021-20016)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-02-04",
+      "cisaKev": true,
+      "description": "A SQL-Injection vulnerability in the SonicWall SSLVPN SMA100 product allows a remote unauthenticated attacker to perform SQL query to access username password and other session related information. This vulnerability impacts SMA100 build version 10.x.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20016"
+    },
+    {
       "id": "CVE-2016-1909",
       "platform": "Fortinet",
       "title": "FortiOS Vulnerability (CVE-2016-1909)",
@@ -85,6 +109,30 @@
       "cisaKev": false,
       "description": "Buffer overflow in the Cookie parser in Fortinet FortiOS 4.x before 4.1.11, 4.2.x before 4.2.13, and 4.3.x before 4.3.9 and FortiSwitch before 3.4.3 allows remote attackers to execute arbitrary code via a crafted HTTP request, aka EGREGIOUSBLUNDER.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-6909"
+    },
+    {
+      "id": "CVE-2016-4573",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2016-4573)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2016-09-09",
+      "cisaKev": false,
+      "description": "Fortinet FortiSwitch FSW-108D-POE, FSW-124D, FSW-124D-POE, FSW-224D-POE, FSW-224D-FPOE, FSW-248D-POE, FSW-248D-FPOE, FSW-424D, FSW-424D-POE, FSW-424D-FPOE, FSW-448D, FSW-448D-POE, FSW-448D-FPOE, FSW-524D, FSW-524D-FPOE, FSW-548D, FSW-548D-FPOE, FSW-1024D, FSW-1048D, FSW-3032D, and FSW-R-112D-POE models, when in FortiLink managed mode and upgraded to 3.4.1, might allow remote attackers to bypass authentication and gain administrative access via an empty password for the rest_admin account.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-4573"
+    },
+    {
+      "id": "CVE-2018-1352",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2018-1352)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2019-02-08",
+      "cisaKev": false,
+      "description": "A format string vulnerability in Fortinet FortiOS 5.6.0 allows attacker to execute unauthorized code or commands via the SSH username variable.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-1352"
     },
     {
       "id": "CVE-2016-2397",
@@ -111,6 +159,42 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9682"
     },
     {
+      "id": "CVE-2016-9683",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2016-9683)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2017-02-22",
+      "cisaKev": false,
+      "description": "The SonicWall Secure Remote Access server (version 8.1.0.2-14sv) is vulnerable to a Remote Command Injection vulnerability in its web administrative interface. This vulnerability occurs in the 'extensionsettings' CGI (/cgi-bin/extensionsettings) component responsible for handling some of the server's internal configurations. The CGI application doesn't properly escape the information it's passed when processing a particular multi-part form request involving scripts. The filename of the 'scriptname' variable is read in unsanitized before a call to system() is performed - allowing for remote command injection. Exploitation of this vulnerability yields shell access to the remote machine under the nobody user account. This is SonicWall Issue ID 181195.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9683"
+    },
+    {
+      "id": "CVE-2016-9684",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2016-9684)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2017-02-22",
+      "cisaKev": false,
+      "description": "The SonicWall Secure Remote Access server (version 8.1.0.2-14sv) is vulnerable to a Remote Command Injection vulnerability in its web administrative interface. This vulnerability occurs in the 'viewcert' CGI (/cgi-bin/viewcert) component responsible for processing SSL certificate information. The CGI application doesn't properly escape the information it's passed in the 'CERT' variable before a call to system() is performed - allowing for remote command injection. Exploitation of this vulnerability yields shell access to the remote machine under the nobody user account.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9684"
+    },
+    {
+      "id": "CVE-2018-9866",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2018-9866)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2018-08-03",
+      "cisaKev": false,
+      "description": "A vulnerability in lack of validation of user-supplied parameters pass to XML-RPC calls on SonicWall Global Management System (GMS) virtual appliance's, allow remote user to execute arbitrary code. This vulnerability affected GMS version 8.1 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-9866"
+    },
+    {
       "id": "CVE-2019-7475",
       "platform": "SonicWall",
       "title": "SonicOS Vulnerability (CVE-2019-7475)",
@@ -121,6 +205,42 @@
       "cisaKev": false,
       "description": "A vulnerability in SonicWall SonicOS and SonicOSv with management enabled system on specific configuration allow unprivileged user to access advanced routing services. This vulnerability affected SonicOS Gen 5 version 5.9.1.10 and earlier, Gen 6 version 6.2.7.3, 6.5.1.3, 6.5.2.2, 6.5.3.1, 6.2.7.8, 6.4.0.0, 6.5.1.8, 6.0.5.3-86o and SonicOSv 6.5.0.2-8v_RC363 (VMWARE), 6.5.0.2.8v_RC367 (AZURE), SonicOSv 6.5.0.2.8v_RC368 (AWS), SonicOSv 6.5.0.2.8v_RC366 (HYPER_V).",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7475"
+    },
+    {
+      "id": "CVE-2019-7482",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7482)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2019-12-19",
+      "cisaKev": false,
+      "description": "Stack-based buffer overflow in SonicWall SMA100 allows an unauthenticated user to execute arbitrary code in function libSys.so. This vulnerability impacted SMA100 version 9.0.0.3 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7482"
+    },
+    {
+      "id": "CVE-2019-7488",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7488)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2019-12-23",
+      "cisaKev": false,
+      "description": "Weak default password cause vulnerability in SonicWall Email Security appliance which leads to attacker gain access to appliance database. This vulnerability affected Email Security Appliance version 10.0.2 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7488"
+    },
+    {
+      "id": "CVE-2019-7489",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7489)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2019-12-23",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicWall Email Security appliance allow an unauthenticated user to perform remote code execution. This vulnerability affected Email Security Appliance version 10.0.2 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7489"
     },
     {
       "id": "CVE-2022-22274",
@@ -135,6 +255,66 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-22274"
     },
     {
+      "id": "CVE-2018-13379",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2018-13379)",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2019-06-04",
+      "cisaKev": true,
+      "description": "An Improper Limitation of a Pathname to a Restricted Directory (\"Path Traversal\") in Fortinet FortiOS 6.0.0 to 6.0.4, 5.6.3 to 5.6.7 and 5.4.6 to 5.4.12 and FortiProxy 2.0.0, 1.2.0 to 1.2.8, 1.1.0 to 1.1.6, 1.0.0 to 1.0.7 under SSL VPN web portal allows an unauthenticated attacker to download system files via special crafted HTTP resource requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-13379"
+    },
+    {
+      "id": "CVE-2011-0627",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2011-0627)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2011-05-13",
+      "cisaKev": false,
+      "description": "Adobe Flash Player before 10.3.181.14 on Windows, Mac OS X, Linux, and Solaris and before 10.3.185.21 on Android allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted Flash content, as possibly exploited in the wild in May 2011 by a Microsoft Office document with an embedded .swf file.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2011-0627"
+    },
+    {
+      "id": "CVE-2014-8439",
+      "platform": "Windows Desktop",
+      "title": "Windows 11 Vulnerability (CVE-2014-8439)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2014-11-25",
+      "cisaKev": true,
+      "description": "Adobe Flash Player before 13.0.0.258 and 14.x and 15.x before 15.0.0.239 on Windows and OS X and before 11.2.202.424 on Linux, Adobe AIR before 15.0.0.293, Adobe AIR SDK before 15.0.0.302, and Adobe AIR SDK & Compiler before 15.0.0.302 allow attackers to execute arbitrary code or cause a denial of service (invalid pointer dereference) via unspecified vectors.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2014-8439"
+    },
+    {
+      "id": "CVE-2016-4066",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2016-4066)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2016-07-13",
+      "cisaKev": false,
+      "description": "Cross-site request forgery (CSRF) vulnerability in Fortinet FortiWeb before 5.5.3 allows remote attackers to hijack the authentication of administrators for requests that change the password via unspecified vectors.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-4066"
+    },
+    {
+      "id": "CVE-2016-4965",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2016-4965)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2016-09-21",
+      "cisaKev": false,
+      "description": "Fortinet FortiWan (formerly AscernLink) before 4.2.5 allows remote authenticated users with access to the nslookup functionality to execute arbitrary commands with root privileges via the graph parameter to diagnosis_control.php.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-4965"
+    },
+    {
       "id": "CVE-2024-40591",
       "platform": "Fortinet",
       "title": "FortiGate Vulnerability (CVE-2024-40591)",
@@ -145,6 +325,42 @@
       "cisaKev": false,
       "description": "An incorrect privilege assignment vulnerability [CWE-266] in Fortinet FortiOS version 7.6.0, 7.4.0 through 7.4.4, 7.2.0 through 7.2.9 and before 7.0.15 allows an authenticated admin whose access profile has the Security Fabric permission to escalate their privileges to super-admin by connecting the targetted FortiGate to a malicious upstream FortiGate they control.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40591"
+    },
+    {
+      "id": "CVE-2019-7485",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7485)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2019-12-19",
+      "cisaKev": false,
+      "description": "Buffer overflow in SonicWall SMA100 allows an authenticated user to execute arbitrary code in DEARegister CGI script. This vulnerability impacted SMA100 version 9.0.0.3 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7485"
+    },
+    {
+      "id": "CVE-2019-7486",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7486)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2019-12-19",
+      "cisaKev": false,
+      "description": "Code injection in SonicWall SMA100 allows an authenticated user to execute arbitrary code in viewcacert CGI script. This vulnerability impacted SMA100 version 9.0.0.4 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7486"
+    },
+    {
+      "id": "CVE-2021-20017",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2021-20017)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-03-13",
+      "cisaKev": false,
+      "description": "A post-authenticated command injection vulnerability in SonicWall SMA100 allows an authenticated attacker to execute OS commands as a 'nobody' user. This vulnerability impacts SMA100 version 10.2.0.5 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20017"
     },
     {
       "id": "CVE-2021-20046",
@@ -181,6 +397,18 @@
       "cisaKev": false,
       "description": "SonicOS SSLVPN improper restriction of excessive MFA attempts vulnerability allows an authenticated attacker to use excessive MFA codes.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-1101"
+    },
+    {
+      "id": "CVE-2020-5145",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2020-5145)",
+      "score": 8.6,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2020-10-28",
+      "cisaKev": false,
+      "description": "SonicWall Global VPN client version 4.10.4.0314 and earlier have an insecure library loading (DLL hijacking) vulnerability. Successful exploitation could lead to remote code execution in the target system.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5145"
     },
     {
       "id": "CVE-2022-20933",
@@ -243,6 +471,30 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-20271"
     },
     {
+      "id": "CVE-2020-5148",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2020-5148)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-03-05",
+      "cisaKev": false,
+      "description": "SonicWall SSO-agent default configuration uses NetAPI to probe the associated IP's in the network, this client probing method allows a potential attacker to capture the password hash of the privileged user and potentially forces the SSO Agent to authenticate allowing an attacker to bypass firewall access controls.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5148"
+    },
+    {
+      "id": "CVE-2018-9185",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2018-9185)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2018-07-05",
+      "cisaKev": false,
+      "description": "An information disclosure vulnerability in Fortinet FortiOS 6.0.0 and below versions reveals user's web portal login credentials in a Javascript file sent to client-side when pages bookmarked in web portal use the Single Sign-On feature.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-9185"
+    },
+    {
       "id": "CVE-2024-47571",
       "platform": "Fortinet",
       "title": "FortiGate Vulnerability (CVE-2024-47571)",
@@ -253,6 +505,30 @@
       "cisaKev": false,
       "description": "An operation on a resource after expiration or release in Fortinet FortiManager 6.4.12 through 7.4.0 allows an attacker to gain improper access to FortiGate via valid credentials.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-47571"
+    },
+    {
+      "id": "CVE-2019-7476",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7476)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2019-04-26",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicWall Global Management System (GMS), allow a remote user to gain access to the appliance using existing SSH key. This vulnerability affects GMS versions 9.1, 9.0, 8.7, 8.6, 8.4, 8.3 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7476"
+    },
+    {
+      "id": "CVE-2026-76519",
+      "platform": "Cisco Meraki",
+      "title": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-10-14",
+      "cisaKev": true,
+      "description": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
     },
     {
       "id": "CVE-2026-96951",
@@ -3219,18 +3495,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-0034"
     },
     {
-      "id": "CVE-2015-0016",
-      "platform": "Windows Desktop",
-      "title": "Microsoft Windows TS WebProxy Directory Traversal Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2022-05-25",
-      "cisaKev": true,
-      "description": "Directory traversal vulnerability in the TS WebProxy (TSWbPrxy) component in Microsoft Windows allows remote attackers to escalate privileges.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-0016"
-    },
-    {
       "id": "CVE-2015-0071",
       "platform": "Windows Desktop",
       "title": "Microsoft Internet Explorer ASLR Bypass Vulnerability",
@@ -3841,18 +4105,6 @@
       "cisaKev": true,
       "description": "SonicWall Secure Remote Access (SRA) products contain an improper neutralization of a SQL Command leading to SQL injection.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20028"
-    },
-    {
-      "id": "CVE-2019-7483",
-      "platform": "SonicWall",
-      "title": "SonicWall SMA100 Directory Traversal Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2022-03-28",
-      "cisaKev": true,
-      "description": "In SonicWall SMA100, an unauthenticated Directory Traversal vulnerability in the handleWAFRedirect CGI allows the user to test for the presence of a file on the server.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7483"
     },
     {
       "id": "CVE-2018-8440",
@@ -5715,18 +5967,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-12812"
     },
     {
-      "id": "CVE-2018-13379",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiOS SSL VPN Path Traversal Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "Fortinet FortiOS SSL VPN web portal contains a path traversal vulnerability that may allow an unauthenticated attacker to download FortiOS system files through specially crafted HTTP resource requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-13379"
-    },
-    {
       "id": "CVE-2014-1812",
       "platform": "Windows Desktop",
       "title": "Microsoft Windows Group Policy Preferences Password Privilege Escalation Vulnerability",
@@ -6675,30 +6915,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-38648"
     },
     {
-      "id": "CVE-2021-20021",
-      "platform": "SonicWall",
-      "title": "SonicWall Email Security Improper Privilege Management Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "SonicWall Email Security contains an improper privilege management vulnerability that allows an attacker to create an administrative account by sending a crafted HTTP request to the remote host. This vulnerability has known usage in a SonicWall Email Security exploit chain along with CVE-2021-20022 and CVE-2021-20023 to achieve privilege escalation.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20021"
-    },
-    {
-      "id": "CVE-2019-7481",
-      "platform": "SonicWall",
-      "title": "SonicWall SMA100 SQL Injection Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "SonicWall SMA100 contains a SQL injection vulnerability allowing an unauthenticated user to gain read-only access to unauthorized resources.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7481"
-    },
-    {
       "id": "CVE-2021-20022",
       "platform": "SonicWall",
       "title": "SonicWall Email Security Unrestricted Upload of File Vulnerability",
@@ -6723,18 +6939,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20023"
     },
     {
-      "id": "CVE-2021-20016",
-      "platform": "SonicWall",
-      "title": "SonicWall SSLVPN SMA100 SQL Injection Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "SonicWall SSLVPN SMA100 contains a SQL injection vulnerability that allows remote exploitation for credential access by an unauthenticated attacker.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20016"
-    },
-    {
       "id": "CVE-2026-81963",
       "platform": "Windows Server",
       "title": "Windows Update Stack EoP Zero-Day",
@@ -6745,6 +6949,66 @@
       "cisaKev": true,
       "description": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
+    },
+    {
+      "id": "CVE-2015-0016",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2015-0016)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2015-01-13",
+      "cisaKev": true,
+      "description": "Directory traversal vulnerability in the TS WebProxy (aka TSWbPrxy) component in Microsoft Windows Vista SP2, Windows 7 SP1, Windows Server 2008 R2 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1 allows remote attackers to gain privileges via a crafted pathname in an executable file, as demonstrated by a transition from Low Integrity to Medium Integrity, aka \"Directory Traversal Elevation of Privilege Vulnerability.\"",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-0016"
+    },
+    {
+      "id": "CVE-2014-9163",
+      "platform": "Windows Desktop",
+      "title": "Windows 11 Vulnerability (CVE-2014-9163)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2014-12-10",
+      "cisaKev": true,
+      "description": "Stack-based buffer overflow in Adobe Flash Player before 13.0.0.259 and 14.x and 15.x before 15.0.0.246 on Windows and OS X and before 11.2.202.425 on Linux allows attackers to execute arbitrary code via unspecified vectors, as exploited in the wild in December 2014.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2014-9163"
+    },
+    {
+      "id": "CVE-2015-7362",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2015-7362)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2016-01-08",
+      "cisaKev": false,
+      "description": "Fortinet FortiClient Linux SSLVPN before build 2313, when installed on Linux in a home directory that is world readable and executable, allows local users to gain privileges via the helper/subroc setuid program.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-7362"
+    },
+    {
+      "id": "CVE-2020-5131",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2020-5131)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2020-07-17",
+      "cisaKev": false,
+      "description": "SonicWall NetExtender Windows client vulnerable to arbitrary file write vulnerability, this allows attacker to overwrite a DLL and execute code with the same privilege in the host operating system. This vulnerability impact SonicWall NetExtender Windows client version 9.0.815 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5131"
+    },
+    {
+      "id": "CVE-2020-5144",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2020-5144)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2020-10-28",
+      "cisaKev": false,
+      "description": "SonicWall Global VPN client version 4.10.4.0314 and earlier allows unprivileged windows user to elevate privileges to SYSTEM through loaded process hijacking vulnerability.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5144"
     },
     {
       "id": "CVE-2019-7487",
@@ -6771,28 +7035,28 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-20212"
     },
     {
-      "id": "CVE-2001-1452",
-      "platform": "Windows Server",
-      "title": "Windows Server Vulnerability (CVE-2001-1452)",
+      "id": "CVE-2019-7483",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7483)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2001-08-31",
-      "cisaKev": false,
-      "description": "By default, DNS servers on Windows NT 4.0 and Windows 2000 Server cache glue records received from non-delegated name servers, which allows remote attackers to poison the DNS cache via spoofed DNS responses.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2001-1452"
+      "published": "2019-12-19",
+      "cisaKev": true,
+      "description": "In SonicWall SMA100, an unauthenticated Directory Traversal vulnerability in the handleWAFRedirect CGI allows the user to test for the presence of a file on the server.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7483"
     },
     {
-      "id": "CVE-2005-0772",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2005-0772)",
+      "id": "CVE-2019-7481",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2019-7481)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2005-06-28",
-      "cisaKev": false,
-      "description": "VERITAS Backup Exec 9.0 through 10.0 for Windows Servers, and 9.0.4019 through 9.1.307 for Netware, allows remote attackers to cause a denial of service (Remote Agent crash) via (1) a crafted packet in NDMLSRVR.DLL or (2) a request packet with an invalid (non-0) \"Error Status\" value, which triggers a null dereference.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2005-0772"
+      "published": "2019-12-17",
+      "cisaKev": true,
+      "description": "Vulnerability in SonicWall SMA100 allow unauthenticated user to gain read-only access to unauthorized resources. This vulnerablity impacted SMA100 version 9.0.0.3 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7481"
     },
     {
       "id": "CVE-2017-3130",
@@ -6807,6 +7071,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-3130"
     },
     {
+      "id": "CVE-2018-13376",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2018-13376)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2018-11-27",
+      "cisaKev": false,
+      "description": "An uninitialized memory buffer leak exists in Fortinet FortiOS 5.6.1 to 5.6.3, 5.4.6 to 5.4.7, 5.2 all versions under web proxy's disclaimer response web pages, potentially causing sensitive data to be displayed in the HTTP response.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-13376"
+    },
+    {
       "id": "CVE-2019-15703",
       "platform": "Fortinet",
       "title": "FortiGate Vulnerability (CVE-2019-15703)",
@@ -6819,6 +7095,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-15703"
     },
     {
+      "id": "CVE-2026-55841",
+      "platform": "Fortinet",
+      "title": "FortiGate Vulnerability (CVE-2026-55841)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-08-28",
+      "cisaKev": false,
+      "description": "Graylog is a free and open log management platform. Prior to Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3, the FortiGate key-value syslog parser in graylog2-server/src/main/java/org/graylog2/inputs/codecs/GLFortiGateSyslogEvent.java and graylog2-server/src/main/java/org/graylog2/inputs/codecs/SyslogCodec.java mishandles field-like text inside quoted values. GLFortiGateSyslogEvent.getFields() uses KV_PATTERN and QUOTED_KV_PATTERN, while SyslogCodec.parse() invokes the FortiGateSyslogEvent parser; crafted values containing = or backslash-escaped quotes can cause embedded keys such as srcip, dstip, date, time, and tz to remove or overwrite original top-level fields or produce an invalid message that Graylog discards. An unauthenticated network sender who can submit syslog messages can therefore manipulate security-log fields or evade logging to obscure malicious activity. This issue is fixed in Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-55841"
+    },
+    {
       "id": "CVE-2019-7477",
       "platform": "SonicWall",
       "title": "SonicOS Vulnerability (CVE-2019-7477)",
@@ -6829,6 +7117,18 @@
       "cisaKev": false,
       "description": "A vulnerability in SonicWall SonicOS and SonicOSv TLS CBC Cipher allow remote attackers to obtain sensitive plaintext data when CBC cipher suites are enabled. This vulnerability affected SonicOS Gen 5 version 5.9.1.10 and earlier, Gen 6 version 6.2.7.3, 6.5.1.3, 6.5.2.2, 6.5.3.1, 6.2.7.8, 6.4.0.0, 6.5.1.8, 6.0.5.3-86o and SonicOSv 6.5.0.2-8v_RC363 (VMWARE), 6.5.0.2.8v_RC367 (AZURE), SonicOSv 6.5.0.2.8v_RC368 (AWS), SonicOSv 6.5.0.2.8v_RC366 (HYPER_V).",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7477"
+    },
+    {
+      "id": "CVE-2020-5129",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2020-5129)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2020-03-26",
+      "cisaKev": false,
+      "description": "A vulnerability in the SonicWall SMA1000 HTTP Extraweb server allows an unauthenticated remote attacker to cause HTTP server crash which leads to Denial of Service. This vulnerability affected SMA1000 Version 12.1.0-06411 and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5129"
     },
     {
       "id": "CVE-2020-5133",
@@ -6939,6 +7239,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0656"
     },
     {
+      "id": "CVE-2023-41713",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2023-41713)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-10-17",
+      "cisaKev": false,
+      "description": "SonicOS Use of Hard-coded Password vulnerability in the 'dynHandleBuyToolbar' demo function.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41713"
+    },
+    {
       "id": "CVE-2024-20430",
       "platform": "Cisco Meraki",
       "title": "Cisco Meraki Vulnerability (CVE-2024-20430)",
@@ -6963,6 +7275,30 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-7738"
     },
     {
+      "id": "CVE-2017-17544",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2017-17544)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2019-04-09",
+      "cisaKev": false,
+      "description": "A privilege escalation vulnerability in Fortinet FortiOS 6.0.0 to 6.0.6, 5.6.0 to 5.6.10, 5.4 and below allows admin users to elevate their profile to super_admin via restoring modified configurations.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-17544"
+    },
+    {
+      "id": "CVE-2020-5146",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2020-5146)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-01-09",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicWall SMA100 appliance allow an authenticated management-user to perform OS command injection using HTTP POST parameters. This vulnerability affected SMA100 Appliance version 10.2.0.2-20sv and earlier.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-5146"
+    },
+    {
       "id": "CVE-2019-7479",
       "platform": "SonicWall",
       "title": "SonicOS Vulnerability (CVE-2019-7479)",
@@ -6973,18 +7309,6 @@
       "cisaKev": false,
       "description": "A vulnerability in SonicOS allow authenticated read-only admin can elevate permissions to configuration mode. This vulnerability affected SonicOS Gen 5 version 5.9.1.12-4o and earlier, Gen 6 version 6.2.7.4-32n, 6.5.1.4-4n, 6.5.2.3-4n, 6.5.3.3-3n, 6.2.7.10-3n, 6.4.1.0-3n, 6.5.3.3-3n, 6.5.1.9-4n and SonicOSv 6.5.0.2-8v_RC363 (VMWARE), 6.5.0.2.8v_RC367 (AZURE), SonicOSv 6.5.0.2.8v_RC368 (AWS), SonicOSv 6.5.0.2.8v_RC366 (HYPER_V).",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7479"
-    },
-    {
-      "id": "CVE-1999-0012",
-      "platform": "Windows Server",
-      "title": "Windows Server Vulnerability (CVE-1999-0012)",
-      "score": 7.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "1998-02-06",
-      "cisaKev": false,
-      "description": "Some web servers under Microsoft Windows allow remote attackers to bypass access restrictions for files with long file names.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-1999-0012"
     }
   ]
 }
