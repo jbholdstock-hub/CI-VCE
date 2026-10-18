@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-17T18:10:16.144908+00:00",
+  "lastUpdated": "2026-10-18T00:12:31.088830+00:00",
   "total": 612,
   "vulnerabilities": [
     {
@@ -77,7 +77,7 @@
     {
       "id": "CVE-2024-40766",
       "platform": "SonicWall",
-      "title": "SonicOS Vulnerability (CVE-2024-40766)",
+      "title": "SonicWall Vulnerability (CVE-2024-40766)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
