@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-18T18:11:27.550773+00:00",
-  "total": 612,
+  "lastUpdated": "2026-10-19T00:14:04.146625+00:00",
+  "total": 617,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -63,6 +63,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-72979"
     },
     {
+      "id": "CVE-2025-64446",
+      "platform": "Fortinet",
+      "title": "Fortinet Vulnerability (CVE-2025-64446)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2025-11-14",
+      "cisaKev": true,
+      "description": "A relative path traversal vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.1, FortiWeb 7.6.0 through 7.6.4, FortiWeb 7.4.0 through 7.4.9, FortiWeb 7.2.0 through 7.2.11, FortiWeb 7.0.0 through 7.0.11 may allow an attacker to execute administrative commands on the system via crafted HTTP or HTTPS requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-64446"
+    },
+    {
       "id": "CVE-2024-55591",
       "platform": "Fortinet",
       "title": "FortiOS Vulnerability (CVE-2024-55591)",
@@ -77,7 +89,7 @@
     {
       "id": "CVE-2024-40766",
       "platform": "SonicWall",
-      "title": "SonicWall Vulnerability (CVE-2024-40766)",
+      "title": "SonicOS Vulnerability (CVE-2024-40766)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -265,6 +277,18 @@
       "cisaKev": false,
       "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSIEM 7.3.0 through 7.3.1, FortiSIEM 7.2.0 through 7.2.5, FortiSIEM 7.1.0 through 7.1.7, FortiSIEM 7.0.0 through 7.0.3, FortiSIEM 6.7.0 through 6.7.9, FortiSIEM 6.6 all versions, FortiSIEM 6.5 all versions, FortiSIEM 6.4 all versions, FortiSIEM 6.3 all versions, FortiSIEM 6.2 all versions, FortiSIEM 6.1 all versions, FortiSIEM 5.4 all versions, FortiSIEM 5.3 all versions, FortiSIEM 5.2 all versions, FortiSIEM 5.1 all versions, FortiSIEM 5.0 all versions, FortiSIEM 4.10 all versions, FortiSIEM 4.9 all versions, FortiSIEM 4.7 all versions allows an unauthenticated attacker to execute unauthorized code or commands via crafted CLI requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25256"
+    },
+    {
+      "id": "CVE-2025-40604",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2025-40604)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2025-11-20",
+      "cisaKev": false,
+      "description": "Download of Code Without Integrity Check Vulnerability in the SonicWall Email Security appliance loads root filesystem images without verifying signatures, allowing attackers with VMDK or datastore access to modify system files and gain persistent arbitrary code execution.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40604"
     },
     {
       "id": "CVE-2023-41265",
@@ -639,16 +663,16 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-42790"
     },
     {
-      "id": "CVE-2026-84393",
+      "id": "CVE-2025-49201",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2026-84393)",
+      "title": "Fortinet Vulnerability (CVE-2025-49201)",
       "score": 8.1,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2026-09-08",
+      "published": "2025-10-14",
       "cisaKev": false,
-      "description": "A improper validation of certificate with host mismatch vulnerability in Fortinet FortiOS 7.6.1 through 7.6.6, FortiProxy 7.6.2 through 7.6.6 may allow attacker to information disclosure via <insert attack vector here>",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-84393"
+      "description": "A weak authentication vulnerability in Fortinet FortiPAM 1.5.0, FortiPAM 1.4.0 through 1.4.2, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiSwitchManager 7.2.0 through 7.2.4 allows attacker to execute unauthorized code or commands via specially crafted http requests",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-49201"
     },
     {
       "id": "CVE-2025-61624",
@@ -1549,18 +1573,6 @@
       "cisaKev": true,
       "description": "Fortinet FortiWeb contains an OS command Injection vulnerability that may allow an authenticated attacker to execute unauthorized code on the underlying system via crafted HTTP requests or CLI commands.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-58034"
-    },
-    {
-      "id": "CVE-2025-64446",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiWeb Path Traversal Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-11-14",
-      "cisaKev": true,
-      "description": "Fortinet FortiWeb contains a relative path traversal vulnerability that may allow an unauthenticated attacker to execute administrative commands on the system via crafted HTTP or HTTPS requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-64446"
     },
     {
       "id": "CVE-2025-62215",
@@ -7191,6 +7203,54 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-48884"
     },
     {
+      "id": "CVE-2025-25253",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-25253)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "ADJACENT_NETWORK",
+      "published": "2025-10-14",
+      "cisaKev": false,
+      "description": "An Improper Validation of Certificate with Host Mismatch vulnerability [CWE-297] in FortiProxy version 7.6.1 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions and FortiOS version 7.6.2 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions ZTNA proxy may allow an unauthenticated attacker in a man-in-the middle position to intercept and tamper with connections to the ZTNA proxy",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25253"
+    },
+    {
+      "id": "CVE-2025-57740",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-57740)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-10-14",
+      "cisaKev": false,
+      "description": "An Heap-based Buffer Overflow vulnerability [CWE-122] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions; FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions and FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions RDP bookmark connection may allow an authenticated user to execute unauthorized code via crafted requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-57740"
+    },
+    {
+      "id": "CVE-2025-53843",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-53843)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-11-18",
+      "cisaKev": false,
+      "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions allows attacker to execute unauthorized code or commands via specially crafted packets",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53843"
+    },
+    {
+      "id": "CVE-2025-58413",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-58413)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "ADJACENT_NETWORK",
+      "published": "2025-11-18",
+      "cisaKev": false,
+      "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiOS 6.2 all versions, FortiOS 6.0 all versions, FortiSASE 25.3.b allows attacker to execute unauthorized code or commands via specially crafted packets",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-58413"
+    },
+    {
       "id": "CVE-2026-55841",
       "platform": "Fortinet",
       "title": "FortiGate Vulnerability (CVE-2026-55841)",
@@ -7201,6 +7261,18 @@
       "cisaKev": false,
       "description": "Graylog is a free and open log management platform. Prior to Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3, the FortiGate key-value syslog parser in graylog2-server/src/main/java/org/graylog2/inputs/codecs/GLFortiGateSyslogEvent.java and graylog2-server/src/main/java/org/graylog2/inputs/codecs/SyslogCodec.java mishandles field-like text inside quoted values. GLFortiGateSyslogEvent.getFields() uses KV_PATTERN and QUOTED_KV_PATTERN, while SyslogCodec.parse() invokes the FortiGateSyslogEvent parser; crafted values containing = or backslash-escaped quotes can cause embedded keys such as srcip, dstip, date, time, and tz to remove or overwrite original top-level fields or produce an invalid message that Graylog discards. An unauthenticated network sender who can submit syslog messages can therefore manipulate security-log fields or evade logging to obscure malicious activity. This issue is fixed in Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-55841"
+    },
+    {
+      "id": "CVE-2025-40601",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2025-40601)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-11-20",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow vulnerability in the SonicOS SSLVPN service allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40601"
     },
     {
       "id": "CVE-2021-27070",
@@ -7287,30 +7359,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-47856"
     },
     {
-      "id": "CVE-2025-53679",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2025-53679)",
-      "score": 7.2,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-12-09",
-      "cisaKev": false,
-      "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.2, FortiSandbox 4.4.0 through 4.4.7, FortiSandbox 4.2 all versions, FortiSandbox 4.0 all versions, FortiSandbox Cloud 24.1, FortiSandbox Cloud 23 all versions allows a remote privileged attacker to execute unauthorized code or commands via crafted HTTP or HTTPS requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53679"
-    },
-    {
-      "id": "CVE-2025-53949",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2025-53949)",
-      "score": 7.2,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-12-09",
-      "cisaKev": false,
-      "description": "An Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.2, FortiSandbox 4.4.0 through 4.4.7, FortiSandbox 4.2 all versions, FortiSandbox 4.0 all versions may allow an authenticated attacker to execute unauthorized code on the underlying system via crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53949"
-    },
-    {
       "id": "CVE-2026-100232",
       "platform": "SonicWall",
       "title": "SonicWall Vulnerability (CVE-2026-100232)",
@@ -7333,6 +7381,18 @@
       "cisaKev": true,
       "description": "An elevation of privilege vulnerability exists in Windows when the Win32k component fails to properly handle objects in memory, aka \"Win32k Elevation of Privilege Vulnerability.\" This affects Windows Server 2008, Windows 7, Windows Server 2008 R2. This CVE ID is unique from CVE-2018-8124, CVE-2018-8164, CVE-2018-8166.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-8120"
+    },
+    {
+      "id": "CVE-2025-8061",
+      "platform": "Windows Desktop",
+      "title": "Windows 11 Vulnerability (CVE-2025-8061)",
+      "score": 7.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2025-09-11",
+      "cisaKev": false,
+      "description": "A potential insufficient access control vulnerability was reported in the Lenovo Dispatcher 3.0 and Dispatcher 3.1 drivers used by some Lenovo consumer notebooks that could allow an authenticated local user to execute code with elevated privileges. The Lenovo Dispatcher 3.2 driver is not affected. This vulnerability does not affect systems when the Windows feature Core Isolation Memory Integrity is enabled. Lenovo systems preloaded with Windows 11 have this feature enabled by default.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-8061"
     },
     {
       "id": "CVE-2026-66153",
