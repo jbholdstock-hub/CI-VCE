@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-21T12:23:25.484061+00:00",
-  "total": 595,
+  "lastUpdated": "2026-10-21T18:20:51.430205+00:00",
+  "total": 616,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -75,6 +75,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-64446"
     },
     {
+      "id": "CVE-2024-55591",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2024-55591)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2025-01-14",
+      "cisaKev": true,
+      "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS version 7.0.0 through 7.0.16 and FortiProxy version 7.0.0 through 7.0.19 and 7.2.0 through 7.2.12 allows a remote attacker to gain super-admin privileges via crafted requests to\u00a0Node.js websocket module.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
+    },
+    {
       "id": "CVE-2024-40766",
       "platform": "SonicWall",
       "title": "SonicOS Vulnerability (CVE-2024-40766)",
@@ -89,7 +101,7 @@
     {
       "id": "CVE-2024-21762",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2024-21762)",
+      "title": "FortiOS Vulnerability (CVE-2024-21762)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -99,9 +111,21 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-21762"
     },
     {
+      "id": "CVE-2023-27997",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2023-27997)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2023-06-13",
+      "cisaKev": true,
+      "description": "A heap-based buffer overflow vulnerability [CWE-122] in FortiOS version 7.2.4 and below, version 7.0.11 and below, version 6.4.12 and below, version 6.0.16 and below and FortiProxy version 7.2.3 and below, version 7.0.9 and below, version 2.0.12 and below, version 1.2 all versions, version 1.1 all versions SSL-VPN may allow a remote attacker to execute arbitrary code or commands via specifically crafted requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-27997"
+    },
+    {
       "id": "CVE-2022-40684",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2022-40684)",
+      "title": "FortiOS Vulnerability (CVE-2022-40684)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -109,6 +133,18 @@
       "cisaKev": true,
       "description": "An authentication bypass using an alternate path or channel [CWE-288] in Fortinet FortiOS version 7.2.0 through 7.2.1 and 7.0.0 through 7.0.6, FortiProxy version 7.2.0 and version 7.0.0 through 7.0.6 and FortiSwitchManager version 7.2.0 and 7.0.0 allows an unauthenticated atttacker to perform operations on the administrative interface via specially crafted HTTP or HTTPS requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-40684"
+    },
+    {
+      "id": "CVE-2020-12812",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2020-12812)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2020-07-24",
+      "cisaKev": true,
+      "description": "An improper authentication vulnerability in SSL VPN in FortiOS 6.4.0, 6.2.0 to 6.2.3, 6.0.9 and below may result in a user being able to log in successfully without being prompted for the second factor of authentication (FortiToken) if they changed the case of their username.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-12812"
     },
     {
       "id": "CVE-2021-20021",
@@ -133,6 +169,66 @@
       "cisaKev": true,
       "description": "A SQL-Injection vulnerability in the SonicWall SSLVPN SMA100 product allows a remote unauthenticated attacker to perform SQL query to access username password and other session related information. This vulnerability impacts SMA100 build version 10.x.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20016"
+    },
+    {
+      "id": "CVE-2021-26877",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-26877)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26877"
+    },
+    {
+      "id": "CVE-2021-26893",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-26893)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26893"
+    },
+    {
+      "id": "CVE-2021-26894",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-26894)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26894"
+    },
+    {
+      "id": "CVE-2021-26895",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-26895)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26895"
+    },
+    {
+      "id": "CVE-2021-26897",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-26897)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26897"
     },
     {
       "id": "CVE-2024-46796",
@@ -161,7 +257,7 @@
     {
       "id": "CVE-2023-42789",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-42789)",
+      "title": "FortiOS Vulnerability (CVE-2023-42789)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -291,16 +387,52 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34527"
     },
     {
-      "id": "CVE-2011-0627",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2011-0627)",
+      "id": "CVE-2021-33780",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-33780)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
-      "published": "2011-05-13",
+      "published": "2021-07-14",
       "cisaKev": false,
-      "description": "Adobe Flash Player before 10.3.181.14 on Windows, Mac OS X, Linux, and Solaris and before 10.3.185.21 on Android allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted Flash content, as possibly exploited in the wild in May 2011 by a Microsoft Office document with an embedded .swf file.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2011-0627"
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33780"
+    },
+    {
+      "id": "CVE-2021-34494",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-34494)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-07-14",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34494"
+    },
+    {
+      "id": "CVE-2021-34525",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-34525)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-07-14",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34525"
+    },
+    {
+      "id": "CVE-2021-34442",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-34442)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-07-16",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34442"
     },
     {
       "id": "CVE-2025-1930",
@@ -361,6 +493,18 @@
       "cisaKev": false,
       "description": "An improper authorization in Fortinet FortiWebManager 7.2.0, FortiWebManager 7.0.0 through 7.0.4, FortiWebManager 6.3.0, FortiWebManager 6.2.3 through 6.2.4, FortiWebManager 6.0.2 allows attacker to execute unauthorized code or commands via HTTP requests or CLI.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-23668"
+    },
+    {
+      "id": "CVE-2025-53844",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-53844)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-05-12",
+      "cisaKev": false,
+      "description": "A out-of-bounds write vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11 allows attacker to execute unauthorized code or commands via specially crafted packets.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53844"
     },
     {
       "id": "CVE-2026-66152",
@@ -447,9 +591,45 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41266"
     },
     {
+      "id": "CVE-2025-58325",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-58325)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2025-10-14",
+      "cisaKev": false,
+      "description": "An Incorrect Provision of Specified Functionality vulnerability [CWE-684] in FortiOS 7.6.0, 7.4.0 through 7.4.5, 7.2.5 through 7.2.10, 7.0.0 through 7.0.15, 6.4 all versions may allow a local authenticated attacker to execute system commands via crafted CLI commands.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-58325"
+    },
+    {
+      "id": "CVE-2025-25249",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-25249)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-01-13",
+      "cisaKev": true,
+      "description": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25249"
+    },
+    {
+      "id": "CVE-2025-24472",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-24472)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-02-11",
+      "cisaKev": true,
+      "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS 7.0.0 through 7.0.16 and FortiProxy 7.2.0 through 7.2.12, 7.0.0 through 7.0.19 may allow a remote unauthenticated attacker with prior knowledge of upstream and downstream devices serial numbers to gain super-admin privileges on the downstream device, if the Security Fabric is enabled, via crafted CSF proxy requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-24472"
+    },
+    {
       "id": "CVE-2017-12615",
       "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2017-12615)",
+      "title": "Windows Server Vulnerability (CVE-2017-12615)",
       "score": 8.1,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -461,7 +641,7 @@
     {
       "id": "CVE-2023-42790",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-42790)",
+      "title": "FortiOS Vulnerability (CVE-2023-42790)",
       "score": 8.1,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -579,18 +759,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461"
     },
     {
-      "id": "CVE-2025-25249",
-      "platform": "Fortinet",
-      "title": "Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2026-09-09",
-      "cisaKev": true,
-      "description": "Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25249"
-    },
-    {
       "id": "CVE-2026-20079",
       "platform": "Cisco Meraki",
       "title": "Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability",
@@ -601,6 +769,18 @@
       "cisaKev": true,
       "description": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-20079"
+    },
+    {
+      "id": "CVE-2026-81963",
+      "platform": "Windows Desktop",
+      "title": "Microsoft Windows Link Following Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2026-09-08",
+      "cisaKev": true,
+      "description": "Microsoft Windows Update Stack contains a link following vulnerability that allows a local attacker to escalate privileges locally up to SYSTEM.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
     },
     {
       "id": "CVE-2026-85880",
@@ -1791,18 +1971,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20439"
     },
     {
-      "id": "CVE-2025-24472",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2025-03-18",
-      "cisaKev": true,
-      "description": " Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that allows a remote attacker to gain super-admin privileges via crafted CSF proxy requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-24472"
-    },
-    {
       "id": "CVE-2025-24993",
       "platform": "Windows Desktop",
       "title": "Microsoft Windows NTFS Heap-Based Buffer Overflow Vulnerability",
@@ -2029,18 +2197,6 @@
       "cisaKev": true,
       "description": "Microsoft Windows Hyper-V NT Kernel Integration VSP contains a heap-based buffer overflow vulnerability that allows a local attacker to gain SYSTEM privileges.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-21333"
-    },
-    {
-      "id": "CVE-2024-55591",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2025-01-14",
-      "cisaKev": true,
-      "description": "Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that may allow an unauthenticated, remote attacker to gain super-admin privileges via crafted requests to Node.js websocket module.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
     },
     {
       "id": "CVE-2024-35250",
@@ -2821,18 +2977,6 @@
       "cisaKev": true,
       "description": "Microsoft Win32k contains an unspecified vulnerability that allows for privilege escalation.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-0165"
-    },
-    {
-      "id": "CVE-2023-27997",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiOS and FortiProxy SSL-VPN Heap-Based Buffer Overflow Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-06-13",
-      "cisaKev": true,
-      "description": "Fortinet FortiOS and FortiProxy SSL-VPN contain a heap-based buffer overflow vulnerability which can allow an unauthenticated, remote attacker to execute code or commands via specifically crafted requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-27997"
     },
     {
       "id": "CVE-2004-1464",
@@ -5823,18 +5967,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-5591"
     },
     {
-      "id": "CVE-2020-12812",
-      "platform": "Fortinet",
-      "title": "Fortinet FortiOS SSL VPN Improper Authentication Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2021-11-03",
-      "cisaKev": true,
-      "description": "Fortinet FortiOS SSL VPN contains an improper authentication vulnerability that may allow a user to login successfully without being prompted for the second factor of authentication (FortiToken) if they change the case in their username.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-12812"
-    },
-    {
       "id": "CVE-2018-13379",
       "platform": "Fortinet",
       "title": "Fortinet FortiOS SSL VPN Path Traversal Vulnerability",
@@ -6783,16 +6915,28 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20023"
     },
     {
-      "id": "CVE-2026-81963",
+      "id": "CVE-2021-33746",
       "platform": "Windows Server",
-      "title": "Windows Update Stack EoP Zero-Day",
-      "score": 7.8,
+      "title": "Windows Server Vulnerability (CVE-2021-33746)",
+      "score": 8.0,
       "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2026-09-08",
-      "cisaKev": true,
-      "description": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
+      "vector": "NETWORK",
+      "published": "2021-07-14",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33746"
+    },
+    {
+      "id": "CVE-2021-33754",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-33754)",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-07-14",
+      "cisaKev": false,
+      "description": "Windows DNS Server Remote Code Execution Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33754"
     },
     {
       "id": "CVE-2015-2291",
@@ -6809,7 +6953,7 @@
     {
       "id": "CVE-2015-1701",
       "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2015-1701)",
+      "title": "Windows Server Vulnerability (CVE-2015-1701)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -6853,6 +6997,30 @@
       "cisaKev": false,
       "description": "Insufficient input validation in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables an unprivileged user to cause an integer overflow via local access.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12221"
+    },
+    {
+      "id": "CVE-2021-26887",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-26887)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "An elevation of privilege vulnerability exists in Microsoft Windows when Folder redirection has been enabled via Group Policy. When folder redirection file server is co-located with Terminal server, an attacker who successfully exploited the vulnerability would be able to begin redirecting another user's personal data to a created folder.\nTo exploit the vulnerability, an attacker can create a new folder under the Folder Redirection root path and create a junction on a newly created User folder. When the new user logs in, Folder Redirection would start redirecting to the folder and copying personal data.\nThis elevation of privilege vulnerability can only be addressed by reconfiguring Folder Redirection with Offline files and restricting permissions, and NOT via a security update for affected Windows Servers. See the FAQ section of this CVE for configuration guidance.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26887"
+    },
+    {
+      "id": "CVE-2023-4807",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2023-4807)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2023-09-08",
+      "cisaKev": false,
+      "description": "Issue summary: The POLY1305 MAC (message authentication code) implementation\ncontains a bug that might corrupt the internal state of applications on the\nWindows 64 platform when running on newer X86_64 processors supporting the\nAVX512-IFMA instructions.\n\nImpact summary: If in an application that uses the OpenSSL library an attacker\ncan influence whether the POLY1305 MAC algorithm is used, the application\nstate might be corrupted with various application dependent consequences.\n\nThe POLY1305 MAC (message authentication code) implementation in OpenSSL does\nnot save the contents of non-volatile XMM registers on Windows 64 platform\nwhen calculating the MAC of data larger than 64 bytes. Before returning to\nthe caller all the XMM registers are set to zero rather than restoring their\nprevious content. The vulnerable code is used only on newer x86_64 processors\nsupporting the AVX512-IFMA instructions.\n\nThe consequences of this kind of internal application state corruption can\nbe various - from no consequences, if the calling application does not\ndepend on the contents of non-volatile XMM registers at all, to the worst\nconsequences, where the attacker could get complete control of the application\nprocess. However given the contents of the registers are just zeroized so\nthe attacker cannot put arbitrary values inside, the most likely consequence,\nif any, would be an incorrect result of some application dependent\ncalculations or a crash leading to a denial of service.\n\nThe POLY1305 MAC algorithm is most frequently used as part of the\nCHACHA20-POLY1305 AEAD (authenticated encryption with associated data)\nalgorithm. The most common usage of this AEAD cipher is with TLS protocol\nversions 1.2 and 1.3 and a malicious client can influence whether this AEAD\ncipher is used by the server. This implies that server applications using\nOpenSSL can be potentially impacted. However we are currently not aware of\nany concrete application that would be affected by this issue therefore we\nconsider this a Low severity security issue.\n\nAs a workaround the AVX512-IFMA instructions support can be disabled at\nruntime by setting the environment variable OPENSSL_ia32cap:\n\n   OPENSSL_ia32cap=:~0x200000\n\nThe FIPS provider is not affected by this issue.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4807"
     },
     {
       "id": "CVE-2023-52751",
@@ -6975,9 +7143,45 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-7481"
     },
     {
+      "id": "CVE-2020-0909",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2020-0909)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2020-05-21",
+      "cisaKev": false,
+      "description": "A denial of service vulnerability exists when Hyper-V on a Windows Server fails to properly handle specially crafted network packets.\nTo exploit the vulnerability, an attacker would send specially crafted network packets to the Hyper-V Server.\nThe security update addresses the vulnerability by resolving the conditions where Hyper-V would fail to properly handle these network packets.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-0909"
+    },
+    {
+      "id": "CVE-2021-26896",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-26896)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "Windows DNS Server Denial of Service Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26896"
+    },
+    {
+      "id": "CVE-2021-27063",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-27063)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-03-11",
+      "cisaKev": false,
+      "description": "Windows DNS Server Denial of Service Vulnerability",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-27063"
+    },
+    {
       "id": "CVE-2024-48884",
       "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2024-48884)",
+      "title": "FortiOS Vulnerability (CVE-2024-48884)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -6985,6 +7189,54 @@
       "cisaKev": false,
       "description": "A improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiManager 7.6.0 through 7.6.1, FortiManager 7.4.1 through 7.4.3, FortiManager Cloud 7.4.1 through 7.4.3, FortiOS 7.6.0, FortiOS 7.4.0 through 7.4.4, FortiOS 7.2.0 through 7.2.9, FortiOS 7.0.0 through 7.0.15, FortiOS 6.4.0 through 6.4.15, FortiProxy 7.4.0 through 7.4.5, FortiProxy 7.2.0 through 7.2.11, FortiProxy 7.0.0 through 7.0.18, FortiProxy 2.0 all versions, FortiProxy 1.2 all versions, FortiProxy 1.1 all versions, FortiProxy 1.0 all versions may allow a remote authenticated attacker with access to the security fabric interface and port to write arbitrary files or a remote unauthenticated attacker to delete an arbitrary folder",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-48884"
+    },
+    {
+      "id": "CVE-2025-25253",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-25253)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "ADJACENT_NETWORK",
+      "published": "2025-10-14",
+      "cisaKev": false,
+      "description": "An Improper Validation of Certificate with Host Mismatch vulnerability [CWE-297] in FortiProxy version 7.6.1 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions and FortiOS version 7.6.2 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions ZTNA proxy may allow an unauthenticated attacker in a man-in-the middle position to intercept and tamper with connections to the ZTNA proxy",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25253"
+    },
+    {
+      "id": "CVE-2025-57740",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-57740)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-10-14",
+      "cisaKev": false,
+      "description": "An Heap-based Buffer Overflow vulnerability [CWE-122] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions; FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions and FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions RDP bookmark connection may allow an authenticated user to execute unauthorized code via crafted requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-57740"
+    },
+    {
+      "id": "CVE-2025-53843",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-53843)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-11-18",
+      "cisaKev": false,
+      "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions allows attacker to execute unauthorized code or commands via specially crafted packets",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53843"
+    },
+    {
+      "id": "CVE-2025-58413",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-58413)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "ADJACENT_NETWORK",
+      "published": "2025-11-18",
+      "cisaKev": false,
+      "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiOS 6.2 all versions, FortiOS 6.0 all versions, FortiSASE 25.3.b allows attacker to execute unauthorized code or commands via specially crafted packets",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-58413"
     },
     {
       "id": "CVE-2026-55841",
@@ -7109,7 +7361,7 @@
     {
       "id": "CVE-2018-8120",
       "platform": "Windows Server",
-      "title": "Windows Vulnerability (CVE-2018-8120)",
+      "title": "Windows Server Vulnerability (CVE-2018-8120)",
       "score": 7.0,
       "severity": "HIGH",
       "vector": "LOCAL",
