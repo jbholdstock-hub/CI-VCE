@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T18:20:51.430205+00:00",
+  "lastUpdated": "2026-10-22T00:16:42.621580+00:00",
   "total": 616,
   "vulnerabilities": [
     {
@@ -769,18 +769,6 @@
       "cisaKev": true,
       "description": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-20079"
-    },
-    {
-      "id": "CVE-2026-81963",
-      "platform": "Windows Desktop",
-      "title": "Microsoft Windows Link Following Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2026-09-08",
-      "cisaKev": true,
-      "description": "Microsoft Windows Update Stack contains a link following vulnerability that allows a local attacker to escalate privileges locally up to SYSTEM.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
     },
     {
       "id": "CVE-2026-85880",
@@ -6937,6 +6925,18 @@
       "cisaKev": false,
       "description": "Windows DNS Server Remote Code Execution Vulnerability",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33754"
+    },
+    {
+      "id": "CVE-2026-81963",
+      "platform": "Windows Server",
+      "title": "Windows Update Stack EoP Zero-Day",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2026-09-08",
+      "cisaKev": true,
+      "description": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
     },
     {
       "id": "CVE-2015-2291",
