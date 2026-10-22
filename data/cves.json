@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-22T06:24:24.996942+00:00",
-  "total": 616,
+  "lastUpdated": "2026-10-22T12:24:10.947428+00:00",
+  "total": 613,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -293,7 +293,7 @@
     {
       "id": "CVE-2023-41265",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-41265)",
+      "title": "Windows 11 Vulnerability (CVE-2023-41265)",
       "score": 9.6,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -352,8 +352,8 @@
     },
     {
       "id": "CVE-2017-0145",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2017-0145)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2017-0145)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -364,8 +364,8 @@
     },
     {
       "id": "CVE-2017-0144",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2017-0144)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2017-0144)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -376,8 +376,8 @@
     },
     {
       "id": "CVE-2021-34527",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2021-34527)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2021-34527)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -459,18 +459,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-3928"
     },
     {
-      "id": "CVE-2021-34481",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2021-34481)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2021-07-16",
-      "cisaKev": false,
-      "description": "A remote code execution vulnerability exists when the Windows Print Spooler service improperly performs privileged file operations. An attacker who successfully exploited this vulnerability could run arbitrary code with SYSTEM privileges. An attacker could then install programs; view, change, or delete data; or create new accounts with full user rights.\nUPDATE August 10, 2021: Microsoft has completed the investigation and has released security updates to address this vulnerability. Please see the Security Updates table for the applicable update for your system. We recommend that you install these updates immediately. This security update changes the Point and Print default behavior; please see KB5005652.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-34481"
-    },
-    {
       "id": "CVE-2019-5589",
       "platform": "Fortinet",
       "title": "Fortinet Vulnerability (CVE-2019-5589)",
@@ -532,8 +520,8 @@
     },
     {
       "id": "CVE-2015-2546",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2015-2546)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2015-2546)",
       "score": 8.2,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -544,8 +532,8 @@
     },
     {
       "id": "CVE-2018-12214",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2018-12214)",
+      "platform": "Windows Server",
+      "title": "Windows Vulnerability (CVE-2018-12214)",
       "score": 8.2,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -556,8 +544,8 @@
     },
     {
       "id": "CVE-2018-12216",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2018-12216)",
+      "platform": "Windows Server",
+      "title": "Windows Vulnerability (CVE-2018-12216)",
       "score": 8.2,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -568,8 +556,8 @@
     },
     {
       "id": "CVE-2018-12220",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2018-12220)",
+      "platform": "Windows Server",
+      "title": "Windows Vulnerability (CVE-2018-12220)",
       "score": 8.2,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -581,7 +569,7 @@
     {
       "id": "CVE-2023-41266",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-41266)",
+      "title": "Windows 11 Vulnerability (CVE-2023-41266)",
       "score": 8.2,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -6964,8 +6952,8 @@
     },
     {
       "id": "CVE-2018-8453",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2018-8453)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2018-8453)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -6976,8 +6964,8 @@
     },
     {
       "id": "CVE-2016-7255",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2016-7255)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2016-7255)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -6988,8 +6976,8 @@
     },
     {
       "id": "CVE-2018-12221",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2018-12221)",
+      "platform": "Windows Server",
+      "title": "Windows Vulnerability (CVE-2018-12221)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -7024,8 +7012,8 @@
     },
     {
       "id": "CVE-2023-52751",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-52751)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2023-52751)",
       "score": 7.8,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -7120,8 +7108,8 @@
     },
     {
       "id": "CVE-2018-8174",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2018-8174)",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2018-8174)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -7261,30 +7249,6 @@
       "cisaKev": false,
       "description": "A Stack-based buffer overflow vulnerability in the SonicOS SSLVPN service allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40601"
-    },
-    {
-      "id": "CVE-2021-27070",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2021-27070)",
-      "score": 7.3,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2021-03-11",
-      "cisaKev": false,
-      "description": "Windows 10 Update Assistant Elevation of Privilege Vulnerability",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-27070"
-    },
-    {
-      "id": "CVE-2021-36945",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2021-36945)",
-      "score": 7.3,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2021-08-12",
-      "cisaKev": false,
-      "description": "Windows 10 Update Assistant Elevation of Privilege Vulnerability",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-36945"
     },
     {
       "id": "CVE-2020-9290",
