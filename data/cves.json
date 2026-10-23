@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-23T00:18:11.765385+00:00",
-  "total": 621,
+  "lastUpdated": "2026-10-23T06:23:09.762943+00:00",
+  "total": 617,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -63,18 +63,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-72979"
     },
     {
-      "id": "CVE-2024-55591",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-55591)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2025-01-14",
-      "cisaKev": true,
-      "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS version 7.0.0 through 7.0.16 and FortiProxy version 7.0.0 through 7.0.19 and 7.2.0 through 7.2.12 allows a remote attacker to gain super-admin privileges via crafted requests to\u00a0Node.js websocket module.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
-    },
-    {
       "id": "CVE-2024-40766",
       "platform": "SonicWall",
       "title": "SonicOS Vulnerability (CVE-2024-40766)",
@@ -89,7 +77,7 @@
     {
       "id": "CVE-2024-21762",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-21762)",
+      "title": "Fortinet Vulnerability (CVE-2024-21762)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -99,21 +87,9 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-21762"
     },
     {
-      "id": "CVE-2023-27997",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-27997)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2023-06-13",
-      "cisaKev": true,
-      "description": "A heap-based buffer overflow vulnerability [CWE-122] in FortiOS version 7.2.4 and below, version 7.0.11 and below, version 6.4.12 and below, version 6.0.16 and below and FortiProxy version 7.2.3 and below, version 7.0.9 and below, version 2.0.12 and below, version 1.2 all versions, version 1.1 all versions SSL-VPN may allow a remote attacker to execute arbitrary code or commands via specifically crafted requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-27997"
-    },
-    {
       "id": "CVE-2022-40684",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2022-40684)",
+      "title": "Fortinet Vulnerability (CVE-2022-40684)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -121,18 +97,6 @@
       "cisaKev": true,
       "description": "An authentication bypass using an alternate path or channel [CWE-288] in Fortinet FortiOS version 7.2.0 through 7.2.1 and 7.0.0 through 7.0.6, FortiProxy version 7.2.0 and version 7.0.0 through 7.0.6 and FortiSwitchManager version 7.2.0 and 7.0.0 allows an unauthenticated atttacker to perform operations on the administrative interface via specially crafted HTTP or HTTPS requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-40684"
-    },
-    {
-      "id": "CVE-2020-12812",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2020-12812)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2020-07-24",
-      "cisaKev": true,
-      "description": "An improper authentication vulnerability in SSL VPN in FortiOS 6.4.0, 6.2.0 to 6.2.3, 6.0.9 and below may result in a user being able to log in successfully without being prompted for the second factor of authentication (FortiToken) if they changed the case of their username.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-12812"
     },
     {
       "id": "CVE-2021-20021",
@@ -245,7 +209,7 @@
     {
       "id": "CVE-2023-42789",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-42789)",
+      "title": "Fortinet Vulnerability (CVE-2023-42789)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -497,7 +461,7 @@
     {
       "id": "CVE-2023-29181",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-29181)",
+      "title": "Fortinet Vulnerability (CVE-2023-29181)",
       "score": 8.8,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -605,7 +569,7 @@
     {
       "id": "CVE-2022-42476",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2022-42476)",
+      "title": "Fortinet Vulnerability (CVE-2022-42476)",
       "score": 8.2,
       "severity": "HIGH",
       "vector": "LOCAL",
@@ -613,30 +577,6 @@
       "cisaKev": false,
       "description": "A relative path traversal vulnerability [CWE-23] vulnerability in Fortinet FortiOS 7.2.0 through 7.2.3, FortiOS 7.0.0 through 7.0.8, FortiOS 6.4.0 through 6.4.11, FortiOS 6.2.0 through 6.2.12, FortiProxy 7.2.0 through 7.2.1, FortiProxy 7.0.0 through 7.0.7, FortiProxy 2.0.0 through 2.0.11, FortiProxy 1.2 all versions, FortiProxy 01.02 all versions, FortiProxy 1.1 all versions, FortiProxy 01.01 all versions allows privileged VDOM administrators to escalate their privileges to super admin of the box via crafted CLI requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-42476"
-    },
-    {
-      "id": "CVE-2025-58325",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2025-58325)",
-      "score": 8.2,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2025-10-14",
-      "cisaKev": false,
-      "description": "An Incorrect Provision of Specified Functionality vulnerability [CWE-684] in FortiOS 7.6.0, 7.4.0 through 7.4.5, 7.2.5 through 7.2.10, 7.0.0 through 7.0.15, 6.4 all versions may allow a local authenticated attacker to execute system commands via crafted CLI commands.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-58325"
-    },
-    {
-      "id": "CVE-2025-24472",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2025-24472)",
-      "score": 8.1,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-02-11",
-      "cisaKev": true,
-      "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS 7.0.0 through 7.0.16 and FortiProxy 7.2.0 through 7.2.12, 7.0.0 through 7.0.19 may allow a remote unauthenticated attacker with prior knowledge of upstream and downstream devices serial numbers to gain super-admin privileges on the downstream device, if the Security Fabric is enabled, via crafted CSF proxy requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-24472"
     },
     {
       "id": "CVE-2017-12615",
@@ -653,7 +593,7 @@
     {
       "id": "CVE-2023-42790",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-42790)",
+      "title": "Fortinet Vulnerability (CVE-2023-42790)",
       "score": 8.1,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -1983,6 +1923,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-20439"
     },
     {
+      "id": "CVE-2025-24472",
+      "platform": "Fortinet",
+      "title": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2025-03-18",
+      "cisaKev": true,
+      "description": " Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that allows a remote attacker to gain super-admin privileges via crafted CSF proxy requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-24472"
+    },
+    {
       "id": "CVE-2025-24993",
       "platform": "Windows Desktop",
       "title": "Microsoft Windows NTFS Heap-Based Buffer Overflow Vulnerability",
@@ -2209,6 +2161,18 @@
       "cisaKev": true,
       "description": "Microsoft Windows Hyper-V NT Kernel Integration VSP contains a heap-based buffer overflow vulnerability that allows a local attacker to gain SYSTEM privileges.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-21333"
+    },
+    {
+      "id": "CVE-2024-55591",
+      "platform": "Fortinet",
+      "title": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2025-01-14",
+      "cisaKev": true,
+      "description": "Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that may allow an unauthenticated, remote attacker to gain super-admin privileges via crafted requests to Node.js websocket module.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
     },
     {
       "id": "CVE-2024-35250",
@@ -2989,6 +2953,18 @@
       "cisaKev": true,
       "description": "Microsoft Win32k contains an unspecified vulnerability that allows for privilege escalation.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-0165"
+    },
+    {
+      "id": "CVE-2023-27997",
+      "platform": "Fortinet",
+      "title": "Fortinet FortiOS and FortiProxy SSL-VPN Heap-Based Buffer Overflow Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-06-13",
+      "cisaKev": true,
+      "description": "Fortinet FortiOS and FortiProxy SSL-VPN contain a heap-based buffer overflow vulnerability which can allow an unauthenticated, remote attacker to execute code or commands via specifically crafted requests.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-27997"
     },
     {
       "id": "CVE-2004-1464",
@@ -5979,6 +5955,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-5591"
     },
     {
+      "id": "CVE-2020-12812",
+      "platform": "Fortinet",
+      "title": "Fortinet FortiOS SSL VPN Improper Authentication Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-11-03",
+      "cisaKev": true,
+      "description": "Fortinet FortiOS SSL VPN contains an improper authentication vulnerability that may allow a user to login successfully without being prompted for the second factor of authentication (FortiToken) if they change the case in their username.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-12812"
+    },
+    {
       "id": "CVE-2018-13379",
       "platform": "Fortinet",
       "title": "Fortinet FortiOS SSL VPN Path Traversal Vulnerability",
@@ -7193,7 +7181,7 @@
     {
       "id": "CVE-2023-22640",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-22640)",
+      "title": "Fortinet Vulnerability (CVE-2023-22640)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -7205,7 +7193,7 @@
     {
       "id": "CVE-2023-29180",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-29180)",
+      "title": "Fortinet Vulnerability (CVE-2023-29180)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -7217,7 +7205,7 @@
     {
       "id": "CVE-2023-41677",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-41677)",
+      "title": "Fortinet Vulnerability (CVE-2023-41677)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -7229,7 +7217,7 @@
     {
       "id": "CVE-2024-26010",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-26010)",
+      "title": "Fortinet Vulnerability (CVE-2024-26010)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -7241,7 +7229,7 @@
     {
       "id": "CVE-2024-48884",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-48884)",
+      "title": "Fortinet Vulnerability (CVE-2024-48884)",
       "score": 7.5,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -7249,42 +7237,6 @@
       "cisaKev": false,
       "description": "A improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiManager 7.6.0 through 7.6.1, FortiManager 7.4.1 through 7.4.3, FortiManager Cloud 7.4.1 through 7.4.3, FortiOS 7.6.0, FortiOS 7.4.0 through 7.4.4, FortiOS 7.2.0 through 7.2.9, FortiOS 7.0.0 through 7.0.15, FortiOS 6.4.0 through 6.4.15, FortiProxy 7.4.0 through 7.4.5, FortiProxy 7.2.0 through 7.2.11, FortiProxy 7.0.0 through 7.0.18, FortiProxy 2.0 all versions, FortiProxy 01.02 all versions, FortiProxy 1.2 all versions, FortiProxy 01.01 all versions, FortiProxy 1.1 all versions, FortiProxy 01.00 all versions may allow a remote authenticated attacker with access to the security fabric interface and port to write arbitrary files or a remote unauthenticated attacker to delete an arbitrary folder",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-48884"
-    },
-    {
-      "id": "CVE-2025-25253",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2025-25253)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "ADJACENT_NETWORK",
-      "published": "2025-10-14",
-      "cisaKev": false,
-      "description": "An Improper Validation of Certificate with Host Mismatch vulnerability [CWE-297] in FortiProxy version 7.6.1 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions and FortiOS version 7.6.2 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions ZTNA proxy may allow an unauthenticated attacker in a man-in-the middle position to intercept and tamper with connections to the ZTNA proxy",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25253"
-    },
-    {
-      "id": "CVE-2025-57740",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2025-57740)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-10-14",
-      "cisaKev": false,
-      "description": "An Heap-based Buffer Overflow vulnerability [CWE-122] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions; FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions and FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions RDP bookmark connection may allow an authenticated user to execute unauthorized code via crafted requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-57740"
-    },
-    {
-      "id": "CVE-2025-53843",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2025-53843)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-11-18",
-      "cisaKev": false,
-      "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions allows attacker to execute unauthorized code or commands via specially crafted packets",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53843"
     },
     {
       "id": "CVE-2026-55841",
@@ -7397,7 +7349,7 @@
     {
       "id": "CVE-2024-50571",
       "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2024-50571)",
+      "title": "Fortinet Vulnerability (CVE-2024-50571)",
       "score": 7.2,
       "severity": "HIGH",
       "vector": "NETWORK",
