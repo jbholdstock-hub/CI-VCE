@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-23T12:18:02.216655+00:00",
-  "total": 621,
+  "lastUpdated": "2026-10-23T18:18:18.931847+00:00",
+  "total": 620,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -77,7 +77,7 @@
     {
       "id": "CVE-2024-40766",
       "platform": "SonicWall",
-      "title": "SonicOS Vulnerability (CVE-2024-40766)",
+      "title": "SonicWall Vulnerability (CVE-2024-40766)",
       "score": 9.8,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -555,18 +555,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-2546"
     },
     {
-      "id": "CVE-2023-41266",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-41266)",
-      "score": 8.2,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-08-29",
-      "cisaKev": true,
-      "description": "A path traversal vulnerability found in Qlik Sense Enterprise for Windows for versions May 2023 Patch 3 and earlier, February 2023 Patch 7 and earlier, November 2022 Patch 10 and earlier, and August 2022 Patch 12 and earlier allows an unauthenticated remote attacker to generate an anonymous session. This allows them to transmit HTTP requests to unauthorized endpoints. This is fixed in August 2023 IR, May 2023 Patch 4, February 2023 Patch 8, November 2022 Patch 11, and August 2022 Patch 13.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41266"
-    },
-    {
       "id": "CVE-2018-12214",
       "platform": "Windows Desktop",
       "title": "Windows 10 Vulnerability (CVE-2018-12214)",
@@ -601,6 +589,18 @@
       "cisaKev": false,
       "description": "Logic bug in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables a privileged user to execute arbitrary code via local access.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12220"
+    },
+    {
+      "id": "CVE-2023-41266",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2023-41266)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-08-29",
+      "cisaKev": true,
+      "description": "A path traversal vulnerability found in Qlik Sense Enterprise for Windows for versions May 2023 Patch 3 and earlier, February 2023 Patch 7 and earlier, November 2022 Patch 10 and earlier, and August 2022 Patch 12 and earlier allows an unauthenticated remote attacker to generate an anonymous session. This allows them to transmit HTTP requests to unauthorized endpoints. This is fixed in August 2023 IR, May 2023 Patch 4, February 2023 Patch 8, November 2022 Patch 11, and August 2022 Patch 13.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41266"
     },
     {
       "id": "CVE-2022-42476",
@@ -3145,18 +3145,6 @@
       "cisaKev": true,
       "description": "Microsoft Windows Graphic Component contains an unspecified vulnerability that allows for privilege escalation.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-21823"
-    },
-    {
-      "id": "CVE-2015-2291",
-      "platform": "Windows Desktop",
-      "title": "Intel Ethernet Diagnostics Driver for Windows Denial-of-Service Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2023-02-10",
-      "cisaKev": true,
-      "description": "Intel ethernet diagnostics driver for Windows IQVW32.sys and IQVW64.sys contain an unspecified vulnerability that allows for a denial-of-service (DoS).",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-2291"
     },
     {
       "id": "CVE-2022-41080",
@@ -6975,6 +6963,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
     },
     {
+      "id": "CVE-2015-2291",
+      "platform": "Windows Server",
+      "title": "Windows Vulnerability (CVE-2015-2291)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2017-08-09",
+      "cisaKev": true,
+      "description": "(1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in the Intel Ethernet diagnostics driver for Windows allows local users to cause a denial of service or possibly execute arbitrary code with kernel privileges via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007 IOCTL call.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-2291"
+    },
+    {
       "id": "CVE-2015-1701",
       "platform": "Windows Server",
       "title": "Windows Server Vulnerability (CVE-2015-1701)",
@@ -7011,6 +7011,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-7255"
     },
     {
+      "id": "CVE-2018-12221",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2018-12221)",
+      "score": 7.8,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2019-03-14",
+      "cisaKev": false,
+      "description": "Insufficient input validation in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables an unprivileged user to cause an integer overflow via local access.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12221"
+    },
+    {
       "id": "CVE-2021-26887",
       "platform": "Windows Server",
       "title": "Windows Server Vulnerability (CVE-2021-26887)",
@@ -7045,18 +7057,6 @@
       "cisaKev": false,
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix use-after-free in smb2_query_info_compound()\n\nThe following UAF was triggered when running fstests generic/072 with\nKASAN enabled against Windows Server 2022 and mount options\n'multichannel,max_channels=2,vers=3.1.1,mfsymlinks,noperm'\n\n  BUG: KASAN: slab-use-after-free in smb2_query_info_compound+0x423/0x6d0 [cifs]\n  Read of size 8 at addr ffff888014941048 by task xfs_io/27534\n\n  CPU: 0 PID: 27534 Comm: xfs_io Not tainted 6.6.0-rc7 #1\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS\n  rel-1.16.2-3-gd478f380-rebuilt.opensuse.org 04/01/2014\n  Call Trace:\n   dump_stack_lvl+0x4a/0x80\n   print_report+0xcf/0x650\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __phys_addr+0x46/0x90\n   kasan_report+0xda/0x110\n   ? smb2_query_info_compound+0x423/0x6d0 [cifs]\n   ? smb2_query_info_compound+0x423/0x6d0 [cifs]\n   smb2_query_info_compound+0x423/0x6d0 [cifs]\n   ? __pfx_smb2_query_info_compound+0x10/0x10 [cifs]\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __stack_depot_save+0x39/0x480\n   ? kasan_save_stack+0x33/0x60\n   ? kasan_set_track+0x25/0x30\n   ? ____kasan_slab_free+0x126/0x170\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n   ? __pfx_smb2_queryfs+0x10/0x10 [cifs]\n   ? __pfx___lock_acquire+0x10/0x10\n   smb311_queryfs+0x210/0x220 [cifs]\n   ? __pfx_smb311_queryfs+0x10/0x10 [cifs]\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __lock_acquire+0x480/0x26c0\n   ? lock_release+0x1ed/0x640\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? do_raw_spin_unlock+0x9b/0x100\n   cifs_statfs+0x18c/0x4b0 [cifs]\n   statfs_by_dentry+0x9b/0xf0\n   fd_statfs+0x4e/0xb0\n   __do_sys_fstatfs+0x7f/0xe0\n   ? __pfx___do_sys_fstatfs+0x10/0x10\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? lockdep_hardirqs_on_prepare+0x136/0x200\n   ? srso_alias_return_thunk+0x5/0x7f\n   do_syscall_64+0x3f/0x90\n   entry_SYSCALL_64_after_hwframe+0x6e/0xd8\n\n  Allocated by task 27534:\n   kasan_save_stack+0x33/0x60\n   kasan_set_track+0x25/0x30\n   __kasan_kmalloc+0x8f/0xa0\n   open_cached_dir+0x71b/0x1240 [cifs]\n   smb2_query_info_compound+0x5c3/0x6d0 [cifs]\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n   smb311_queryfs+0x210/0x220 [cifs]\n   cifs_statfs+0x18c/0x4b0 [cifs]\n   statfs_by_dentry+0x9b/0xf0\n   fd_statfs+0x4e/0xb0\n   __do_sys_fstatfs+0x7f/0xe0\n   do_syscall_64+0x3f/0x90\n   entry_SYSCALL_64_after_hwframe+0x6e/0xd8\n\n  Freed by task 27534:\n   kasan_save_stack+0x33/0x60\n   kasan_set_track+0x25/0x30\n   kasan_save_free_info+0x2b/0x50\n   ____kasan_slab_free+0x126/0x170\n   slab_free_freelist_hook+0xd0/0x1e0\n   __kmem_cache_free+0x9d/0x1b0\n   open_cached_dir+0xff5/0x1240 [cifs]\n   smb2_query_info_compound+0x5c3/0x6d0 [cifs]\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n\nThis is a race between open_cached_dir() and cached_dir_lease_break()\nwhere the cache entry for the open directory handle receives a lease\nbreak while creating it.  And before returning from open_cached_dir(),\nwe put the last reference of the new @cfid because of\n!@cfid->has_lease.\n\nBesides the UAF, while running xfstests a lot of missed lease breaks\nhave been noticed in tests that run several concurrent statfs(2) calls\non those cached fids\n\n  CIFS: VFS: \\\\w22-root1.gandalf.test No task to wake, unknown frame...\n  CIFS: VFS: \\\\w22-root1.gandalf.test Cmd: 18 Err: 0x0 Flags: 0x1...\n  CIFS: VFS: \\\\w22-root1.gandalf.test smb buf 00000000715bfe83 len 108\n  CIFS: VFS: Dump pending requests:\n  CIFS: VFS: \\\\w22-root1.gandalf.test No task to wake, unknown frame...\n  CIFS: VFS: \\\\w22-root1.gandalf.test Cmd: 18 Err: 0x0 Flags: 0x1...\n  CIFS: VFS: \\\\w22-root1.gandalf.test smb buf 000000005aa7316e len 108\n  ...\n\nTo fix both, in open_cached_dir() ensure that @cfid->has_lease is set\nright before sending out compounded request so that any potential\nlease break will be get processed by demultiplex thread while we're\nstill caching @cfid.  And, if open failed for some reason, re-check\n@cfid->has_lease to decide whether or not put lease reference.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-52751"
-    },
-    {
-      "id": "CVE-2018-12221",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2018-12221)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2019-03-14",
-      "cisaKev": false,
-      "description": "Insufficient input validation in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables an unprivileged user to cause an integer overflow via local access.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12221"
     },
     {
       "id": "CVE-2024-23667",
@@ -7297,18 +7297,6 @@
       "cisaKev": false,
       "description": "Graylog is a free and open log management platform. Prior to Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3, the FortiGate key-value syslog parser in graylog2-server/src/main/java/org/graylog2/inputs/codecs/GLFortiGateSyslogEvent.java and graylog2-server/src/main/java/org/graylog2/inputs/codecs/SyslogCodec.java mishandles field-like text inside quoted values. GLFortiGateSyslogEvent.getFields() uses KV_PATTERN and QUOTED_KV_PATTERN, while SyslogCodec.parse() invokes the FortiGateSyslogEvent parser; crafted values containing = or backslash-escaped quotes can cause embedded keys such as srcip, dstip, date, time, and tz to remove or overwrite original top-level fields or produce an invalid message that Graylog discards. An unauthenticated network sender who can submit syslog messages can therefore manipulate security-log fields or evade logging to obscure malicious activity. This issue is fixed in Graylog Server versions 6.3.12, 7.0.7, and 7.1.2 and Graylog Forwarder version 7.3.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-55841"
-    },
-    {
-      "id": "CVE-2025-40601",
-      "platform": "SonicWall",
-      "title": "SonicOS Vulnerability (CVE-2025-40601)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-11-20",
-      "cisaKev": false,
-      "description": "A Stack-based buffer overflow vulnerability in the SonicOS SSLVPN service allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40601"
     },
     {
       "id": "CVE-2021-27070",
