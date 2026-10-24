@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-24T12:16:37.676846+00:00",
-  "total": 621,
+  "lastUpdated": "2026-10-24T18:12:27.863882+00:00",
+  "total": 622,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -281,7 +281,7 @@
     {
       "id": "CVE-2023-41265",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-41265)",
+      "title": "Windows 11 Vulnerability (CVE-2023-41265)",
       "score": 9.6,
       "severity": "CRITICAL",
       "vector": "NETWORK",
@@ -649,6 +649,18 @@
       "cisaKev": true,
       "description": "When running Apache Tomcat 7.0.0 to 7.0.79 on Windows with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of the Default to false) it was possible to upload a JSP file to the server via a specially crafted request. This JSP could then be requested and any code it contained would be executed by the server.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-12615"
+    },
+    {
+      "id": "CVE-2023-25734",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2023-25734)",
+      "score": 8.1,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-06-02",
+      "cisaKev": false,
+      "description": "After downloading a Windows <code>.url</code> shortcut from the local filesystem, an attacker could supply a remote path that would lead to unexpected network requests from the operating system. This also had the potential to leak NTLM credentials to the resource.<br>*This bug only affects Firefox on Windows. Other operating systems are unaffected.*. This vulnerability affects Firefox < 110, Thunderbird < 102.8, and Firefox ESR < 102.8.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-25734"
     },
     {
       "id": "CVE-2023-42790",
