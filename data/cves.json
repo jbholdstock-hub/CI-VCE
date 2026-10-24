@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-23T18:18:18.931847+00:00",
+  "lastUpdated": "2026-10-24T00:17:27.589295+00:00",
   "total": 620,
   "vulnerabilities": [
     {
@@ -219,6 +219,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26897"
     },
     {
+      "id": "CVE-2023-29542",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2023-29542)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2023-06-19",
+      "cisaKev": false,
+      "description": "A newline in a filename could have been used to bypass the file extension security mechanisms that replace malicious file extensions such as .lnk  with .download. This could have led to accidental execution of malicious code.\n\n*This bug only affects Firefox and Thunderbird on Windows. Other versions of Firefox\u00a0and Thunderbird are unaffected.* This vulnerability affects Firefox < 112, Firefox ESR < 102.10, and Thunderbird < 102.10.\n\n",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29542"
+    },
+    {
       "id": "CVE-2024-46796",
       "platform": "Windows Desktop",
       "title": "Windows 11 Vulnerability (CVE-2024-46796)",
@@ -229,18 +241,6 @@
       "cisaKev": false,
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix double put of @cfile in smb2_set_path_size()\n\nIf smb2_compound_op() is called with a valid @cfile and returned\n-EINVAL, we need to call cifs_get_writable_path() before retrying it\nas the reference of @cfile was already dropped by previous call.\n\nThis fixes the following KASAN splat when running fstests generic/013\nagainst Windows Server 2022:\n\n  CIFS: Attempting to mount //w22-fs0/scratch\n  run fstests generic/013 at 2024-09-02 19:48:59\n  ==================================================================\n  BUG: KASAN: slab-use-after-free in detach_if_pending+0xab/0x200\n  Write of size 8 at addr ffff88811f1a3730 by task kworker/3:2/176\n\n  CPU: 3 UID: 0 PID: 176 Comm: kworker/3:2 Not tainted 6.11.0-rc6 #2\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-2.fc40\n  04/01/2014\n  Workqueue: cifsoplockd cifs_oplock_break [cifs]\n  Call Trace:\n   <TASK>\n   dump_stack_lvl+0x5d/0x80\n   ? detach_if_pending+0xab/0x200\n   print_report+0x156/0x4d9\n   ? detach_if_pending+0xab/0x200\n   ? __virt_addr_valid+0x145/0x300\n   ? __phys_addr+0x46/0x90\n   ? detach_if_pending+0xab/0x200\n   kasan_report+0xda/0x110\n   ? detach_if_pending+0xab/0x200\n   detach_if_pending+0xab/0x200\n   timer_delete+0x96/0xe0\n   ? __pfx_timer_delete+0x10/0x10\n   ? rcu_is_watching+0x20/0x50\n   try_to_grab_pending+0x46/0x3b0\n   __cancel_work+0x89/0x1b0\n   ? __pfx___cancel_work+0x10/0x10\n   ? kasan_save_track+0x14/0x30\n   cifs_close_deferred_file+0x110/0x2c0 [cifs]\n   ? __pfx_cifs_close_deferred_file+0x10/0x10 [cifs]\n   ? __pfx_down_read+0x10/0x10\n   cifs_oplock_break+0x4c1/0xa50 [cifs]\n   ? __pfx_cifs_oplock_break+0x10/0x10 [cifs]\n   ? lock_is_held_type+0x85/0xf0\n   ? mark_held_locks+0x1a/0x90\n   process_one_work+0x4c6/0x9f0\n   ? find_held_lock+0x8a/0xa0\n   ? __pfx_process_one_work+0x10/0x10\n   ? lock_acquired+0x220/0x550\n   ? __list_add_valid_or_report+0x37/0x100\n   worker_thread+0x2e4/0x570\n   ? __kthread_parkme+0xd1/0xf0\n   ? __pfx_worker_thread+0x10/0x10\n   kthread+0x17f/0x1c0\n   ? kthread+0xda/0x1c0\n   ? __pfx_kthread+0x10/0x10\n   ret_from_fork+0x31/0x60\n   ? __pfx_kthread+0x10/0x10\n   ret_from_fork_asm+0x1a/0x30\n   </TASK>\n\n  Allocated by task 1118:\n   kasan_save_stack+0x30/0x50\n   kasan_save_track+0x14/0x30\n   __kasan_kmalloc+0xaa/0xb0\n   cifs_new_fileinfo+0xc8/0x9d0 [cifs]\n   cifs_atomic_open+0x467/0x770 [cifs]\n   lookup_open.isra.0+0x665/0x8b0\n   path_openat+0x4c3/0x1380\n   do_filp_open+0x167/0x270\n   do_sys_openat2+0x129/0x160\n   __x64_sys_creat+0xad/0xe0\n   do_syscall_64+0xbb/0x1d0\n   entry_SYSCALL_64_after_hwframe+0x77/0x7f\n\n  Freed by task 83:\n   kasan_save_stack+0x30/0x50\n   kasan_save_track+0x14/0x30\n   kasan_save_free_info+0x3b/0x70\n   poison_slab_object+0xe9/0x160\n   __kasan_slab_free+0x32/0x50\n   kfree+0xf2/0x300\n   process_one_work+0x4c6/0x9f0\n   worker_thread+0x2e4/0x570\n   kthread+0x17f/0x1c0\n   ret_from_fork+0x31/0x60\n   ret_from_fork_asm+0x1a/0x30\n\n  Last potentially related work creation:\n   kasan_save_stack+0x30/0x50\n   __kasan_record_aux_stack+0xad/0xc0\n   insert_work+0x29/0xe0\n   __queue_work+0x5ea/0x760\n   queue_work_on+0x6d/0x90\n   _cifsFileInfo_put+0x3f6/0x770 [cifs]\n   smb2_compound_op+0x911/0x3940 [cifs]\n   smb2_set_path_size+0x228/0x270 [cifs]\n   cifs_set_file_size+0x197/0x460 [cifs]\n   cifs_setattr+0xd9c/0x14b0 [cifs]\n   notify_change+0x4e3/0x740\n   do_truncate+0xfa/0x180\n   vfs_truncate+0x195/0x200\n   __x64_sys_truncate+0x109/0x150\n   do_syscall_64+0xbb/0x1d0\n   entry_SYSCALL_64_after_hwframe+0x77/0x7f",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-46796"
-    },
-    {
-      "id": "CVE-2026-44170",
-      "platform": "Windows Desktop",
-      "title": "Windows 11 Vulnerability (CVE-2026-44170)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2026-06-12",
-      "cisaKev": false,
-      "description": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, MariaDB on WIndows with installed CONNECT engine and enabled REST support interpolated table HTTP attribute into the curl command line without proper sanitizing. This allows the user to execute shell commands on the server. This issue has been patched in versions 10.6.26, 10.11.17, 11.4.11, 11.8.7, and 12.3.2.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-44170"
     },
     {
       "id": "CVE-2023-42789",
@@ -593,7 +593,7 @@
     {
       "id": "CVE-2023-41266",
       "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-41266)",
+      "title": "Windows 11 Vulnerability (CVE-2023-41266)",
       "score": 8.2,
       "severity": "HIGH",
       "vector": "NETWORK",
@@ -7047,18 +7047,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4807"
     },
     {
-      "id": "CVE-2023-52751",
-      "platform": "Windows Desktop",
-      "title": "Windows 10 Vulnerability (CVE-2023-52751)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2024-05-21",
-      "cisaKev": false,
-      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix use-after-free in smb2_query_info_compound()\n\nThe following UAF was triggered when running fstests generic/072 with\nKASAN enabled against Windows Server 2022 and mount options\n'multichannel,max_channels=2,vers=3.1.1,mfsymlinks,noperm'\n\n  BUG: KASAN: slab-use-after-free in smb2_query_info_compound+0x423/0x6d0 [cifs]\n  Read of size 8 at addr ffff888014941048 by task xfs_io/27534\n\n  CPU: 0 PID: 27534 Comm: xfs_io Not tainted 6.6.0-rc7 #1\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS\n  rel-1.16.2-3-gd478f380-rebuilt.opensuse.org 04/01/2014\n  Call Trace:\n   dump_stack_lvl+0x4a/0x80\n   print_report+0xcf/0x650\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __phys_addr+0x46/0x90\n   kasan_report+0xda/0x110\n   ? smb2_query_info_compound+0x423/0x6d0 [cifs]\n   ? smb2_query_info_compound+0x423/0x6d0 [cifs]\n   smb2_query_info_compound+0x423/0x6d0 [cifs]\n   ? __pfx_smb2_query_info_compound+0x10/0x10 [cifs]\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __stack_depot_save+0x39/0x480\n   ? kasan_save_stack+0x33/0x60\n   ? kasan_set_track+0x25/0x30\n   ? ____kasan_slab_free+0x126/0x170\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n   ? __pfx_smb2_queryfs+0x10/0x10 [cifs]\n   ? __pfx___lock_acquire+0x10/0x10\n   smb311_queryfs+0x210/0x220 [cifs]\n   ? __pfx_smb311_queryfs+0x10/0x10 [cifs]\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? __lock_acquire+0x480/0x26c0\n   ? lock_release+0x1ed/0x640\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? do_raw_spin_unlock+0x9b/0x100\n   cifs_statfs+0x18c/0x4b0 [cifs]\n   statfs_by_dentry+0x9b/0xf0\n   fd_statfs+0x4e/0xb0\n   __do_sys_fstatfs+0x7f/0xe0\n   ? __pfx___do_sys_fstatfs+0x10/0x10\n   ? srso_alias_return_thunk+0x5/0x7f\n   ? lockdep_hardirqs_on_prepare+0x136/0x200\n   ? srso_alias_return_thunk+0x5/0x7f\n   do_syscall_64+0x3f/0x90\n   entry_SYSCALL_64_after_hwframe+0x6e/0xd8\n\n  Allocated by task 27534:\n   kasan_save_stack+0x33/0x60\n   kasan_set_track+0x25/0x30\n   __kasan_kmalloc+0x8f/0xa0\n   open_cached_dir+0x71b/0x1240 [cifs]\n   smb2_query_info_compound+0x5c3/0x6d0 [cifs]\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n   smb311_queryfs+0x210/0x220 [cifs]\n   cifs_statfs+0x18c/0x4b0 [cifs]\n   statfs_by_dentry+0x9b/0xf0\n   fd_statfs+0x4e/0xb0\n   __do_sys_fstatfs+0x7f/0xe0\n   do_syscall_64+0x3f/0x90\n   entry_SYSCALL_64_after_hwframe+0x6e/0xd8\n\n  Freed by task 27534:\n   kasan_save_stack+0x33/0x60\n   kasan_set_track+0x25/0x30\n   kasan_save_free_info+0x2b/0x50\n   ____kasan_slab_free+0x126/0x170\n   slab_free_freelist_hook+0xd0/0x1e0\n   __kmem_cache_free+0x9d/0x1b0\n   open_cached_dir+0xff5/0x1240 [cifs]\n   smb2_query_info_compound+0x5c3/0x6d0 [cifs]\n   smb2_queryfs+0xc2/0x2c0 [cifs]\n\nThis is a race between open_cached_dir() and cached_dir_lease_break()\nwhere the cache entry for the open directory handle receives a lease\nbreak while creating it.  And before returning from open_cached_dir(),\nwe put the last reference of the new @cfid because of\n!@cfid->has_lease.\n\nBesides the UAF, while running xfstests a lot of missed lease breaks\nhave been noticed in tests that run several concurrent statfs(2) calls\non those cached fids\n\n  CIFS: VFS: \\\\w22-root1.gandalf.test No task to wake, unknown frame...\n  CIFS: VFS: \\\\w22-root1.gandalf.test Cmd: 18 Err: 0x0 Flags: 0x1...\n  CIFS: VFS: \\\\w22-root1.gandalf.test smb buf 00000000715bfe83 len 108\n  CIFS: VFS: Dump pending requests:\n  CIFS: VFS: \\\\w22-root1.gandalf.test No task to wake, unknown frame...\n  CIFS: VFS: \\\\w22-root1.gandalf.test Cmd: 18 Err: 0x0 Flags: 0x1...\n  CIFS: VFS: \\\\w22-root1.gandalf.test smb buf 000000005aa7316e len 108\n  ...\n\nTo fix both, in open_cached_dir() ensure that @cfid->has_lease is set\nright before sending out compounded request so that any potential\nlease break will be get processed by demultiplex thread while we're\nstill caching @cfid.  And, if open failed for some reason, re-check\n@cfid->has_lease to decide whether or not put lease reference.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-52751"
-    },
-    {
       "id": "CVE-2024-23667",
       "platform": "Fortinet",
       "title": "Fortinet Vulnerability (CVE-2024-23667)",
@@ -7189,6 +7177,18 @@
       "cisaKev": false,
       "description": "Windows DNS Server Denial of Service Vulnerability",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-27063"
+    },
+    {
+      "id": "CVE-2023-32214",
+      "platform": "Windows Desktop",
+      "title": "Windows 10 Vulnerability (CVE-2023-32214)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-06-19",
+      "cisaKev": false,
+      "description": "Protocol handlers `ms-cxh` and `ms-cxh-full` could have been leveraged to trigger a denial of service.\n*Note: This attack only affects Windows. Other operating systems are not affected.* This vulnerability affects Firefox < 113, Firefox ESR < 102.11, and Thunderbird < 102.11.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-32214"
     },
     {
       "id": "CVE-2023-22640",
