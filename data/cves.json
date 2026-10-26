@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-25T18:14:08.023019+00:00",
-  "total": 622,
+  "lastUpdated": "2026-10-26T00:16:12.212073+00:00",
+  "total": 624,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -7417,6 +7417,30 @@
       "cisaKev": false,
       "description": "A heap-based buffer overflow vulnerability in Fortinet FortiAnalyzer 7.6.0 through 7.6.2, FortiAnalyzer 7.4.0 through 7.4.5, FortiAnalyzer 7.2.0 through 7.2.9, FortiAnalyzer 7.0.0 through 7.0.13, FortiAnalyzer 6.4 all versions, FortiAnalyzer 6.2 all versions, FortiAnalyzer 6.0 all versions, FortiAnalyzer Cloud 7.4.1 through 7.4.5, FortiAnalyzer Cloud 7.2.1 through 7.2.9, FortiAnalyzer Cloud 7.0.1 through 7.0.13, FortiAnalyzer Cloud 6.4 all versions, FortiManager 7.6.0 through 7.6.1, FortiManager 7.4.0 through 7.4.5, FortiManager 7.2.0 through 7.2.9, FortiManager 7.0.0 through 7.0.13, FortiManager 6.4 all versions, FortiManager 6.2 all versions, FortiManager 6.0 all versions, FortiManager Cloud 7.6.2, FortiManager Cloud 7.4.1 through 7.4.5, FortiManager Cloud 7.2.1 through 7.2.9, FortiManager Cloud 7.0.1 through 7.0.13, FortiManager Cloud 6.4 all versions, FortiOS 7.6.0 through 7.6.2, FortiOS 7.4.0 through 7.4.6, FortiOS 7.2.0 through 7.2.10, FortiOS 7.0.0 through 7.0.16, FortiOS 6.4.0 through 6.4.15, FortiOS 6.2 all versions, FortiProxy 7.6.0 through 7.6.1, FortiProxy 7.4.0 through 7.4.7, FortiProxy 7.2.0 through 7.2.12, FortiProxy 7.0.0 through 7.0.19, FortiProxy 2.0 all versions, FortiProxy 01.02 all versions, FortiProxy 1.2 all versions, FortiProxy 01.01 all versions, FortiProxy 1.1 all versions, FortiProxy 01.00 all versions allows attacker to execute unauthorized code or commands via specifically crafted requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-50571"
+    },
+    {
+      "id": "CVE-2026-4113",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-4113)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-04-09",
+      "cisaKev": false,
+      "description": "An observable response discrepancy vulnerability in the SonicWall SMA1000 series appliances allows a remote attacker to enumerate SSL VPN user credentials.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-4113"
+    },
+    {
+      "id": "CVE-2026-4116",
+      "platform": "SonicWall",
+      "title": "SonicWall Vulnerability (CVE-2026-4116)",
+      "score": 7.2,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-04-09",
+      "cisaKev": false,
+      "description": "Improper handling of Unicode encoding in SonicWall SMA1000 series appliances allows a remote authenticated SSLVPN user to bypass Workplace/Connect Tunnel TOTP authentication.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-4116"
     },
     {
       "id": "CVE-2026-100232",
