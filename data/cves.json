@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-01T12:23:04.396335+00:00",
-  "total": 612,
+  "lastUpdated": "2026-11-01T21:31:43.818170+00:00",
+  "total": 610,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -73,18 +73,6 @@
       "cisaKev": true,
       "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS version 7.0.0 through 7.0.16 and FortiProxy version 7.0.0 through 7.0.19 and 7.2.0 through 7.2.12 allows a remote attacker to gain super-admin privileges via crafted requests to\u00a0Node.js websocket module.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
-    },
-    {
-      "id": "CVE-2024-40766",
-      "platform": "SonicWall",
-      "title": "SonicOS Vulnerability (CVE-2024-40766)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2024-08-23",
-      "cisaKev": true,
-      "description": "An improper access control vulnerability has been identified in the SonicWall SonicOS management access, potentially leading to unauthorized resource access and in specific conditions, causing the firewall to crash. This issue affects SonicWall Firewall Gen 5 and Gen 6 devices, as well as Gen 7 devices running SonicOS 7.0.1-5035 and older versions.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40766"
     },
     {
       "id": "CVE-2024-21762",
@@ -2341,6 +2329,18 @@
       "cisaKev": true,
       "description": "Microsoft Publisher contains a protection mechanism failure vulnerability that allows attacker to bypass Office macro policies used to block untrusted or malicious files.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-38226"
+    },
+    {
+      "id": "CVE-2024-40766",
+      "platform": "SonicWall",
+      "title": "SonicWall SonicOS Improper Access Control Vulnerability",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2024-09-09",
+      "cisaKev": true,
+      "description": "SonicWall SonicOS contains an improper access control vulnerability that could lead to unauthorized resource access and, under certain conditions, may cause the firewall to crash.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40766"
     },
     {
       "id": "CVE-2021-31196",
@@ -6927,18 +6927,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33754"
     },
     {
-      "id": "CVE-2026-0204",
-      "platform": "SonicWall",
-      "title": "SonicOS Vulnerability (CVE-2026-0204)",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "ADJACENT_NETWORK",
-      "published": "2026-04-29",
-      "cisaKev": false,
-      "description": "A vulnerability in the access control mechanism of SonicOS may allow certain management interface functions to be accessible under specific conditions.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-0204"
-    },
-    {
       "id": "CVE-2026-81963",
       "platform": "Windows Server",
       "title": "Windows Update Stack EoP Zero-Day",
@@ -7225,18 +7213,6 @@
       "cisaKev": false,
       "description": "An Heap-based Buffer Overflow vulnerability [CWE-122] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions; FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions and FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions RDP bookmark connection may allow an authenticated user to execute unauthorized code via crafted requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-57740"
-    },
-    {
-      "id": "CVE-2025-40601",
-      "platform": "SonicWall",
-      "title": "SonicOS Vulnerability (CVE-2025-40601)",
-      "score": 7.5,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-11-20",
-      "cisaKev": false,
-      "description": "A Stack-based buffer overflow vulnerability in the SonicOS SSLVPN service allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40601"
     },
     {
       "id": "CVE-2021-27070",
