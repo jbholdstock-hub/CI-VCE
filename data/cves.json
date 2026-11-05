@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-05T04:25:37.493066+00:00",
-  "total": 629,
+  "lastUpdated": "2026-11-05T13:45:29.888967+00:00",
+  "total": 628,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -253,18 +253,6 @@
       "cisaKev": false,
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix double put of @cfile in smb2_set_path_size()\n\nIf smb2_compound_op() is called with a valid @cfile and returned\n-EINVAL, we need to call cifs_get_writable_path() before retrying it\nas the reference of @cfile was already dropped by previous call.\n\nThis fixes the following KASAN splat when running fstests generic/013\nagainst Windows Server 2022:\n\n  CIFS: Attempting to mount //w22-fs0/scratch\n  run fstests generic/013 at 2024-09-02 19:48:59\n  ==================================================================\n  BUG: KASAN: slab-use-after-free in detach_if_pending+0xab/0x200\n  Write of size 8 at addr ffff88811f1a3730 by task kworker/3:2/176\n\n  CPU: 3 UID: 0 PID: 176 Comm: kworker/3:2 Not tainted 6.11.0-rc6 #2\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-2.fc40\n  04/01/2014\n  Workqueue: cifsoplockd cifs_oplock_break [cifs]\n  Call Trace:\n   <TASK>\n   dump_stack_lvl+0x5d/0x80\n   ? detach_if_pending+0xab/0x200\n   print_report+0x156/0x4d9\n   ? detach_if_pending+0xab/0x200\n   ? __virt_addr_valid+0x145/0x300\n   ? __phys_addr+0x46/0x90\n   ? detach_if_pending+0xab/0x200\n   kasan_report+0xda/0x110\n   ? detach_if_pending+0xab/0x200\n   detach_if_pending+0xab/0x200\n   timer_delete+0x96/0xe0\n   ? __pfx_timer_delete+0x10/0x10\n   ? rcu_is_watching+0x20/0x50\n   try_to_grab_pending+0x46/0x3b0\n   __cancel_work+0x89/0x1b0\n   ? __pfx___cancel_work+0x10/0x10\n   ? kasan_save_track+0x14/0x30\n   cifs_close_deferred_file+0x110/0x2c0 [cifs]\n   ? __pfx_cifs_close_deferred_file+0x10/0x10 [cifs]\n   ? __pfx_down_read+0x10/0x10\n   cifs_oplock_break+0x4c1/0xa50 [cifs]\n   ? __pfx_cifs_oplock_break+0x10/0x10 [cifs]\n   ? lock_is_held_type+0x85/0xf0\n   ? mark_held_locks+0x1a/0x90\n   process_one_work+0x4c6/0x9f0\n   ? find_held_lock+0x8a/0xa0\n   ? __pfx_process_one_work+0x10/0x10\n   ? lock_acquired+0x220/0x550\n   ? __list_add_valid_or_report+0x37/0x100\n   worker_thread+0x2e4/0x570\n   ? __kthread_parkme+0xd1/0xf0\n   ? __pfx_worker_thread+0x10/0x10\n   kthread+0x17f/0x1c0\n   ? kthread+0xda/0x1c0\n   ? __pfx_kthread+0x10/0x10\n   ret_from_fork+0x31/0x60\n   ? __pfx_kthread+0x10/0x10\n   ret_from_fork_asm+0x1a/0x30\n   </TASK>\n\n  Allocated by task 1118:\n   kasan_save_stack+0x30/0x50\n   kasan_save_track+0x14/0x30\n   __kasan_kmalloc+0xaa/0xb0\n   cifs_new_fileinfo+0xc8/0x9d0 [cifs]\n   cifs_atomic_open+0x467/0x770 [cifs]\n   lookup_open.isra.0+0x665/0x8b0\n   path_openat+0x4c3/0x1380\n   do_filp_open+0x167/0x270\n   do_sys_openat2+0x129/0x160\n   __x64_sys_creat+0xad/0xe0\n   do_syscall_64+0xbb/0x1d0\n   entry_SYSCALL_64_after_hwframe+0x77/0x7f\n\n  Freed by task 83:\n   kasan_save_stack+0x30/0x50\n   kasan_save_track+0x14/0x30\n   kasan_save_free_info+0x3b/0x70\n   poison_slab_object+0xe9/0x160\n   __kasan_slab_free+0x32/0x50\n   kfree+0xf2/0x300\n   process_one_work+0x4c6/0x9f0\n   worker_thread+0x2e4/0x570\n   kthread+0x17f/0x1c0\n   ret_from_fork+0x31/0x60\n   ret_from_fork_asm+0x1a/0x30\n\n  Last potentially related work creation:\n   kasan_save_stack+0x30/0x50\n   __kasan_record_aux_stack+0xad/0xc0\n   insert_work+0x29/0xe0\n   __queue_work+0x5ea/0x760\n   queue_work_on+0x6d/0x90\n   _cifsFileInfo_put+0x3f6/0x770 [cifs]\n   smb2_compound_op+0x911/0x3940 [cifs]\n   smb2_set_path_size+0x228/0x270 [cifs]\n   cifs_set_file_size+0x197/0x460 [cifs]\n   cifs_setattr+0xd9c/0x14b0 [cifs]\n   notify_change+0x4e3/0x740\n   do_truncate+0xfa/0x180\n   vfs_truncate+0x195/0x200\n   __x64_sys_truncate+0x109/0x150\n   do_syscall_64+0xbb/0x1d0\n   entry_SYSCALL_64_after_hwframe+0x77/0x7f",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-46796"
-    },
-    {
-      "id": "CVE-2023-42789",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-42789)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2024-03-12",
-      "cisaKev": false,
-      "description": "A out-of-bounds write vulnerability in Fortinet FortiOS 7.4.0 through 7.4.1, FortiOS 7.2.0 through 7.2.5, FortiOS 7.0.0 through 7.0.12, FortiOS 6.4.0 through 6.4.14, FortiOS 6.2.0 through 6.2.15, FortiProxy 7.4.0, FortiProxy 7.2.0 through 7.2.6, FortiProxy 7.0.0 through 7.0.12, FortiProxy 2.0.0 through 2.0.13, FortiSASE 23.2.b allows attacker to execute unauthorized code or commands via specially crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-42789"
     },
     {
       "id": "CVE-2025-25256",
@@ -697,18 +685,6 @@
       "cisaKev": false,
       "description": "After downloading a Windows <code>.url</code> shortcut from the local filesystem, an attacker could supply a remote path that would lead to unexpected network requests from the operating system. This also had the potential to leak NTLM credentials to the resource.<br>*This bug only affects Firefox on Windows. Other operating systems are unaffected.*. This vulnerability affects Firefox < 110, Thunderbird < 102.8, and Firefox ESR < 102.8.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-25734"
-    },
-    {
-      "id": "CVE-2023-42790",
-      "platform": "Fortinet",
-      "title": "FortiOS Vulnerability (CVE-2023-42790)",
-      "score": 8.1,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-03-12",
-      "cisaKev": false,
-      "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.4.0 through 7.4.1, FortiOS 7.2.0 through 7.2.5, FortiOS 7.0.0 through 7.0.12, FortiOS 6.4.0 through 6.4.14, FortiOS 6.2.0 through 6.2.15, FortiProxy 7.4.0, FortiProxy 7.2.0 through 7.2.6, FortiProxy 7.0.0 through 7.0.12, FortiProxy 2.0.0 through 2.0.13, FortiSASE 23.2.b allows attacker to execute unauthorized code or commands via specially crafted HTTP requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-42790"
     },
     {
       "id": "CVE-2026-76418",
@@ -7345,6 +7321,18 @@
       "cisaKev": false,
       "description": "An Heap-based Buffer Overflow vulnerability [CWE-122] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions; FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions and FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions RDP bookmark connection may allow an authenticated user to execute unauthorized code via crafted requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-57740"
+    },
+    {
+      "id": "CVE-2025-53843",
+      "platform": "Fortinet",
+      "title": "FortiOS Vulnerability (CVE-2025-53843)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-11-18",
+      "cisaKev": false,
+      "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions allows attacker to execute unauthorized code or commands via specially crafted packets",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53843"
     },
     {
       "id": "CVE-2026-55841",
