@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T01:01:38.935668+00:00",
-  "total": 608,
+  "lastUpdated": "2026-11-10T13:59:53.270968+00:00",
+  "total": 626,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -25,6 +25,18 @@
       "cisaKev": false,
       "description": "A SQL Injection vulnerability exists in Esri ArcGIS Server versions 11.3, 11.4 and 11.5 on Windows, Linux and Kubernetes. This vulnerability allows a remote, unauthenticated attacker to execute arbitrary SQL commands via a specific ArcGIS Feature Service operation. Successful exploitation can potentially result in unauthorized access, modification, or deletion of data from the underlying Enterprise Geodatabase.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-57870"
+    },
+    {
+      "id": "CVE-2026-69730",
+      "platform": "Fortinet",
+      "title": "FortiOS SSL-VPN Memory Corruption RCE",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2026-09-08",
+      "cisaKev": false,
+      "description": "Use after free in Windows DNS allows an unauthorized attacker to execute code over a network.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-69730"
     },
     {
       "id": "CVE-2026-69525",
@@ -61,6 +73,18 @@
       "cisaKev": true,
       "description": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS version 7.0.0 through 7.0.16 and FortiProxy version 7.0.0 through 7.0.19 and 7.2.0 through 7.2.12 allows a remote attacker to gain super-admin privileges via crafted requests to\u00a0Node.js websocket module.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
+    },
+    {
+      "id": "CVE-2024-40766",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2024-40766)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2024-08-23",
+      "cisaKev": true,
+      "description": "An improper access control vulnerability has been identified in the SonicWall SonicOS management access, potentially leading to unauthorized resource access and in specific conditions, causing the firewall to crash. This issue affects SonicWall Firewall Gen 5 and Gen 6 devices, as well as Gen 7 devices running SonicOS 7.0.1-5035 and older versions.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40766"
     },
     {
       "id": "CVE-2024-21762",
@@ -217,6 +241,42 @@
       "cisaKev": false,
       "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSIEM 7.3.0 through 7.3.1, FortiSIEM 7.2.0 through 7.2.5, FortiSIEM 7.1.0 through 7.1.7, FortiSIEM 7.0.0 through 7.0.3, FortiSIEM 6.7.0 through 6.7.9, FortiSIEM 6.6 all versions, FortiSIEM 6.5 all versions, FortiSIEM 6.4 all versions, FortiSIEM 6.3 all versions, FortiSIEM 6.2 all versions, FortiSIEM 6.1 all versions, FortiSIEM 5.4 all versions, FortiSIEM 5.3 all versions, FortiSIEM 5.2 all versions, FortiSIEM 5.1 all versions, FortiSIEM 5.0 all versions, FortiSIEM 4.10 all versions, FortiSIEM 4.9 all versions, FortiSIEM 4.7 all versions allows an unauthenticated attacker to execute unauthorized code or commands via crafted CLI requests.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25256"
+    },
+    {
+      "id": "CVE-2022-22274",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2022-22274)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2022-03-25",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow vulnerability in the SonicOS via HTTP request allows a remote unauthenticated attacker to cause Denial of Service (DoS) or potentially results in code execution in the firewall.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-22274"
+    },
+    {
+      "id": "CVE-2024-22394",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2024-22394)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2024-02-08",
+      "cisaKev": false,
+      "description": "An improper authentication vulnerability has been identified in SonicWall SonicOS SSL-VPN feature, which in specific conditions could allow a remote attacker to bypass authentication.\u00a0\n\nThis issue affects only firmware version SonicOS 7.1.1-7040.\n\n",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-22394"
+    },
+    {
+      "id": "CVE-2025-40600",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2025-40600)",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "vector": "NETWORK",
+      "published": "2025-07-29",
+      "cisaKev": false,
+      "description": "Use of Externally-Controlled Format String vulnerability in the SonicOS SSL VPN interface allows a remote unauthenticated attacker to cause service disruption.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40600"
     },
     {
       "id": "CVE-2023-41265",
@@ -411,6 +471,78 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29181"
     },
     {
+      "id": "CVE-2021-20046",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2021-20046)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2022-01-10",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow in the SonicOS HTTP Content-Length response header allows a remote authenticated attacker to cause Denial of Service (DoS) and potentially results in code execution in the firewall. This vulnerability affected SonicOS Gen 5, Gen 6 and Gen 7 firmware versions.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20046"
+    },
+    {
+      "id": "CVE-2021-20048",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2021-20048)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2022-01-10",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow in the SonicOS SessionID HTTP response header allows a remote authenticated attacker to cause Denial of Service (DoS) and potentially results in code execution in the firewall. This vulnerability affected SonicOS Gen 5, Gen 6 and Gen 7 firmware versions.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20048"
+    },
+    {
+      "id": "CVE-2023-1101",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2023-1101)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-03-02",
+      "cisaKev": false,
+      "description": "SonicOS SSLVPN improper restriction of excessive MFA attempts vulnerability allows an authenticated attacker to use excessive MFA codes.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-1101"
+    },
+    {
+      "id": "CVE-2023-41715",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2023-41715)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-10-17",
+      "cisaKev": false,
+      "description": "SonicOS post-authentication Improper Privilege Management vulnerability in the SonicOS SSL VPN Tunnel allows users to elevate their privileges inside the tunnel.\n",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41715"
+    },
+    {
+      "id": "CVE-2026-107154",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2026-107154)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-11-06",
+      "cisaKev": false,
+      "description": "A session validation vulnerability has been identified in the SonicOS management interface, which in specific conditions could potentially enable a remote unauthenticated attacker to perform unauthorized operations.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-107154"
+    },
+    {
+      "id": "CVE-2026-107155",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2026-107155)",
+      "score": 8.8,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-11-06",
+      "cisaKev": false,
+      "description": "A permissive cross-domain policy vulnerability has been identified in the SonicOS management interface, which in specific conditions could potentially enable a remote unauthenticated attacker to perform unauthorized operations.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-107155"
+    },
+    {
       "id": "CVE-2015-2546",
       "platform": "Windows Desktop",
       "title": "Windows 10 Vulnerability (CVE-2015-2546)",
@@ -457,6 +589,18 @@
       "cisaKev": false,
       "description": "Logic bug in Kernel Mode Driver in Intel(R) Graphics Driver for Windows* before versions before versions 10.18.x.5059 (aka 15.33.x.5059), 10.18.x.5057 (aka 15.36.x.5057), 20.19.x.5063 (aka 15.40.x.5063) 21.20.x.5064 (aka 15.45.x.5064) and 24.20.100.6373 potentially enables a privileged user to execute arbitrary code via local access.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12220"
+    },
+    {
+      "id": "CVE-2023-2110",
+      "platform": "Windows Server",
+      "title": "Windows Server Vulnerability (CVE-2023-2110)",
+      "score": 8.2,
+      "severity": "HIGH",
+      "vector": "LOCAL",
+      "published": "2023-08-19",
+      "cisaKev": false,
+      "description": "Improper path handling in Obsidian desktop before 1.2.8 on Windows, Linux and macOS allows a crafted webpage to access local files and exfiltrate them to remote web servers via \"app://local/<absolute-path>\". This vulnerability can be exploited if a user opens a malicious markdown file in Obsidian, or copies text from a malicious webpage and paste it into Obsidian.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2110"
     },
     {
       "id": "CVE-2023-41266",
@@ -553,18 +697,6 @@
       "cisaKev": false,
       "description": "A weak authentication vulnerability in Fortinet FortiPAM 1.5.0, FortiPAM 1.4.0 through 1.4.2, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiSwitchManager 7.2.0 through 7.2.4 allows attacker to execute unauthorized code or commands via specially crafted http requests",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-49201"
-    },
-    {
-      "id": "CVE-2026-19868",
-      "platform": "SonicWall",
-      "title": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2026-11-06",
-      "cisaKev": true,
-      "description": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868"
     },
     {
       "id": "CVE-2026-76418",
@@ -2329,18 +2461,6 @@
       "cisaKev": true,
       "description": "Microsoft Publisher contains a protection mechanism failure vulnerability that allows attacker to bypass Office macro policies used to block untrusted or malicious files.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-38226"
-    },
-    {
-      "id": "CVE-2024-40766",
-      "platform": "SonicWall",
-      "title": "SonicWall SonicOS Improper Access Control Vulnerability",
-      "score": 8.0,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-09-09",
-      "cisaKev": true,
-      "description": "SonicWall SonicOS contains an improper access control vulnerability that could lead to unauthorized resource access and, under certain conditions, may cause the firewall to crash.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40766"
     },
     {
       "id": "CVE-2021-31196",
@@ -6927,6 +7047,18 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33754"
     },
     {
+      "id": "CVE-2026-0204",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2026-0204)",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "ADJACENT_NETWORK",
+      "published": "2026-04-29",
+      "cisaKev": false,
+      "description": "A vulnerability in the access control mechanism of SonicOS may allow certain management interface functions to be accessible under specific conditions.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-0204"
+    },
+    {
       "id": "CVE-2026-81963",
       "platform": "Windows Server",
       "title": "Windows Update Stack EoP Zero-Day",
@@ -7011,18 +7143,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-26887"
     },
     {
-      "id": "CVE-2023-4807",
-      "platform": "Windows Server",
-      "title": "Windows Server Vulnerability (CVE-2023-4807)",
-      "score": 7.8,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2023-09-08",
-      "cisaKev": false,
-      "description": "Issue summary: The POLY1305 MAC (message authentication code) implementation\ncontains a bug that might corrupt the internal state of applications on the\nWindows 64 platform when running on newer X86_64 processors supporting the\nAVX512-IFMA instructions.\n\nImpact summary: If in an application that uses the OpenSSL library an attacker\ncan influence whether the POLY1305 MAC algorithm is used, the application\nstate might be corrupted with various application dependent consequences.\n\nThe POLY1305 MAC (message authentication code) implementation in OpenSSL does\nnot save the contents of non-volatile XMM registers on Windows 64 platform\nwhen calculating the MAC of data larger than 64 bytes. Before returning to\nthe caller all the XMM registers are set to zero rather than restoring their\nprevious content. The vulnerable code is used only on newer x86_64 processors\nsupporting the AVX512-IFMA instructions.\n\nThe consequences of this kind of internal application state corruption can\nbe various - from no consequences, if the calling application does not\ndepend on the contents of non-volatile XMM registers at all, to the worst\nconsequences, where the attacker could get complete control of the application\nprocess. However given the contents of the registers are just zeroized so\nthe attacker cannot put arbitrary values inside, the most likely consequence,\nif any, would be an incorrect result of some application dependent\ncalculations or a crash leading to a denial of service.\n\nThe POLY1305 MAC algorithm is most frequently used as part of the\nCHACHA20-POLY1305 AEAD (authenticated encryption with associated data)\nalgorithm. The most common usage of this AEAD cipher is with TLS protocol\nversions 1.2 and 1.3 and a malicious client can influence whether this AEAD\ncipher is used by the server. This implies that server applications using\nOpenSSL can be potentially impacted. However we are currently not aware of\nany concrete application that would be affected by this issue therefore we\nconsider this a Low severity security issue.\n\nAs a workaround the AVX512-IFMA instructions support can be disabled at\nruntime by setting the environment variable OPENSSL_ia32cap:\n\n   OPENSSL_ia32cap=:~0x200000\n\nThe FIPS provider is not affected by this issue.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4807"
-    },
-    {
       "id": "CVE-2025-69217",
       "platform": "Windows Desktop",
       "title": "Windows 11 Vulnerability (CVE-2025-69217)",
@@ -7045,6 +7165,18 @@
       "cisaKev": false,
       "description": "A untrusted search path vulnerability in Fortinet  may allow attacker to execute unauthorized code or commands via network exploitable",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-9287"
+    },
+    {
+      "id": "CVE-2026-19868",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2026-19868)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-11-06",
+      "cisaKev": true,
+      "description": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868"
     },
     {
       "id": "CVE-2018-8174",
@@ -7201,6 +7333,90 @@
       "cisaKev": false,
       "description": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions allows attacker to execute unauthorized code or commands via specially crafted packets",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-53843"
+    },
+    {
+      "id": "CVE-2021-20027",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2021-20027)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2021-06-14",
+      "cisaKev": false,
+      "description": "A buffer overflow vulnerability in SonicOS allows a remote attacker to cause a Denial of Service (DoS) by sending a specially crafted request. This vulnerability affects SonicOS Gen5, Gen6, Gen7 platforms, and SonicOSv virtual firewalls.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20027"
+    },
+    {
+      "id": "CVE-2022-22278",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2022-22278)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2022-04-27",
+      "cisaKev": false,
+      "description": "A vulnerability in SonicOS CFS (Content filtering service) returns a large 403 forbidden HTTP response message to the source address when users try to access prohibited resource this allows an attacker to cause HTTP Denial of Service (DoS) attack",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-22278"
+    },
+    {
+      "id": "CVE-2023-0656",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2023-0656)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-03-02",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow vulnerability in the SonicOS allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0656"
+    },
+    {
+      "id": "CVE-2023-41713",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2023-41713)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2023-10-17",
+      "cisaKev": false,
+      "description": "SonicOS Use of Hard-coded Password vulnerability in the 'dynHandleBuyToolbar' demo function.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-41713"
+    },
+    {
+      "id": "CVE-2024-29012",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2024-29012)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2024-06-20",
+      "cisaKev": false,
+      "description": "Stack-based buffer overflow vulnerability in the SonicOS HTTP server allows an authenticated remote attacker to cause Denial of Service (DoS) via sscanf function.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-29012"
+    },
+    {
+      "id": "CVE-2024-40764",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2024-40764)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2024-07-18",
+      "cisaKev": false,
+      "description": "Heap-based buffer overflow vulnerability in the SonicOS IPSec VPN allows an unauthenticated remote attacker to cause Denial of Service (DoS).",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2024-40764"
+    },
+    {
+      "id": "CVE-2025-40601",
+      "platform": "SonicWall",
+      "title": "SonicOS Vulnerability (CVE-2025-40601)",
+      "score": 7.5,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2025-11-20",
+      "cisaKev": false,
+      "description": "A Stack-based buffer overflow vulnerability in the SonicOS SSLVPN service allows a remote unauthenticated attacker to cause Denial of Service (DoS), which could cause an impacted firewall to crash.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40601"
     },
     {
       "id": "CVE-2021-27070",
