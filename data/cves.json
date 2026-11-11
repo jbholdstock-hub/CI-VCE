@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T13:16:56.372517+00:00",
-  "total": 644,
+  "lastUpdated": "2026-11-11T23:53:09.588933+00:00",
+  "total": 646,
   "vulnerabilities": [
     {
       "id": "CVE-2025-2857",
@@ -661,6 +661,18 @@
       "cisaKev": false,
       "description": "A permissive cross-domain policy vulnerability has been identified in the SonicOS management interface, which in specific conditions could potentially enable a remote unauthenticated attacker to perform unauthorized operations.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-107155"
+    },
+    {
+      "id": "CVE-2026-126180",
+      "platform": "Fortinet",
+      "title": "FortiGate Vulnerability (CVE-2026-126180)",
+      "score": 8.4,
+      "severity": "HIGH",
+      "vector": "NETWORK",
+      "published": "2026-11-11",
+      "cisaKev": false,
+      "description": "A improper neutralization of special elements used in a template engine vulnerability in Fortinet FortiManager 8.0.0 through 8.0.1, FortiManager 7.6.0 through 7.6.7, FortiManager 7.4.0 through 7.4.11, FortiManager 7.2 all versions, FortiManager Cloud 8.0.0 through 8.0.1, FortiManager Cloud 7.6.0 through 7.6.7, FortiManager Cloud 7.4.1 through 7.4.11, FortiManager Cloud 7.2 all versions may allow a low privileged Device Manager admin to obtain super admin privilege on managed FortiGates via injecting malicious commands.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-126180"
     },
     {
       "id": "CVE-2015-2546",
@@ -7141,6 +7153,18 @@
       "cisaKev": false,
       "description": "Windows DNS Server Remote Code Execution Vulnerability",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-33754"
+    },
+    {
+      "id": "CVE-2026-126181",
+      "platform": "Fortinet",
+      "title": "FortiGate Vulnerability (CVE-2026-126181)",
+      "score": 8.0,
+      "severity": "HIGH",
+      "vector": "ADJACENT_NETWORK",
+      "published": "2026-11-11",
+      "cisaKev": false,
+      "description": "A use of hard-coded credentials vulnerability in Fortinet FortiManager 8.0.0 through 8.0.1, FortiManager 7.6.0 through 7.6.7, FortiManager 7.4.0 through 7.4.11, FortiManager 7.2 all versions may allow an adjacent-network authenticated attacker with user permission to join the FGFM configuration-sync mesh of the affected FortiGate deployment via the default pre-shared key.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-126181"
     },
     {
       "id": "CVE-2026-0204",
