@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T12:46:31.038705+00:00",
-  "total": 613,
+  "lastUpdated": "2026-11-14T21:52:08.004102+00:00",
+  "total": 603,
   "vulnerabilities": [
     {
       "id": "CVE-2026-69730",
@@ -135,18 +135,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20016"
     },
     {
-      "id": "CVE-2025-25256",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2025-25256)",
-      "score": 9.8,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2025-08-12",
-      "cisaKev": false,
-      "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] vulnerability in Fortinet FortiSIEM 7.3.0 through 7.3.1, FortiSIEM 7.2.0 through 7.2.5, FortiSIEM 7.1.0 through 7.1.7, FortiSIEM 7.0.0 through 7.0.3, FortiSIEM 6.7.0 through 6.7.9, FortiSIEM 6.6 all versions, FortiSIEM 6.5 all versions, FortiSIEM 6.4 all versions, FortiSIEM 6.3 all versions, FortiSIEM 6.2 all versions, FortiSIEM 6.1 all versions, FortiSIEM 5.4 all versions, FortiSIEM 5.3 all versions, FortiSIEM 5.2 all versions, FortiSIEM 5.1 all versions, FortiSIEM 5.0 all versions, FortiSIEM 4.10 all versions, FortiSIEM 4.9 all versions, FortiSIEM 4.7 all versions allows an unauthenticated attacker to execute unauthorized code or commands via crafted CLI requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-25256"
-    },
-    {
       "id": "CVE-2024-22394",
       "platform": "SonicWall",
       "title": "SonicOS Vulnerability (CVE-2024-22394)",
@@ -193,18 +181,6 @@
       "cisaKev": false,
       "description": "Use of Externally-Controlled Format String vulnerability in the SonicOS SSL VPN interface allows a remote unauthenticated attacker to cause service disruption.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40600"
-    },
-    {
-      "id": "CVE-2023-47534",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-47534)",
-      "score": 9.6,
-      "severity": "CRITICAL",
-      "vector": "NETWORK",
-      "published": "2024-03-12",
-      "cisaKev": false,
-      "description": "A improper neutralization of formula elements in a csv file vulnerability in Fortinet FortiClientEMS 7.2.0 through 7.2.2, FortiClientEMS 7.0.0 through 7.0.10, FortiClientEMS 6.4 all versions, FortiClientEMS 06.02 all versions, FortiClientEMS 6.2 all versions, FortiClientEMS 06.00 all versions, FortiClientEMS 6.0 all versions allows attacker to execute unauthorized code or commands via specially crafted packets.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-47534"
     },
     {
       "id": "CVE-2026-78327",
@@ -277,30 +253,6 @@
       "cisaKev": true,
       "description": "The SMBv1 server in Microsoft Windows Vista SP2; Windows Server 2008 SP2 and R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold and R2; Windows RT 8.1; and Windows 10 Gold, 1511, and 1607; and Windows Server 2016 allows remote attackers to execute arbitrary code via crafted packets, aka \"Windows SMB Remote Code Execution Vulnerability.\" This vulnerability is different from those described in CVE-2017-0143, CVE-2017-0145, CVE-2017-0146, and CVE-2017-0148.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-0144"
-    },
-    {
-      "id": "CVE-2019-5589",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2019-5589)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2019-05-28",
-      "cisaKev": false,
-      "description": "A untrusted search path vulnerability in Fortinet  may allow attacker to execute unauthorized code or commands via network exploitable",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-5589"
-    },
-    {
-      "id": "CVE-2023-45581",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2023-45581)",
-      "score": 8.8,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2024-02-15",
-      "cisaKev": false,
-      "description": "An improper privilege management vulnerability [CWE-269] vulnerability in Fortinet FortiClientEMS 7.2.0 through 7.2.2, FortiClientEMS 7.0.6 through 7.0.10, FortiClientEMS 7.0.0 through 7.0.4, FortiClientEMS 6.4 all versions, FortiClientEMS 06.02 all versions, FortiClientEMS 6.2 all versions allows an\u00a0Site administrator with Super Admin privileges to perform global administrative operations affecting other sites via crafted HTTP or HTTPS requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-45581"
     },
     {
       "id": "CVE-2023-29181",
@@ -529,30 +481,6 @@
       "cisaKev": true,
       "description": "When running Apache Tomcat 7.0.0 to 7.0.79 on Windows with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of the Default to false) it was possible to upload a JSP file to the server via a specially crafted request. This JSP could then be requested and any code it contained would be executed by the server.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-12615"
-    },
-    {
-      "id": "CVE-2025-52970",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2025-52970)",
-      "score": 8.1,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-08-12",
-      "cisaKev": false,
-      "description": "A improper handling of parameters vulnerability in Fortinet FortiWeb 7.6.0 through 7.6.3, FortiWeb 7.4.0 through 7.4.7, FortiWeb 7.2.0 through 7.2.10, FortiWeb 7.0.0 through 7.0.10 may allow an unauthenticated remote attacker with non-public information pertaining to the device and targeted user to gain admin privileges on the device via a specially crafted request.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-52970"
-    },
-    {
-      "id": "CVE-2025-49201",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2025-49201)",
-      "score": 8.1,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-10-14",
-      "cisaKev": false,
-      "description": "A weak authentication vulnerability in Fortinet FortiPAM 1.5.0, FortiPAM 1.4.0 through 1.4.2, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiSwitchManager 7.2.0 through 7.2.4 allows attacker to execute unauthorized code or commands via specially crafted http requests",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-49201"
     },
     {
       "id": "CVE-2026-124194",
@@ -6987,18 +6915,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-66150"
     },
     {
-      "id": "CVE-2020-9287",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2020-9287)",
-      "score": 7.7,
-      "severity": "HIGH",
-      "vector": "LOCAL",
-      "published": "2020-03-15",
-      "cisaKev": false,
-      "description": "A untrusted search path vulnerability in Fortinet  may allow attacker to execute unauthorized code or commands via network exploitable",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-9287"
-    },
-    {
       "id": "CVE-2026-19868",
       "platform": "SonicWall",
       "title": "SonicOS Vulnerability (CVE-2026-19868)",
@@ -7227,18 +7143,6 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-40601"
     },
     {
-      "id": "CVE-2020-9290",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2020-9290)",
-      "score": 7.3,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2020-03-15",
-      "cisaKev": false,
-      "description": "A untrusted search path vulnerability in Fortinet  may allow attacker to execute unauthorized code or commands via network exploitable",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-9290"
-    },
-    {
       "id": "CVE-2021-20022",
       "platform": "SonicWall",
       "title": "SonicWall Vulnerability (CVE-2021-20022)",
@@ -7249,30 +7153,6 @@
       "cisaKev": true,
       "description": "SonicWall Email Security version 10.0.9.x contains a vulnerability that allows a post-authenticated attacker to upload an arbitrary file to the remote host.",
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-20022"
-    },
-    {
-      "id": "CVE-2025-31104",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2025-31104)",
-      "score": 7.2,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-06-10",
-      "cisaKev": false,
-      "description": "A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiADC 7.6.0 through 7.6.1, FortiADC 7.4.0 through 7.4.6, FortiADC 7.2.0 through 7.2.7, FortiADC 7.1.0 through 7.1.4, FortiADC 7.0 all versions, FortiADC 6.2 all versions, FortiADC 6.1 all versions, FortiADC 6.0 all versions, FortiADC 5.4 all versions, FortiADC 5.3 all versions, FortiADC 5.2 all versions, FortiADC 5.1 all versions, FortiADC 5.0 all versions, FortiADC 4.8 all versions, FortiADC 4.7 all versions, FortiADC 4.6 all versions, FortiADC 4.5 all versions, FortiADC 4.4 all versions, FortiADC 4.3 all versions, FortiADC 4.2 all versions, FortiADC 4.1 all versions, FortiADC 4.0 all versions, FortiADC 3.2 all versions, FortiADC 3.1 all versions, FortiADC 3.0 all versions may allow attacker to execute unauthorized code or commands via <insert attack vector here>",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-31104"
-    },
-    {
-      "id": "CVE-2025-47856",
-      "platform": "Fortinet",
-      "title": "Fortinet Vulnerability (CVE-2025-47856)",
-      "score": 7.2,
-      "severity": "HIGH",
-      "vector": "NETWORK",
-      "published": "2025-10-14",
-      "cisaKev": false,
-      "description": "Two improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerabilities [CWE-78] in Fortinet FortiVoice version 7.2.0, 7.0.0 through 7.0.6 and before 6.4.10 allows a privileged attacker to execute arbitrary code or commands via crafted HTTP/HTTPS or CLI requests.",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-47856"
     },
     {
       "id": "CVE-2024-50571",
